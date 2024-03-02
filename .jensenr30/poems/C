@@ -1,0 +1,35 @@
+//-------------------------------------------
+// A poem in C
+//-------------------------------------------
+
+I told you once;
+I told you twice;
+A C program must be concise;
+
+A dangling pointer spoils the code;
+A NULL dereference may explode;
+
+A simple thing, in days of youth            \
+to will these digital rules to bend;
+But all bloody hell breaks loose            \
+when i++ past buffer's end;
+
+Years ago, I'd guess and check              \
+and crash and fail and hack around;
+But today, the path is clearer.             \
+The ghost of Ritchie guides me now;
+
+I've told you one;
+Now tell you twice.
+A C program must be concise.
+
+//-------------------------------------------
+// scraps / scratch / work area
+//-------------------------------------------
+
+void *'s __ALIGNED__
+
+Encryption keys and nonce IVs               \
+and precious data all combined;
+Safe within statistical secrecy             \
+the *'s of the void aligned;

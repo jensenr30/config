@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+source "$CFGDIR/$HOSTNAME/startup.sh"
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+xrandr | grep -i " connected" | sed -e 's/ connected.*//g'
+

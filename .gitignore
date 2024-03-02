@@ -1,0 +1,111 @@
+#===============================================================================
+# 1. Ignore everything by default
+#===============================================================================
+*
+
+
+#===============================================================================
+# 2. Track specific things
+#===============================================================================
+!README.md
+!TODO.md
+
+!.abcde.conf
+!.alias.sh
+!.bash_login
+!.bash_profile
+!.bashrc
+!.dictionary.txt
+!.gitignore
+!.gitignore-global
+!.inputrc
+!.nvimrc
+!.pd_profile
+!.profile
+!.tmux.conf
+!.vimrc
+!.xinitrc-ryan
+!.wslconfig
+
+!.jensenr30/
+!.jensenr30/**
+
+!.config/
+!.config/.gtktermrc
+!.config/alacritty/
+!.config/alacritty/*
+
+!.config/htop/
+!.config/htop/htoprc
+!.config/i3
+.config/i3/*
+!.config/i3/config
+!.config/polybar
+!.config/polybar/config.ini
+!.config/nvim/
+!.config/nvim/**
+!.config/nvim_disabled/
+!.config/nvim_disabled/**
+.config/nvim/plugin/**
+!.config/REAPER
+!.config/REAPER/Configurations
+!.config/REAPER/Configurations/*
+
+!.screenlayout/
+!.screenlayout/**
+
+!.ssr/
+!.ssr/output-profiles/
+!.ssr/output-profiles/*
+
+!AppData/
+!AppData/Roaming/
+!AppData/Roaming/Microsoft/
+!AppData/Roaming/Microsoft/Windows/
+!AppData/Roaming/Microsoft/Windows/Start\ Menu/
+!AppData/Roaming/Microsoft/Windows/Start\ Menu/Programs/
+!AppData/Roaming/Microsoft/Windows/Start\ Menu/Programs/Startup/
+!AppData/Roaming/Microsoft/Windows/Start\ Menu/Programs/Startup/*
+
+!AppData/Roaming/Mozilla/
+!AppData/Roaming/Mozilla/Firefox/
+!AppData/Roaming/Mozilla/Firefox/Profiles/
+!AppData/Roaming/Mozilla/Firefox/Profiles/7gjaszpg.default/
+!AppData/Roaming/Mozilla/Firefox/Profiles/7gjaszpg.default/persdict.dat
+
+# lots of good scripts in here :)
+!bin/
+!bin/**
+
+!pd/
+
+#===============================================================================
+# 3. Ignore specific junk
+#===============================================================================
+
+# Windows
+**desktop.ini
+**Thumbs.db
+AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/*.lnk
+
+# LibreOffice
+**.~lock.*
+
+# KDiff3
+**.orig
+
+# Python
+**/.project
+**/.pydevproject
+**/__pycache__*
+
+# log files
+**startup.py_log.txt
+
+# vim
+**.swp
+
+# Dolphin
+**.directory
+
+.jensenr30/*/.system-setup.complete

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+yt-audio --audio-format best --split-chapters -o "chapter:%(title)s/%(section_number)02d - %(section_title)s.%(ext)s" $@

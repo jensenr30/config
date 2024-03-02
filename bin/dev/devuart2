@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+realpath /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AB8AT4RI-if00-port0
+

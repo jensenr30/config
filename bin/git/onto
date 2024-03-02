@@ -1,0 +1,2 @@
+#!/usr/bin/sh
+cat ~/bin/cheat-sheets/onto-instructions.txt

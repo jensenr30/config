@@ -1,0 +1,4 @@
+#!/bin/bash
+# ryan jensen's preferred calculator
+
+python3 -i ~/bin/calc.py

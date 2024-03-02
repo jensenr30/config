@@ -1,0 +1,25 @@
+#!/bin/bash
+# create an ssh key if you don't have one
+
+pubkey="id_rsa.pub"
+echo "pubkey='$pubkey'"
+
+
+if [ -f "$HOME/.ssh/$pubkey"  ]; then
+    printf "ssh key already exists.  Printing file contents...\n\n"
+    cat "$HOME/.ssh/$pubkey"
+    printf "\n"
+else
+    echo "ssh key does not exist.  Creating new key..."
+    ssh-keygen -t -rsa
+fi
+
+source ~/.cfgdir
+dest_path="$CFGDIR/private/$HOSTNAME/.ssh"
+echo "copying public ssh key ($HOME/.ssh/$pubkey) to your private repository:"
+echo "$dest_path/$pubkey"
+mkdir -p "$dest_path"
+cp "$HOME/.ssh/$pubkey" "$dest_path/$pubkey"
+
+printf "done."
+

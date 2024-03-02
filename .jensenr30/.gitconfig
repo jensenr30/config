@@ -1,0 +1,7 @@
+[user]
+    email = jensenr30@gmail.com
+    name = Ryan Jensen
+[credential]
+    helper = store
+[core]
+    editor = e

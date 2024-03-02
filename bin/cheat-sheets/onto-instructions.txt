@@ -1,0 +1,23 @@
+git rebase --onto <new base> <old base> <my-branch>
+
+git rebase --onto F D <my-branch>
+
+
+Before:         A---B---C---F---G (branch)
+                         \
+                          D---E---H---I (HEAD my-branch)
+
+
+After:          A---B---C---F---G (branch)
+                             \
+                              E'---H'---I' (HEAD my-branch)
+
+
+- If <my-branch> is not used, the current branch is rebased.
+- 'F' is the target commit or branch name  (i.e. new base).
+- 'D' is the first commit to be excluded from the rebase.
+
+
+Pro Tip: add  --update-refs  to drag branches along which
+depend on commits being rebased.
+

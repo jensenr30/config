@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+fzf -e --layout=reverse --height=23 $@

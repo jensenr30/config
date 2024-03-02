@@ -1,0 +1,8 @@
+#!/bin/bash
+# These permissions allow the ssh-agent to read public keys.
+# So remote clients can to ssh into the server using their key file.
+# So the client doesn't have to type a password every time.
+
+chmod go-w ~
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys

@@ -1,0 +1,14 @@
+#!/usr/bin/sh
+
+RED='\x1b[31;1m'
+NOCOLOR='\033[0m'
+
+echo -e "${RED}Danger Will Robinson!${NOCOLOR}"
+echo -e "${RED}_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-${NOCOLOR}"
+echo -e "${RED}PACMAN EXECUTING FULL SYSTEM UPGRADE${NOCOLOR}"
+echo -e "${RED}_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-${NOCOLOR}"
+echo -e "${RED}pacman -Syu${NOCOLOR}"
+echo -e "${RED}pacman -Syu${NOCOLOR}"
+echo -e "${RED}pacman -Syu${NOCOLOR}"
+echo -e "${RED}_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-${NOCOLOR}"
+sudo pacman -Syu

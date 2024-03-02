@@ -1,0 +1,26 @@
+#!/usr/bin/sh
+
+DEV='UNKNOWN'
+
+case $1 in
+	0)
+		DEV='/dev/serial/by-id/usb-Protofusion_Labs_CANable_0c927d2_git@github.com:jensenr30_cantact-fw.git_003A00224146571720313238-if00'
+		;;
+	1)
+		DEV='/dev/serial/by-id/usb-Protofusion_Labs_CANable_4c4d951_git@github.com:jensenr30_cantact-fw.git_002B00365043571320353339-if00'
+		;;
+	2)
+		DEV='/dev/serial/by-id/usb-Protofusion_Labs_CANable_4c4d951_git@github.com:jensenr30_cantact-fw.git_003B00455043570520353339-if00'
+		;;
+	3)
+		DEV='/dev/serial/by-id/usb-Protofusion_Labs_CANable_4c4d951_git@github.com:jensenr30_cantact-fw.git_003900185043570520353339-if00'
+		;;
+	*)
+    	echo "unknown"
+    	;;
+esac
+
+REALDEV=$(realpath "$DEV")
+# echo "$DEV"
+echo "$REALDEV"
+printf "$REALDEV" | clipin

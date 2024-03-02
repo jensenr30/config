@@ -1,0 +1,11 @@
+### Installing arm-none-eabi on Ubuntu
+The stale version of arm-none-eabi-gcc (available from `apt`) has issues and generates larger binaries than up-to-date versions.
+- `sudo apt remove gcc-arm-none-eabi && sudo apt autoremove`
+- download and extract `arm-gnu-toolchain-*-x86_64-arm-none-eabi.tar.xz` from:
+https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+- add `path/to/your/arm-none-eabi/bin/` to the PATH environment variable in `~/.profile` or `~/.bashrc`
+- `sudo apt install libncursesw5 libncursesw5-dev`
+- install python 3.8:
+  - `sudo apt update && sudo apt upgrade`
+  - `sudo add-apt-repository ppa:deadsnakes/ppa -y && sudo apt update`
+  - `sudo apt install python3.8 && python3.8 --version`

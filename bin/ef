@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+
+F=$(fz)
+e $F
+printf "\n$F\n"
+

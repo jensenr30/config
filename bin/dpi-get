@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+key='Xft.dpi: '
+DPI=$(cat $HOME/.Xresources | grep -i "$key" | sed "s/$key//g")
+dpi_chars=$(printf "$DPI" | wc -m)
+if [ "$dpi_chars" == "0" ]; then
+    DPI="96"
+fi
+
+export DPI="$DPI"
+echo "$DPI"
+

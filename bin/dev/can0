@@ -1,0 +1,27 @@
+#!/bin/bash
+# script to bring up a SocketCAN interface on linux
+
+# -s0 = 10k
+# -s1 = 20k
+# -s2 = 50k
+# -s3 = 100k
+# -s4 = 125k
+# -s5 = 250k
+# -s6 = 500k
+# -s7 = 750k
+# -s8 = 1M
+
+# todo: change this long device name to $(can0dev)
+sudo slcand -o -c -s8 /dev/serial/by-id/usb-Protofusion_Labs_CANable_0c927d2_git@github.com\:jensenr30_cantact-fw.git_003A00224146571720313238-if00 can0
+sudo ifconfig can0 up
+sudo ifconfig can0 txqueuelen 1000
+
+echo ""
+
+CAN0_UP=$(ip link | grep "can0: .* state UP .* qlen 1000" | wc -l)
+if [ "$CAN0_UP" == '1' ]; then
+    echo 'can0 online!'
+else
+    echo 'ERROR: can0 not online!  run: ifconfig'
+fi
+

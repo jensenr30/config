@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+# call this script from .xinit rc at the end.
+
+xrdb -merge ~/.Xresources
+# this is necessary because polybar doesn't respond to .Xresources dpi settings
+export DPI=$(dpi-get)
+
+i3

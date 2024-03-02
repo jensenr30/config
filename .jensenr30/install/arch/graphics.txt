@@ -1,0 +1,21 @@
+#!/usr/bin/sh
+
+echo "This script is not meant to be executed on the command line"
+exit
+
+# FOR AMD:
+./graphics-amd.sh
+
+# in order to fix INTEL graphics issues, i found these threads
+# https://bbs.archlinux.org/viewtopic.php?id=276679
+# https://forums.gentoo.org/viewtopic-t-1145306-start-0.html
+
+sudo vim /etc/X11/xorg.conf.d/20-intel.conf
+# and add the following:
+
+Section "Device"
+        Identifier  "Intel Graphics"
+        Driver      "modesetting"
+        Option      "AccelMethod"    "glamor"
+        Option      "DRI"            "3"
+EndSection

@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+# this should only run once soon after an operating system is freshly installed.
+
+set -e
+
+source "$CFGDIR/install/bash-complete-alias.sh"

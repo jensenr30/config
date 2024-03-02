@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+git config user.email "jensenr30@gmail.com"
+git config user.name "Ryan Jensen"
+

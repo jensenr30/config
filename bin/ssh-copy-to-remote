@@ -1,0 +1,9 @@
+#!/bin/bash
+# a script to streamline the process of adding an ssh key to a remote computer
+echo "Enter remote computer IP address or name: "
+echo -n "> "
+read SERVER_NAME_OR_IP
+echo "Enter name of user you will sign in as on remote computer: "
+echo -n "> "
+read USER_NAME
+ssh-copy-id -i ~/.ssh/id_rsa.pub $USER_NAME@$SERVER_NAME_OR_IP

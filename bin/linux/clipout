@@ -1,0 +1,5 @@
+#!/bin/bash
+# print contents of user's clipboard to stdout
+
+xclip -o -selection "clipboard"
+

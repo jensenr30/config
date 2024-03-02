@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+
+device_dir='/dev/serial/by-id'
+device=$(ls "$device_dir" | grep -i "canable")
+echo "$device_dir/$device"
+

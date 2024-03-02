@@ -1,0 +1,9 @@
+#!/bin/bash
+# flac
+# use ffmpeg to convert a file to FLAC.
+
+# grab the user input
+FILE=$1
+
+# extract audio from the video file and store in flac
+ffmpeg -i "$FILE" -c:a flac "$FILE.flac"

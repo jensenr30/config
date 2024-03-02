@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+download-continuously.py "yt-video --no-playlist --"
+

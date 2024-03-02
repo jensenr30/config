@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo pacman -S --noconfirm i3-wm
+sudo pacman -S --noconfirm polybar
+sudo pacman -S --noconfirm arandr # GUI tool for monitor config using xrandr
+
+# sudo apt install -y x11-xserver-utils
+# sudo apt install -y clipit
+# sudo apt install -y pm-utils
+
+# see ~/.jensenr30/jenbox2/i3-init

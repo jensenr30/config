@@ -1,0 +1,6 @@
+# STMicroelectronics ST-LINK/V2
+ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="664", GROUP="plugdev"
+
+# Tiva C-Series Launchpad ICD
+ATTRS{idVendor}=="1cbe", ATTRS{idProduct}=="00fd", MODE="664", GROUP="plugdev"
+

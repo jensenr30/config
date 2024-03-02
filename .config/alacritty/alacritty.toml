@@ -1,0 +1,52 @@
+[colors.bright]
+black = "#666666"
+blue = "#7aa6da"
+cyan = "#70c0b1"
+green = "#396a30"
+magenta = "#d357d8"
+red = "#ff4040"
+white = "#eaeaea"
+yellow = "#e7c547"
+
+[colors.normal]
+black = "#000000"
+blue = "#5172d2"
+cyan = "#2abeb7"
+green = "#25ad28"
+magenta = "#a264ab"
+red = "#cc3030"
+white = "#a0a0a0"
+yellow = "#dddd20"
+
+[colors.primary]
+background = "#000000"
+foreground = "#a0a0a0"
+
+[colors.search.focused_match]
+background = "#00FF00"
+foreground = "#000000"
+
+[colors.search.matches]
+background = "#aa2255"
+foreground = "#000000"
+
+[cursor.style]
+blinking = "Off"
+shape = "Beam"
+
+[font]
+size = 12
+
+[font.normal]
+family = "Inconsolata Nerd Font Mono"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
+[scrolling]
+history = 50000
+
+[shell]
+program = "/bin/bash"

@@ -1,0 +1,2 @@
+#!/bin/bash
+wine start "C:\\users\\$USER\\AppData\\Local\\SumatraPDF\\SumatraPDF.exe" "$1"

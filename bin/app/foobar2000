@@ -1,0 +1,2 @@
+#!/bin/bash
+wine start "C:\\users\\$USER\\Documents\\Desktop\\foobar2000\\foobar2000.exe" "$1"

@@ -1,0 +1,99 @@
+#!/usr/bin/python
+import subprocess
+import sys
+from time import time
+from time import sleep
+import numpy as np
+
+filename = "ping-record.csv"
+ping_timeout = 5
+
+sites = [
+    "localhost",
+    "192.168.0.1",
+    "192.168.1.1",
+    "consolidatedcommunications.com",
+    "1.0.0.1",
+    "1.1.1.1",
+    "8.8.4.4",
+    "8.8.8.8",
+    "google.com",
+    "youtube.com",
+    "facebook.com",
+    "amazon.com",
+    "apple.com",
+]
+
+
+def try_to_open_csv():
+    try:
+        file = open(filename, "r")
+        file.close()
+    except:
+        file = open(filename, "w")
+        file.write("time_s,address,ping_ms\n")
+        file.close()
+    return open(filename, "+a")
+
+
+class website:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+
+
+def ping_once(site):
+    count_flag = "-c "
+    try:
+        result = subprocess.check_output(
+            f"ping-once {site} {count_flag} 1",
+            shell=True,
+            timeout=ping_timeout
+        )
+    except:
+        return np.nan
+
+    str = result.decode('utf-8')
+    try:
+        time_ms = float(str)
+    except:
+        time_ms = np.nan
+    return time_ms
+
+
+def ping(site, count=1, inter_ping_delay=1):
+    for i in range(count):
+        result = ping_once(site)
+        if i != count - 1:
+            printf(".")
+            sleep(inter_ping_delay)
+    return result
+
+
+def printf(str, end=""):
+    print(str, end=end)
+    sys.stdout.flush()
+
+
+def write_to_csv(time, website, ping_ms):
+    file = try_to_open_csv()
+    file.write(f"{time},{website},{ping_ms}\n")
+    file.close()
+
+
+def ping_sites(sites):
+    for site in sites:
+        printf(f"{site} ")
+        ping_result = ping(site, count=4)
+        printf(f" {ping_result} ms\n")
+        write_to_csv(time(), site, ping_result)
+
+
+while True:
+    time_last_pinged_s = time()
+    ping_sites(sites)
+
+    ping_period_s = 60
+    time_elapsed = time() - time_last_pinged_s
+    time_to_wait_s = ping_period_s - time_elapsed
+    sleep(time_to_wait_s)

@@ -1,0 +1,10 @@
+#!/usr/bin/sh
+
+alias ide='code'
+
+if [ -z "$1" ]; then
+    ide . &
+else
+    ide $@ &
+fi
+

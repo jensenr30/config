@@ -1,0 +1,19 @@
+#!/bin/bash
+# B.A.R.N.
+# 
+# stands for
+#
+# B A T C H
+#
+# A U T O M A T I C
+#
+# R E - N A M E
+#
+# now pay attention
+# INPUTS:
+#
+# first  input argument is the pattern you want to find
+#
+# second input argument is the text-string that will replace every instance of text matching the first argument
+
+python ~/bin/barn.py "$@"

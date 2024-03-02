@@ -1,0 +1,9 @@
+.venv
+.cache
+**__pycache__
+.pdm-python
+.vscode/settings.json
+**.orig
+ryans-secret-code*
+compile_commands.json
+

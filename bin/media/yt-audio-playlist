@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+yt-audio -o "%(playlist_index)s - %(title)s.%(ext)s" --yes-playlist $@
+

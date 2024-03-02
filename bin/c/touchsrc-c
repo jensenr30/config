@@ -1,0 +1,24 @@
+#!/usr/bin/sh
+
+# create a pair of .c and .h files
+# E.g.
+# touchsrc-c app/src/analog/instrumentation
+# will create:
+# app/src/analog/instrumentation.c
+# app/src/analog/instrumentation.h
+
+set -e
+
+directory="$(dirname "$1")" ; filename="$(basename "$1")"
+echo "directory = $directory"
+
+mkdir -p "$directory"
+
+header="$directory/$filename.h"
+sourcefile="$directory/$filename.c"
+echo "header = $header"
+echo "sourcefile = $sourcefile"
+
+touch "$header"
+wrap-c-header "$header"
+echo "#include \"$filename.h\"" > "$sourcefile"

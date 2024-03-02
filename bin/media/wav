@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# grab the user input
+FILE=$1
+
+# extract audio from file and save to file
+ffmpeg -i "$FILE" "$FILE.wav"
+

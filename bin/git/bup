@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+# BUp: Branch Updater
+# updates a branch without checking it out
+git pull origin $1:$1
+

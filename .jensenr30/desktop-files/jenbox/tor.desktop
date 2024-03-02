@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=fsearch
+Comment=Locate documents and folders on this computer by name or content
+Exec=fsearch
+Icon=system-search
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;
+Keywords=search;files;locate;documents;folders;computer;name;content;find;tool;fsearch

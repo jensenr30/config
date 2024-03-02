@@ -1,0 +1,5 @@
+#!/bin/bash
+# download continuously using wget
+
+python -i ~/bin/download-continuously.py "wget"
+

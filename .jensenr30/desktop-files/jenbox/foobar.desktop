@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=foobar
+Comment=Music Player and Visualizer
+Exec=/home/ryan/programs/
+Icon=system-search
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;
+Keywords=search;files;locate;documents;folders;computer;name;content;find;tool;fsearch
+Name[en_US]=foobar

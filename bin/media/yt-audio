@@ -1,0 +1,4 @@
+#!/bin/bash
+# download the video as audio, passing along all arguments
+yt-dlp -f 140 --embed-thumbnail "$@"
+

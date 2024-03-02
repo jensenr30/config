@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+abcde -B -f -o flac -x $@
+

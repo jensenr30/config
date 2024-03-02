@@ -1,0 +1,9 @@
+#!/bin/bash
+# mp3
+# use ffmpeg to convert a file to 320k mp3.
+
+# grab the user input
+FILE=$1
+
+# extract audio from file and save to file
+ffmpeg -i "$FILE" -ab 320k "$FILE.mp3"

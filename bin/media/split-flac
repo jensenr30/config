@@ -1,0 +1,6 @@
+#!/bin/bash
+# split-flac
+# 
+# splits up any audio into flac
+
+python ~/bin/split-flac.py "$@"

@@ -1,0 +1,7 @@
+!# /usr/bin/env bash
+
+# argument 1 = compiler
+# argument 2 = header file
+
+$1 -E -H -o /dev/null - <<<"#include <$2>"
+

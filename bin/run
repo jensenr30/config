@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+r="$HOME/repos"
+
+if [ $(pwd) = "$r/gittyup" ]; then
+    echo "running gittyup..."
+    ./build/release/gittyup "$r/test-repo"
+else
+    echo "Your current working directory is not on the list!"
+    echo "See $(realpath $0)"
+fi
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+sudo apt install -y i3
+sudo apt install -y x11-xserver-utils
+sudo apt install -y clipit
+sudo apt install -y pm-utils
+sudo apt install -y polybar
+
+# Example of configuring monitors on jenbox2:
+#xrandr
+#xrandr --output HDMI-1-2 --auto --left-of DisplayPort-3
+#xrandr --output HDMI-A-2 --auto --right-of DisplayPort-3
+

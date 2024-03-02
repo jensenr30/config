@@ -1,0 +1,14 @@
+#!/bin/bash
+# any screen with a name matching any of the input arguments will be killed.
+
+for screen_name in $@
+do
+    echo "[screen-kill] screen name: $screen_name"
+    # get list of all screen PIDs
+    pids=$(screen -list | grep -i $screen_name | tr -d "\t " | sed "s/\..*$//")
+    for pid in $pids
+    do
+        echo "[screen-kill] pid: $pid"
+        kill $pid
+    done
+done
