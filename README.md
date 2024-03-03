@@ -1,6 +1,6 @@
 # /home/ryan
 
-A git repo slammed into `~/` on every system I use.
+A git repo slammed into `~` on every system I use.
 
 ## Features
 - Synchronize `.profile`, `.bashrc`, and certain `.*rc` files - controlled by `.gitignore`
