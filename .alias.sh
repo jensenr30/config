@@ -10,18 +10,14 @@ alias ea="e $HOME/.alias.sh && rlal"
 ################################################################################
 # git
 ################################################################################
-alias fp='git fetch --prune'
 alias k='gitk --all --full-history --select-commit=$(mit) & disown'
 alias gh='gittyup .'
-alias kdo='gitk --all --date-order --full-history --select-commit=0000000000000000000000000000000000000001 & disown'
 alias s="git status"
 alias ga='git add'
 alias gr='git reset'
-alias gra='git reset --all'
 alias a="ga -A;s"
 alias ags='a; git stash'
 alias c="git commit"
-alias cm='git commit -m'
 alias b="git branch"
 alias ch="git checkout"
 alias chowmain="ch main || ch master && pulp"
@@ -32,16 +28,9 @@ alias push="git push"
 alias pfwl="git push --force-with-lease"
 alias pushsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias pp="s;line;pull;push;line;s"
-alias pulpm="ch main && pulp || ch master && pulp"
-alias gm='git merge'
 alias gms='git maintenance start'
-
-# You will not miss this "WIP" commit when looking at your git history - I guarantee it
 alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP"'
-
-# the "do everything" command - protip: don't use this at work
 alias gd="git diff"
-
 alias giturl="git remote get-url origin | tee >(clipin)"
 alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
