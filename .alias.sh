@@ -37,6 +37,8 @@ alias rebase='git rebase'
 alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
 alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
+# move to the top-level directory of the current git repo
+alias cdr='cd $(git rev-parse --show-toplevel)'
 
 ################################################################################
 # GNU / Linux
@@ -51,19 +53,11 @@ function bw(){
     fi
 }
 
-# misc
-alias path='echo $PATH | tr " " "\n"'
-
-alias gdir="dolphin --new-window . & disown"
-
 # quick cd into install script directories
 alias cdi="cd $CFGDIR/install"
 alias cdid="cd $CFGDIR/install/$distro"
 # quick cd into nas storage
 alias cdn='cl /nas/safe'
-# move to the top-level directory of the current git repo
-alias cdr='cd $(git rev-parse --show-toplevel)'
-
 # quickly jump up N directories
 # what's nice about this is that it allows `cd -` to work as expected  :)
 function cu(){
@@ -112,20 +106,22 @@ mkcd() {
 #finders
 alias fd='fd --hidden --no-ignore --ignore-case'
 alias sd='cd $(fz) && lv'
+# fuzzy find in your command history :)
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tr -d "\n" | tee >(clipin)'
 
 # greps
 alias grep='grep --color=auto '
-alias gi='grep -i'
-
+alias g='grep'
+alias gi='g -i'
 alias psg="ps -A | grep -i"
 
+# misc *nix
 alias dtop='sudo dmesg -wH'
-alias sl='screen -list'
-alias rm='rm -d'
-alias mkdir="mkdir -p"
 alias k9='killall -9'
-
+alias mkdir="mkdir -p"
+alias path='echo $PATH | tr ":" "\n"'
+alias rm='rm -d'
+alias sl='screen -list'
 alias w='watch -n 0.1 --color'
 
 # PDF diff viewer
@@ -184,12 +180,7 @@ alias mt='m test && cp test/build/compile_commands.json compile_commands.json'
 alias nas="ssh ryan@server"
 
 ################################################################################
-# Arch
-################################################################################
-alias pacown='pacman -F "$1"'
-
-################################################################################
-# PD
+# pd
 ################################################################################
 alias ed='echo DEBUG = $DEBUG; echo DEVKIT = $DEVKIT; echo ELF_FILE = $ELF_FILE'
 alias ed0='unset DEBUG; ed'
@@ -197,4 +188,3 @@ alias ed1='export DEBUG=1; ed'
 alias eddev='export DEVKIT=1; export ELF_FILE="build/app/app"; ed1'
 alias edc='unset DEBUG; unset DEVKIT; unset ELF_FILE; ed'
 alias dgt='dronecan_gui_tool &'
-
