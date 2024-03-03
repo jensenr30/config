@@ -1,0 +1,10 @@
+#!/usr/bin/sh
+
+git add -A
+git commit -m 'gitslam!'
+line
+git pull --prune
+git push
+line
+git status
+

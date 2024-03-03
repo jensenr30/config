@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+
+cd ~/pd
+gitslam
+
+cd ~/.jensenr30/private
+gitslam
+
+cd ~
+gitslam
+

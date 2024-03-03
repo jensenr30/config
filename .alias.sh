@@ -40,7 +40,6 @@ alias gms='git maintenance start'
 alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP"'
 
 # the "do everything" command - protip: don't use this at work
-alias gitslam="a; c -m 'gitslam!'; line; pull; push; line; s"
 alias gd="git diff"
 
 alias giturl="git remote get-url origin | tee >(clipin)"
