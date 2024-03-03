@@ -1,6 +1,8 @@
 #!/usr/bin/sh
 
+line-bold
 echo $(pwd)
+line-bold
 git add -A
 git commit -m 'gitslam!'
 line
