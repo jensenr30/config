@@ -1,4 +1,10 @@
 #!/usr/bin/sh
 
-git diff --cached -U8 --color=always $@ | bat --style rule
+if [ "$sysname" == "windows" ]; then
+    viewer='bat'
+else
+    viewer='bat --style rule'
+fi
+
+git diff --cached -U8 --color=always $@ | $viewer
 

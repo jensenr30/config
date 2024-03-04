@@ -10,7 +10,7 @@ alias ea="e $HOME/.alias.sh && rlal"
 ################################################################################
 # git
 ################################################################################
-alias k='gitk --all --full-history --select-commit=$(mit) & disown'
+alias k='gitk --all --full-history --select-commit=$(git rev-parse HEAD) & disown'
 alias gh='gittyup .'
 alias s="git status"
 alias ga='git add'
