@@ -4,8 +4,6 @@
 ################################################################################
 #         Print the Definition of Any Aliase, Function, or Script!             #
 ################################################################################
-<<<<<<< HEAD
-=======
 alias k='gitk --all --full-history --select-commit=$(git rev-parse HEAD) & disown'
 alias gh='gittyup .'
 alias s="git status"
@@ -35,7 +33,6 @@ alias gcpc='git cherry-pick --continue'
 alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
 # move to the top-level directory of the current git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
->>>>>>> 0378a4294b9cb0dacc61478712e68f475af2f36c
 
 # Example: To see what the chowmain command does, run `cw chowmain` in a terminal
 function cw()
