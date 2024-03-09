@@ -35,6 +35,7 @@ fi
 # path
 #===============================================================================
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.nix-profile/bin"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/bin/app"
@@ -74,6 +75,11 @@ export PATH="$PATH:/usr/lib/emscripten"
 
 export STM32CubeMX_PATH=$HOME/programs/stm32cubemx
 
+
+#===============================================================================
+# Theme
+#===============================================================================
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 #===============================================================================
 # color SSH sessions

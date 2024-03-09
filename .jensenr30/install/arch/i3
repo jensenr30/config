@@ -1,7 +1,11 @@
 #!/bin/bash
-sudo pacman -S --noconfirm i3-wm
-sudo pacman -S --noconfirm polybar
-sudo pacman -S --noconfirm arandr # GUI tool for monitor config using xrandr
+source .install-helper
+
+i i3-wm
+i polybar
+i arandr # GUI tool for monitor config using xrandr
+i picom # compositor
+i feh
 
 # sudo apt install -y x11-xserver-utils
 # sudo apt install -y clipit

@@ -47,10 +47,11 @@
 !.config/nvim_disabled/
 !.config/nvim_disabled/**
 .config/nvim/plugin/**
+!.config/qt5ct/
+!.config/qt5ct/qt5ct.conf
 !.config/REAPER
 !.config/REAPER/Configurations
 !.config/REAPER/Configurations/*
-
 !.screenlayout/
 !.screenlayout/**
 

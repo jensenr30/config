@@ -7,6 +7,8 @@ exec_always ~/.screenlayout/$HOSTNAME.sh
 exec_always dunst
 exec_always lxpolkit
 
+exec_always feh --bg-scale "$HOME/.jensenr30/$HOSTNAME/desktop.jpg"
+
 set $mod Mod4
 set $alt Mod1
 
@@ -49,6 +51,7 @@ bindsym $mod+Ctrl+s exec --no-startup-id sleep 0.5 && systemctl suspend
 exec shutter --min_at_startup
 bindsym Print exec --no-startup-id shutter -s
 for_window [class="Shutter"] floating enable
+for_window [class="SimpleScreen"] floating enable
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -75,7 +78,7 @@ focus_on_window_activation focus
 # kill focused window
 bindsym $mod+$alt+w kill
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id start-menu
+bindsym $mod+p exec --no-startup-id start-menu
 
 bindsym $mod+Ctrl+Return exec --no-startup-id explorer
 # A more modern dmenu replacement is rofi:
@@ -136,7 +139,7 @@ bindsym $mod+$alt+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+p focus parent
+bindsym $mod+Ctrl+p focus parent
 
 # focus the child container
 bindsym $mod+c focus child
