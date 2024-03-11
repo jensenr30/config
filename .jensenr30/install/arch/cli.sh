@@ -13,6 +13,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+i man-pages
 i networkmanager
 sudo systemctl enable --now NetworkManager.service
 # this prevents NFS mounts from causing shutdown to hang for 1 m 30 s
