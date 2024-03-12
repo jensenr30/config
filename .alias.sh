@@ -14,7 +14,8 @@ alias ags='a; git stash'
 alias c="git commit"
 alias b="git branch"
 alias ch="git checkout"
-alias chowmain="ch main || ch master && pulp"
+alias chm='ch main || ch master'
+alias chowmain="chm && pulp"
 alias gf='git fetch'
 alias remain='git rebase main'
 alias pull="git pull"
@@ -60,7 +61,7 @@ function bw(){
     if [ "$function_definition" != "" ]; then
         echo "$function_definition" | bat
     else
-        bat $(which "$1") --style header-filename,grid
+        bat $(which "$1") --style full
     fi
 }
 
