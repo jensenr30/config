@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
 if [ "$sysname" == "windows" ]; then
     viewer='bat'
@@ -6,5 +6,5 @@ else
     viewer='bat --style rule'
 fi
 
-git diff --cached -U8 --color=always $@ | $viewer
+git diff --cached -U6 --color=always $@ | $viewer
 

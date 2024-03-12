@@ -21,6 +21,7 @@ alias c="git commit"
 alias b="git branch"
 alias ch="git checkout"
 alias chowmain="ch main || ch master && pulp"
+alias gf='git fetch'
 alias remain='git rebase main'
 alias pull="git pull"
 alias pulp='git pull --prune'
@@ -104,7 +105,7 @@ mkcd() {
 }
 
 #finders
-alias fd='fd --hidden --no-ignore --ignore-case'
+alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
 alias sd='cd $(fz) && lv'
 # fuzzy find in your command history :)
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tr -d "\n" | tee >(clipin)'

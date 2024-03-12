@@ -122,12 +122,6 @@ complete -F _complete_alias "${!BASH_ALIASES[@]}"
 #===============================================================================
 # colors
 #===============================================================================
-# todo: figure out what this debian_chroot thing is doing. Why does it need to be in my PS1?
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
@@ -178,23 +172,15 @@ fi
 
 PS1_end_string=$(printf "\n$ ")
 
-# TODO what is this debian_chroot shit doing here?
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
 if [ "$color_prompt" = yes ]; then
 	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@'"$hostname_color"'\h\[\033[01;90m\] $ps1_sysname\[\033[00m\]\[\033[01;33m\]\w\[\033[00m\] $(last_command_return_value) \[\033[01;36m\]$(get_git_branch) \[\033[00m\]$PS1_end_string'
 else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h \w $(last_command_return_value) $(get_git_branch)$PS1_end_string'
 fi
 unset color_prompt
-
-# todo: is this necessary?
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
 
 
 #===============================================================================
