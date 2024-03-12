@@ -1,3 +1,4 @@
 #!/usr/bin/sh
 
-dmenu_run -i -fn FreeSans -l 20
+albert show
+# dmenu_run -i -fn FreeSans -l 20

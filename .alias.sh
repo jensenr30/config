@@ -1,14 +1,8 @@
 #!/usr/bin/sh
 
-# put this string in your .bashrc file on its own line: "source ~/.alias"
-
-# R.L.A.L. ReLoad ALiases
-alias rlal='source $HOME/.alias.sh'
-# E.A. - Edit Aliases (also, challenge everything)
-alias ea="e $HOME/.alias.sh && rlal"
 
 ################################################################################
-# git
+#         Print the Definition of Any Aliase, Function, or Script!             #
 ################################################################################
 alias k='gitk --all --full-history --select-commit=$(git rev-parse HEAD) & disown'
 alias gh='gittyup .'
@@ -41,18 +35,42 @@ alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
 # move to the top-level directory of the current git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
 
-################################################################################
-# GNU / Linux
-################################################################################
-# There are so many god damn aliases and scripts, it can get confusing.
-# This function tells you what the alias OR script does.
-function bw(){
-    if alias "$1" &>/dev/null; then     # If the alias exists:
-        alias "$1"                          # print it
-    else                                # otherwise
-        bat $(which "$1")                   # it's probably a script - try to find & print it
+# Example: To see what the chowmain command does, run `cw chowmain` in a terminal
+function cw()
+{
+    if alias "$1" &>/dev/null; then
+        alias "$1"
+        return
+    fi
+    function_definition=$(declare -f "$1")
+    if [ "$function_definition" != "" ]; then
+        echo "$function_definition"
+    else
+        cat $(which "$1")
     fi
 }
+
+# pretty version of cw
+function bw(){
+    if alias "$1" &>/dev/null; then
+        cw "$1" | bat --style=plain
+        return
+    fi
+    function_definition=$(declare -f "$1")
+    if [ "$function_definition" != "" ]; then
+        echo "$function_definition" | bat
+    else
+        bat $(which "$1") --style header-filename,grid
+    fi
+}
+
+alias rlal='source $HOME/.alias.sh'         # ReLoad ALiases
+alias ea="e $HOME/.alias.sh && rlal"        # Edit Aliases
+
+
+################################################################################
+#                               GNU / Linux                                    #
+################################################################################
 
 # quick cd into install script directories
 alias cdi="cd $CFGDIR/install"
@@ -137,17 +155,62 @@ function pdfd() {
 
 alias o='xdg-open'
 
-################################################################################
-# Windows
-################################################################################
-if [ $sysname == "windows" ]; then
-    alias lsu='usbipd wsl list | tee >(wc)'
-    unalias ls
-    alias ls='ls --color=auto --group-directories-first'
-fi
 
 ################################################################################
-# sha
+#                                    C                                         #
+################################################################################
+alias m='make'
+#alias m="make -j $(nproc)"
+alias makenew='make clean && m'
+alias bmake="bear -- make" # generates compile_commands.json for clangd
+alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
+alias mf='m && flash'
+alias mt='m test && cp test/build/compile_commands.json compile_commands.json'
+
+
+################################################################################
+#                                    git                                       #
+################################################################################
+alias k='gitk --all --full-history --select-commit=$(mit) & disown'
+alias gh='gittyup .'
+alias s="git status"
+alias ga='git add'
+alias gr='git reset'
+alias a="ga -A;s"
+alias ags='a; git stash'
+alias c="git commit"
+alias b="git branch"
+alias ch="git checkout"
+alias chowmain="ch main || ch master && pulp"
+alias remain='git rebase main'
+alias pull="git pull"
+alias pulp='git pull --prune'
+alias push="git push"
+alias pfwl="git push --force-with-lease"
+alias pushsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias pp="s;line;pull;push;line;s"
+alias gms='git maintenance start'
+alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP"'
+alias gd="git diff"
+alias giturl="git remote get-url origin | tee >(clipin)"
+alias gsui='git submodule update --init --recursive'
+alias rebase='git rebase'
+alias grc='git rebase --continue'
+alias gcpc='git cherry-pick --continue'
+alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
+# move to the top-level directory of the current git repo
+alias cdr='cd $(git rev-parse --show-toplevel)'
+
+
+################################################################################
+#                                   python                                     #
+################################################################################
+alias py="python"
+alias py3="python3"
+
+
+################################################################################
+#                                    SHA                                       #
 ################################################################################
 alias sha1='sha1sum'
 alias sha224='sha224sum'
@@ -158,30 +221,13 @@ alias sha='shasum'
 
 
 ################################################################################
-# python
-################################################################################
-alias py="python"
-alias py3="python3"
-
-
-################################################################################
-# C
-################################################################################
-alias m='make'
-#alias m="make -j $(nproc)"
-alias makenew='make clean && m'
-alias bmake="bear -- make" # generates compile_commands.json for clangd
-alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
-alias mf='m && flash'
-alias mt='m test && cp test/build/compile_commands.json compile_commands.json'
-
-################################################################################
-# home networking
+#                             home networking                                  #
 ################################################################################
 alias nas="ssh ryan@server"
 
+
 ################################################################################
-# pd
+#                                redacted                                      #
 ################################################################################
 alias ed='echo DEBUG = $DEBUG; echo DEVKIT = $DEVKIT; echo ELF_FILE = $ELF_FILE'
 alias ed0='unset DEBUG; ed'
@@ -189,3 +235,13 @@ alias ed1='export DEBUG=1; ed'
 alias eddev='export DEVKIT=1; export ELF_FILE="build/app/app"; ed1'
 alias edc='unset DEBUG; unset DEVKIT; unset ELF_FILE; ed'
 alias dgt='dronecan_gui_tool &'
+
+
+################################################################################
+#                                 Windows                                      #
+################################################################################
+if [ $sysname == "windows" ]; then
+    alias lsu='usbipd wsl list | tee >(wc)'
+    unalias ls
+    alias ls='ls --color=auto --group-directories-first'
+fi

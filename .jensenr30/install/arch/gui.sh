@@ -1,11 +1,11 @@
 #!/bin/bash
 # basic GUI programs I want on every linux desktop environment
-source .install_aliases.sh
+source .install-helper
 
 pacman-full-system-upgrade
 
 i xorg
-i dmenu
+y albert # i dmenu
 i terminator
 i alacritty
 i --asdeps tk # for gitk to work
