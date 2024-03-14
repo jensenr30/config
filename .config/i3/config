@@ -3,7 +3,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec_always killall -9 polybar
-exec_always k9 picom
+exec_always killall -9 picom
+exec_always killall -9 albert
+
 exec_always ~/.screenlayout/$HOSTNAME.sh
 # notifications
 exec_always dunst
@@ -11,6 +13,11 @@ exec_always lxpolkit
 # desktop background
 exec_always feh --bg-scale "$HOME/.jensenr30/$HOSTNAME/desktop.jpg"
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf
+
+# program launcher
+exec_always albert
+bindsym $mod+p exec --no-startup-id start-menu
+# bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
 
 # disable window borders
 for_window [class=.*] border pixel 0
@@ -83,9 +90,6 @@ focus_on_window_activation focus
 
 # kill focused window
 bindsym $mod+$alt+w kill
-# start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id start-menu
-# bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
 
 bindsym $mod+Ctrl+Return exec --no-startup-id explorer
 # A more modern dmenu replacement is rofi:
