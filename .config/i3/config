@@ -5,13 +5,14 @@
 exec_always killall -9 polybar
 exec_always killall -9 picom
 exec_always killall -9 albert
+exec_always sleep 0.5
 
 exec_always ~/.screenlayout/$HOSTNAME.sh
 # notifications
 exec_always dunst
 exec_always lxpolkit
 # desktop background
-exec_always feh --bg-scale "$HOME/.jensenr30/$HOSTNAME/desktop.jpg"
+exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/desktop.jpg"
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf
 
 # program launcher
@@ -25,7 +26,8 @@ for_window [class=.*] border pixel 0
 set $mod Mod4
 set $alt Mod1
 
-workspace_layout stacking
+# default stacking stacked tabbed
+workspace_layout default
 
 # set monitors to turn off ater 30 minutes of inactivity
 #exec xset dpms 0 0 1800
