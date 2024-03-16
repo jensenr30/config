@@ -63,6 +63,9 @@
 !.ssr/output-profiles/
 !.ssr/output-profiles/*
 
+!.vscode/
+!.vscode/settings.json
+
 !AppData/
 !AppData/Roaming/
 !AppData/Roaming/Microsoft/
