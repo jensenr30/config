@@ -35,6 +35,10 @@
 !.config/alacritty/
 !.config/alacritty/*
 
+!.config/Code
+!.config/Code/User/
+!.config/Code/User/settings.json
+
 !.config/htop/
 !.config/htop/htoprc
 !.config/i3
