@@ -198,10 +198,6 @@ unset color_prompt
 cd "$start_directory"
 unset verbose
 
-# TODO: why does this need to be in closing statements?  or even in this file at all?  why not .profile?
-# also
-source /usr/share/nvm/init-nvm.sh
-
 # p.s. it's nice to start git-bash at home
 if [ "$sysname" = windows ]; then
     if [ "$start_directory" = "/" ]; then

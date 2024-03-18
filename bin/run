@@ -9,4 +9,3 @@ else
     echo "Your current working directory is not on the list!"
     echo "See $(realpath $0)"
 fi
-
