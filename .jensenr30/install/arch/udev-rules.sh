@@ -3,6 +3,6 @@
 sudo cp udev-rules/* /etc/udev/rules.d/
 sudo udevadm control --reload
 
-echo "echo /etc/udev/rules.d/"
-ls -lA /etc/udev/rules.d/
-
+cmd='ls -lA /etc/udev/rules.d/'
+echo "$cmd"
+$cmd

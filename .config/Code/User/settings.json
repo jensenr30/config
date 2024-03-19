@@ -204,7 +204,7 @@
     "git.openRepositoryInParentFolders": "always",
     "editor.stickyTabStops": true,
     "C_Cpp.intelliSenseEngine": "disabled",
-    "clangd.path": "/home/ryan/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/17.0.3/clangd_17.0.3/bin/clangd",
+    "clangd.path": "c:\\Users\\ryan.jensen\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\17.0.3\\clangd_17.0.3\\bin\\clangd.exe",
     "git-graph.date.format": "ISO Date & Time",
     "gitlens.views.commitDetails.files.layout": "tree",
     "todohighlight.include": [

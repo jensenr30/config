@@ -9,6 +9,10 @@ set -o vi # vim motions in bash - now you can get stuck in vim right on the comm
 # asldfalsdkfja
 #
 
+if test -z $sysname; then
+    source "$HOME/.profile"
+fi
+
 start_directory=$(pwd) # don't cause a net change in directory by running this script
 shopt -s globstar # "**" in a pathname expansion context will match all files and 0 or more dirs and subdirs.
 shopt -s expand_aliases # aliases work in non-interactive shells

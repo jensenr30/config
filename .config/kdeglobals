@@ -1,0 +1,4 @@
+# fix dolphin background color because it doesn't read the background color from qt theme!!!
+[Colors:View]
+BackgroundNormal=#2E2E2E
+

@@ -44,6 +44,7 @@
 !.config/i3
 .config/i3/*
 !.config/i3/config
+!.config/kdeglobals
 !.config/polybar
 !.config/polybar/config.ini
 !.config/nvim/
@@ -51,6 +52,9 @@
 !.config/nvim_disabled/
 !.config/nvim_disabled/**
 .config/nvim/plugin/**
+!.config/obs-studio/
+!.config/obs-studio/basic/
+!.config/obs-studio/basic/**
 !.config/qt5ct/
 !.config/qt5ct/qt5ct.conf
 !.config/REAPER

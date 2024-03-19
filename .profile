@@ -27,6 +27,8 @@ if [ $sysname == "linux" ]; then
         distro="deb"
     elif [ "$distro" == "Arch" ]; then
         distro="arch"
+    elif [ "$distro" == "EndeavourOS" ]; then
+        distro="arch"
     fi
     export distro
 fi

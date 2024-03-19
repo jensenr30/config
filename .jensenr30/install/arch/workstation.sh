@@ -1,114 +1,116 @@
 #!/bin/bash
 # install programs for my primary workstation
-source .install_aliases.sh
-pacman-full-system-upgrade
+source install-helper.sh
+
+# disable EndeavourOS's firewall
+# this is necessary for things like network printing to work.
+$sys disable --now firewalld
+
+# package managers
+$i flatpak
 
 # internet
-i firefox
-i torbrowser-launcher
-i qbittorrent
+$i firefox
+$i torbrowser-launcher
+$i qbittorrent
 
 # office
-i fbreader
-i xournalpp # annotating PDFs and adding signatures.
+$i fbreader
+$i xournalpp # annotating PDFs and adding signatures.
 # libre office
-i libreoffice
+$i libreoffice
 # libre office (spell check)
-i hunspell
-i hunspell-en_us
-
-
-# printing
-i cups cups-pdf # printing system
-enable cups.service
-i avahi
-i nss-mdns
-enable avahi-daemon.service
-# refer to the arch wiki, these instructions may be out of date:
-# https://wiki.archlinux.org/title/Avahi#Hostname_resolution
-# Then, edit the file /etc/nsswitch.conf and change the hosts line to include mdns_minimal [NOTFOUND=return] before resolve and dns:
-# hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns
-sudo systemctl restart cups.service
-# this final command makes the printer visible to applications on your workstation:
-avahi-discover
+$i hunspell
+$i hunspell-en_us
 
 # fonts
-i ttf-inconsolata-nerd
+$i ttf-inconsolata-nerd
 
 # media editing
-i gimp
-i audacity
-i kdenlive
-i obs-studio
-y gcolor2
-i xf86-input-wacom
-y wacom-utility
+$i gimp
+$i inkscape
+$i audacity
+$i kdenlive
+$i obs-studio
+$y gcolor2
+$i xf86-input-wacom
+$y wacom-utility
 
 # cd ripping
-y abcde
-i --asdeps glyr flac cdparanoia lame opus-tools vorbisgain
-y --asdeps python-eyed3
+$y abcde
+$i --asdeps glyr flac cdparanoia lame opus-tools vorbisgain
+$y --asdeps python-eyed3
 
 # programming
-i kdiff3
-y visual-studio-code-bin
-y gnome-keyring # for vs code
+$i kdiff3
+$y visual-studio-code-bin
+$y gnome-keyring # for vs code
 #i rustc  # TODO: fix this
 #i cargo
-p pre-commit
-i python-pdm
-i doxygen
+$p pre-commit
+$i python-pdm
+$i doxygen
 
 # installing shit for mcuxpresso IDE
-y python38
-y ncurses5-compat-libs
+$y python38
+$y ncurses5-compat-libs
 
 # C programming
-i gdb
-i check
-i cppcheck
-i lcov
-i make cmake
-i clang
-i multilib-devel   # 32-bit libraries for compiling for ARM etc.
-i openocd
-i bear # used generate compilation database for clang tooling
+$i gdb
+$i check
+$i cppcheck
+$i lcov
+$i make cmake
+$i clang
+$i multilib-devel   # 32-bit libraries for compiling for ARM etc.
+$i openocd
+$i bear # used generate compilation database for clang tooling
 
 # Embedded systems
-yay -S can-utils
+$y can-utils
 # this is for dronecan_gui_tool:
-i python-pip python-setuptools python-wheel
-i python-numpy python-pyqt5
-i --asdeps qt5-svg
-pipx install dronecan
-pipx install git+https://github.com/DroneCAN/gui_tool@master
+$i python-pip python-setuptools python-wheel
+$i python-numpy python-pyqt5
+$i --asdeps qt5-svg
+$p dronecan
+$p git+https://github.com/DroneCAN/gui_tool@master
 # arm GNU build chain
-i arm-none-eabi-gcc arm-none-eabi-gdb
-i --asdeps arm-none-eabi-newlib
+$i arm-none-eabi-gcc arm-none-eabi-gdb
+$i --asdeps arm-none-eabi-newlib
 # for building unity tests, IIRC
-i ruby rubygems
+$i ruby rubygems
 
 # electronics
-i pulseview
+$i pulseview
 
 # CAD
-i freecad
-i kicad
-i --asdeps kicad-library kicad-library-3d
+$i freecad
+$i kicad
+$i --asdeps kicad-library kicad-library-3d
 
 # misc
-i piper
-i wine
-i shutter
-y qdirstat
-y fsearch
+$i discord
+$y fsearch
+$i piper
+$y qdirstat
+$i shutter
+$i wine
 
 # benchmarking
-y geekbench
+$y geekbench
 
 # usbtop
-y usbtop
+$y usbtop
 sudo modprobe usbmon
 
 # via (keyboard customization)
-y via-bin
+$y via-bin
+
+# themes
+$flat flathub org.kde.KStyle.Adwaita
+$i lxappearance || $i lxappearance-gtk3
+$i qt5ct qt6ct
+$i gnome-themes-extra
+# TODO: is this necessary?  -git?  can't i just get these from the arch repos?
+$y adwaita-qt4 adwaita-qt5-git adwaita-qt6-git
+$i papirus-icon-theme
