@@ -32,6 +32,9 @@ $i inkscape
 $i audacity
 $i kdenlive
 $i obs-studio
+$i v4l2loopback-dkms
+# TODO: this shouldn't be necessary if I get my polkit shit working
+#sudo modprobe v4l2loopback
 $y gcolor2
 $i xf86-input-wacom
 $y wacom-utility

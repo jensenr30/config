@@ -15,6 +15,6 @@ echo "copying $orig to $mine"
 cp "$orig" "$mine"
 
 sed -i "/twm &/,$ d" "$HOME/.xinitrc" && bat ~/.xinitrc
-echo "source .xinitrc-ryan" >> "$mine"
+echo 'source "$HOME/.xinitrc-ryan"' >> "$mine"
 echo "Diff between $orig and $mine:"
 diff --color=auto /etc/X11/xinit/xinitrc ~/.xinitrc
