@@ -34,11 +34,10 @@
 !.config/.gtktermrc
 !.config/alacritty/
 !.config/alacritty/*
-
+!.config/albert.conf
 !.config/Code
 !.config/Code/User/
 !.config/Code/User/settings.json
-
 !.config/htop/
 !.config/htop/htoprc
 !.config/i3

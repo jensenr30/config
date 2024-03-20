@@ -9,14 +9,14 @@ exec_always sleep 0.5
 
 exec_always ~/.screenlayout/$HOSTNAME.sh
 # notifications
-exec_always dunst
-exec_always lxpolkit
+exec_always dunst &
+exec_always lxpolkit &
 # desktop background
 exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/desktop.jpg"
-exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf
+exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
 
 # program launcher
-exec_always albert
+exec_always albert &
 bindsym $mod+p exec --no-startup-id start-menu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
 
