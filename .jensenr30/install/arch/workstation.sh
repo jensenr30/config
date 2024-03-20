@@ -28,11 +28,15 @@ $i ttf-inconsolata-nerd
 
 # media editing
 $i gimp
+# fix gimp so it shows up in launcher search
+sudo sed -i "s/Name=GNU Image Manipulation Program/Name=GIMP - GNU Image Manipulation Program/g" \
+    /usr/share/applications/gimp.desktop
 $i inkscape
 $i audacity
 $i kdenlive
 $i obs-studio
 $i v4l2loopback-dkms
+$y simplescreenrecorder
 $y gcolor2
 $i xf86-input-wacom
 $y wacom-utility
