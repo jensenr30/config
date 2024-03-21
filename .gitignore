@@ -34,12 +34,16 @@
 !.config/.gtktermrc
 !.config/alacritty/
 !.config/alacritty/*
-
+!.config/albert.conf
+!.config/Code
+!.config/Code/User/
+!.config/Code/User/settings.json
 !.config/htop/
 !.config/htop/htoprc
 !.config/i3
 .config/i3/*
 !.config/i3/config
+!.config/kdeglobals
 !.config/polybar
 !.config/polybar/config.ini
 !.config/nvim/
@@ -47,17 +51,27 @@
 !.config/nvim_disabled/
 !.config/nvim_disabled/**
 .config/nvim/plugin/**
+!.config/obs-studio/
+!.config/obs-studio/basic/
+!.config/obs-studio/basic/**
 !.config/qt5ct/
 !.config/qt5ct/qt5ct.conf
 !.config/REAPER
 !.config/REAPER/Configurations
 !.config/REAPER/Configurations/*
+!.config/vis/
+!.config/vis/config
+!.config/vis/colors/
+!.config/vis/colors/**
 !.screenlayout/
 !.screenlayout/**
 
 !.ssr/
 !.ssr/output-profiles/
 !.ssr/output-profiles/*
+
+!.vscode/
+!.vscode/settings.json
 
 !AppData/
 !AppData/Roaming/

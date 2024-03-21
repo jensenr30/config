@@ -3,10 +3,14 @@
 r="$HOME/repos"
 
 if [ $(pwd) = "$r/gittyup" ]; then
-    echo "running gittyup..."
-    ./build/release/gittyup "$r/test-repo"
+    if [[ -z "${DEBUG}" ]]; then
+        echo "running gittyup Release"
+        ./build/release/gittyup "$r/test-repo"
+    else
+        echo "running gittyup Debug"
+        ./build/debug/gittyup "$r/test-repo"
+    fi
 else
     echo "Your current working directory is not on the list!"
     echo "See $(realpath $0)"
 fi
-

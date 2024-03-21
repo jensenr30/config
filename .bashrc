@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 set e+ # a single error will not crash my .bashrc
 set -o vi # vim motions in bash - now you can get stuck in vim right on the command line!
 
@@ -7,6 +8,10 @@ set -o vi # vim motions in bash - now you can get stuck in vim right on the comm
 # asdfkalsdkfalsdjkf
 # asldfalsdkfja
 #
+
+if test -z $sysname; then
+    source "$HOME/.profile"
+fi
 
 start_directory=$(pwd) # don't cause a net change in directory by running this script
 shopt -s globstar # "**" in a pathname expansion context will match all files and 0 or more dirs and subdirs.
@@ -196,10 +201,6 @@ unset color_prompt
 # and know the place for the first time
 cd "$start_directory"
 unset verbose
-
-# TODO: why does this need to be in closing statements?  or even in this file at all?  why not .profile?
-# also
-source /usr/share/nvm/init-nvm.sh
 
 # p.s. it's nice to start git-bash at home
 if [ "$sysname" = windows ]; then

@@ -1,2 +1,0 @@
-https://wiki.archlinux.org/title/Official_repositories#multilib
-

@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 
 ################################################################################
@@ -124,7 +124,8 @@ mkcd() {
 }
 
 #finders
-alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
+alias ff='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
+alias f='find . -iname'
 alias cdf='cd $(fz) && lv'
 # fuzzy find in your command history :)
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tr -d "\n" | tee >(clipin)'
