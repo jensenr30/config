@@ -376,5 +376,11 @@
         "**/.cache": true,
         "build": true,
         "test/build": true
-    }
+    },
+    "makefile.configurations": [
+
+    ],
+    "makefile.configureAfterCommand": false,
+    "makefile.configureOnEdit": false,
+    "makefile.configureOnOpen": false
 }

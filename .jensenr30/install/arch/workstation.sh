@@ -50,15 +50,15 @@ $y --asdeps python-eyed3
 $i kdiff3
 $y visual-studio-code-bin
 $y gnome-keyring # for vs code
-#i rustc  # TODO: fix this
-#i cargo
+#$i rustc  # TODO: fix this
+#$i cargo
 $p pre-commit
 $i python-pdm
 $i doxygen
 
-# installing shit for mcuxpresso IDE
-$y python38
-$y ncurses5-compat-libs
+# # installing shit for mcuxpresso IDE
+# $y python38
+# $y ncurses5-compat-libs
 
 # C programming
 $i gdb

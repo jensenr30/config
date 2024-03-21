@@ -59,6 +59,10 @@
 !.config/REAPER
 !.config/REAPER/Configurations
 !.config/REAPER/Configurations/*
+!.config/vis/
+!.config/vis/config
+!.config/vis/colors/
+!.config/vis/colors/**
 !.screenlayout/
 !.screenlayout/**
 
