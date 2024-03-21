@@ -70,6 +70,7 @@ $i clang
 $i multilib-devel   # 32-bit libraries for compiling for ARM etc.
 $i openocd
 $i bear # used generate compilation database for clang tooling
+$i sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
 
 # Embedded systems
 $y can-utils
