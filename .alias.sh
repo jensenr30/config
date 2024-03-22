@@ -32,7 +32,7 @@ alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
 alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
-alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
+alias setbranch='git branch --force' # <branch-name> [<new-tip-commit>]
 # move to the top-level directory of the current git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
 
