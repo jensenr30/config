@@ -37,9 +37,16 @@ ratbagctl $DEV rate set 1000
 
 # e /usr/include/linux/input-event-codes.h
 echo "setting macro keys..."
-# ratbagctl $DEV button 7 action set macro +KEY_F12 -KEY_F12
-ratbagctl $DEV button 7 action set macro +KEY_RIGHTALT +KEY_RIGHTSHIFT +KEY_I -KEY_I -KEY_RIGHTALT -KEY_RIGHTSHIFT
+
+# back button
+ratbagctl $DEV button 3 action set macro +KEY_LEFTALT +KEY_LEFT -KEY_LEFT -KEY_LEFTALT
+# forward button
+ratbagctl $DEV button 4 action set macro +KEY_LEFTALT +KEY_RIGHT -KEY_RIGHT -KEY_LEFTALT
+# just behind the forward most button
 ratbagctl $DEV button 6 action set macro +KEY_RIGHTCTRL +KEY_RIGHTSHIFT +KEY_F -KEY_F -KEY_RIGHTCTRL -KEY_RIGHTSHIFT
+# forward most button
+ratbagctl $DEV button 7 action set macro +KEY_RIGHTALT +KEY_RIGHTSHIFT +KEY_I -KEY_I -KEY_RIGHTALT -KEY_RIGHTSHIFT
+# center button
 ratbagctl $DEV button 8 action set special resolution-cycle-up
 
 LEDs=$(ratbagctl $DEV info | grep -i "Number of Leds: " | sed "s/.*Number of Leds: //g")
@@ -59,5 +66,3 @@ fi
 
 # verify config
 ratbagctl "$DEV" info
-
-
