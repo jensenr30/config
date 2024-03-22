@@ -9,6 +9,9 @@ if [ $(pwd) = "$r/gittyup" ]; then
     else
         bear -- ninja -C build/debug
     fi
+elif [ $(pwd) = "$r/cli-visualizer" ]; then
+    echo "building cli-visualizer..."
+    ./build.sh
 else
     echo "Your current working directory is not on the list!"
     echo "See $(realpath $0)"
