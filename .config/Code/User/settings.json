@@ -382,5 +382,5 @@
     "makefile.configureAfterCommand": false,
     "makefile.configureOnEdit": false,
     "makefile.configureOnOpen": false,
-    "terminal.integrated.fontSize": 17
+    "terminal.integrated.fontSize": 15
 }
