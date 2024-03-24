@@ -2,7 +2,7 @@
 # colors.scheme=jensenr30
 
 #Refresh rate of the visualizers. A really high refresh rate may cause screen tearing. Default is 20.
-visualizer.fps=60
+visualizer.fps=30
 
 #Defaults to "/tmp/mpd.fifo"
 mpd.fifo.path
