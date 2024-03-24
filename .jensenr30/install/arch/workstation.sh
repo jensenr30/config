@@ -126,6 +126,7 @@ sudo modprobe usbmon
 # via (keyboard customization)
 $y via-bin
 
+$y etcher-bin
 $i virtualbox
 
 #===============================================================================
