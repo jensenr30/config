@@ -37,7 +37,7 @@ visualizers=spectrum,ellipse,lorenz
 
 #The amount of space between each bar in the spectrum visualizer. Defaults to 1. It's possible to set this to
 #zero to have no space between bars
-visualizer.spectrum.bar.spacing=1
+visualizer.spectrum.bar.spacing=0
 
 #Available smoothing options are monstercat, sgs, none. Defaults to sgs.
 # visualizer.spectrum.smoothing.mode=monstercat

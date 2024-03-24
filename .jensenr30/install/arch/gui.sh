@@ -4,7 +4,8 @@ source install-helper.sh
 
 $i xorg
 $i polybar
-$y albert # i dmenu
+$i dmenu
+$y albert
 $i terminator
 $i alacritty
 $i --asdeps tk # for gitk to work
@@ -40,6 +41,9 @@ $i pulseaudio-equalizer-ladspa
 
 # fix font issues on firefox where special japanese / chinese character don't render
 $i noto-fonts-cjk
+
+# emoji selector
+$y emote
 
 # notification server
 $i libnotify dunst
