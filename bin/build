@@ -13,7 +13,7 @@ elif [ $(pwd) = "$r/cli-visualizer" ]; then
     echo "building cli-visualizer..."
     ./build.sh
 else
-    echo "Your current working directory is not on the list!"
-    echo "See $(realpath $0)"
+    echo "Your current working directory is not on the list! See $(realpath $0)"
+    echo "Guessing 'make'..."
+    bear -- make
 fi
-

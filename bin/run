@@ -17,7 +17,10 @@ elif [ $(pwd) = "$r/cli-visualizer" ]; then
     else
         echo "TODO"
     fi
+elif [ $(pwd) = "$r/fractile" ]; then
+    echo "running fractile..."
+    ./build/fractile
 else
-    echo "Your current working directory is not on the list!"
-    echo "See $(realpath $0)"
+    flash $@ || echo "Your current working directory is not on the list!  See $(realpath $0)"
+    exit 1
 fi
