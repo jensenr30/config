@@ -53,7 +53,7 @@ cd tile-venture
 git fetch up || git remote add up https://github.com/JPisaBrony/TileVenture.git
 
 $cdrepos
-gc git@github.com:dpayne/cli-visualizer.git cli-visualizer
+gc git@github.com:jensenr30/cli-visualizer-sdl.git cli-visualizer-sdl
 
 $cdrepos
 gc "$HOME" test-repo

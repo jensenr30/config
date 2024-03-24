@@ -10,7 +10,7 @@ if [ $(pwd) = "$r/gittyup" ]; then
         echo "running gittyup Debug"
         ./build/debug/gittyup "$r/test-repo"
     fi
-elif [ $(pwd) = "$r/cli-visualizer" ]; then
+elif [ $(pwd) = "$r/cli-visualizer-sdl" ]; then
     if [[ -z "${DEBUG}" ]]; then
         echo "running vis Release"
         ./build/vis

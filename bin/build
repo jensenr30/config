@@ -9,7 +9,7 @@ if [ $(pwd) = "$r/gittyup" ]; then
     else
         bear -- ninja -C build/debug
     fi
-elif [ $(pwd) = "$r/cli-visualizer" ]; then
+elif [ $(pwd) = "$r/cli-visualizer-sdl" ]; then
     echo "building cli-visualizer..."
     ./build.sh
 else
