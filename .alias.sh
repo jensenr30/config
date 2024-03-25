@@ -4,38 +4,6 @@
 ################################################################################
 #         Print the Definition of Any Aliase, Function, or Script!             #
 ################################################################################
-alias k='gitk --all --full-history --select-commit=$(git rev-parse HEAD) & disown'
-alias gh='gittyup .'
-alias s="git status"
-alias ga='git add'
-alias gr='git reset'
-alias a="ga -A;s"
-alias ags='a; git stash'
-alias c="git commit"
-alias b="git branch"
-alias ch="git checkout"
-alias chm='ch main || ch master'
-alias chowmain="chm && pulp"
-alias gf='git fetch'
-alias remain='git rebase main'
-alias pull="git pull"
-alias pulp='git pull --prune'
-alias push="git push"
-alias pfwl="git push --force-with-lease"
-alias pushsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
-alias pp="s;line;pull;push;line;s"
-alias gms='git maintenance start'
-alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP"'
-alias gd="git diff"
-alias giturl="git remote get-url origin | tee >(clipin)"
-alias gsui='git submodule update --init --recursive'
-alias rebase='git rebase'
-alias grc='git rebase --continue'
-alias gcpc='git cherry-pick --continue'
-alias setbranch='git branch --force' # <branch-name> [<new-tip-commit>]
-# move to the top-level directory of the current git repo
-alias cdr='cd $(git rev-parse --show-toplevel)'
-
 # Example: To see what the chowmain command does, run `cw chowmain` in a terminal
 function cw()
 {
@@ -178,11 +146,13 @@ alias s="git status"
 alias ga='git add'
 alias gr='git reset'
 alias a="ga -A;s"
+alias gf='git fetch'
 alias ags='a; git stash'
 alias c="git commit"
 alias b="git branch"
 alias ch="git checkout"
-alias chowmain="ch main || ch master && pulp"
+alias chm='ch main || ch master'
+alias chowmain="chm && pulp"
 alias remain='git rebase main'
 alias pull="git pull"
 alias pulp='git pull --prune'
@@ -198,7 +168,6 @@ alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
 alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
-alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
 # move to the top-level directory of the current git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
 
