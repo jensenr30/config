@@ -124,8 +124,7 @@ mkcd() {
 }
 
 #finders
-alias ff='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
-alias f='find . -iname'
+alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
 alias cdf='cd $(fz) && lv'
 # fuzzy find in your command history :)
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
@@ -237,6 +236,15 @@ alias ed1='export DEBUG=1; ed'
 alias eddev='export DEVKIT=1; export ELF_FILE="build/app/app"; ed1'
 alias edc='unset DEBUG; unset DEVKIT; unset ELF_FILE; ed'
 alias dgt='dronecan_gui_tool &'
+
+
+################################################################################
+#                               Arch Linux                                     #
+################################################################################
+# this shouldn't be necessary... oh well
+if [ "$distro" == "arch" ]; then
+    alias neofetch='neofetch --ascii_distro Arch'
+fi
 
 
 ################################################################################

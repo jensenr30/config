@@ -1,8 +1,8 @@
 #Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. Default is "colors"
-colors.scheme=jensenr30
+# colors.scheme=jensenr30
 
 #Refresh rate of the visualizers. A really high refresh rate may cause screen tearing. Default is 20.
-visualizer.fps=20
+visualizer.fps=30
 
 #Defaults to "/tmp/mpd.fifo"
 mpd.fifo.path
@@ -37,7 +37,7 @@ visualizers=spectrum,ellipse,lorenz
 
 #The amount of space between each bar in the spectrum visualizer. Defaults to 1. It's possible to set this to
 #zero to have no space between bars
-visualizer.spectrum.bar.spacing=1
+visualizer.spectrum.bar.spacing=0
 
 #Available smoothing options are monstercat, sgs, none. Defaults to sgs.
 # visualizer.spectrum.smoothing.mode=monstercat

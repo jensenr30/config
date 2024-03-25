@@ -14,7 +14,9 @@ $i firefox
 $i torbrowser-launcher
 $i qbittorrent
 
+#===============================================================================
 # office
+#===============================================================================
 $i fbreader
 $i xournalpp # annotating PDFs and adding signatures.
 # libre office
@@ -26,7 +28,9 @@ $i hunspell-en_us
 # fonts
 $i ttf-inconsolata-nerd
 
+#===============================================================================
 # media editing
+#===============================================================================
 $i gimp
 # fix gimp so it shows up in launcher search
 sudo sed -i "s/Name=GNU Image Manipulation Program/Name=GIMP - GNU Image Manipulation Program/g" \
@@ -46,7 +50,9 @@ $y abcde
 $i --asdeps glyr flac cdparanoia lame opus-tools vorbisgain
 $y --asdeps python-eyed3
 
+#===============================================================================
 # programming
+#===============================================================================
 $i kdiff3
 $y visual-studio-code-bin
 $y gnome-keyring # for vs code
@@ -55,12 +61,16 @@ $y gnome-keyring # for vs code
 $p pre-commit
 $i python-pdm
 $i doxygen
+# graphics / game / networking
+$i sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
+$i emscripten
+$y nng
 
 # # installing shit for mcuxpresso IDE
 # $y python38
 # $y ncurses5-compat-libs
 
-# C programming
+# C
 $i gdb
 $i check
 $i cppcheck
@@ -70,9 +80,11 @@ $i clang
 $i multilib-devel   # 32-bit libraries for compiling for ARM etc.
 $i openocd
 $i bear # used generate compilation database for clang tooling
-$i sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
 
+
+#===============================================================================
 # Embedded systems
+#===============================================================================
 $y can-utils
 # this is for dronecan_gui_tool:
 $i python-pip python-setuptools python-wheel
@@ -94,7 +106,9 @@ $i freecad
 $i kicad
 $i --asdeps kicad-library kicad-library-3d
 
+#===============================================================================
 # misc
+#===============================================================================
 $i discord
 $y fsearch
 $i piper
@@ -112,7 +126,12 @@ sudo modprobe usbmon
 # via (keyboard customization)
 $y via-bin
 
+$y etcher-bin
+$i virtualbox
+
+#===============================================================================
 # themes
+#===============================================================================
 $flat flathub org.kde.KStyle.Adwaita
 $i lxappearance || $i lxappearance-gtk3
 $i qt5ct qt6ct

@@ -86,6 +86,7 @@ bindsym $mod+Return exec term
 
 bindsym $mod+Ctrl+f exec fsearch
 bindsym $mod+f exec dolphin
+bindsym $mod+$alt+e exec emote
 bindsym $mod+e exec term -e e
 
 focus_on_window_activation focus

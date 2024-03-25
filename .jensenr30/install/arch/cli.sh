@@ -24,6 +24,8 @@ $i base-devel
 $i pacman-contrib # for pactree
 $i arch-install-scripts # for genfstab
 $y downgrade
+# for configuring installation media
+$i syslinux mtools
 
 # numlock always ON
 $y systemd-numlockontty

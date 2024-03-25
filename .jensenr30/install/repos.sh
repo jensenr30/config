@@ -33,7 +33,7 @@ gc $base/fractile.git fractile
 $cdrepos
 gc $base/Gittyup.git gittyup
 cd gittyup
-git remote add up https://github.com/Murmele/Gittyup.git
+git fetch up || git remote add up https://github.com/Murmele/Gittyup.git
 
 $cdrepos
 gc $base/GravityChaos.git gravity-chaos
@@ -50,7 +50,16 @@ gc $base/TAoE3Solutions.git TAoE3Solutions
 $cdrepos
 gc $base/TileVenture.git tile-venture
 cd tile-venture
-git remote add up https://github.com/JPisaBrony/TileVenture.git
+git fetch up || git remote add up https://github.com/JPisaBrony/TileVenture.git
 
+$cdrepos
+gc git@github.com:jensenr30/cli-visualizer-sdl.git cli-visualizer-sdl
+
+$cdrepos
+gc "$HOME" test-repo
+gc "$HOME" test-remote
+cd test-repo
+git remote remove origin
+git remote add origin ../test-remote
 
 echo repos.sh done.
