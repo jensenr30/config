@@ -33,6 +33,7 @@ $sys enable --now numLockOnTty
 
 # git
 $i git
+$i git-delta
 
 # coreutils
 $i bat
