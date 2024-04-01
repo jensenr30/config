@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ "$sysname" == "windows" ]; then
+    viewer='bat'
+else
+    viewer='bat --style rule'
+fi
+
+git diff -U6 --color=always $@ | $viewer
+
