@@ -16,6 +16,7 @@ fi
 export sysname
 export sysname_short
 
+
 #===============================================================================
 # distro
 #===============================================================================
@@ -27,9 +28,12 @@ if [ $sysname == "linux" ]; then
         distro="deb"
     elif [ "$distro" == "Arch" ]; then
         distro="arch"
+    elif [ "$distro" == "EndeavourOS" ]; then
+        distro="arch"
     fi
     export distro
 fi
+
 
 #===============================================================================
 # path
@@ -39,6 +43,7 @@ export PATH="$PATH:$HOME/.nix-profile/bin"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/bin/app"
+export PATH="$PATH:$HOME/bin/c"
 export PATH="$PATH:$HOME/bin/dev"
 export PATH="$PATH:$HOME/bin/git"
 export PATH="$PATH:$HOME/bin/hardware"
@@ -80,6 +85,7 @@ export STM32CubeMX_PATH=$HOME/programs/stm32cubemx
 # Theme
 #===============================================================================
 export QT_QPA_PLATFORMTHEME=qt6ct
+
 
 #===============================================================================
 # color SSH sessions

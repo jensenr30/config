@@ -1,40 +1,9 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 
 ################################################################################
 #         Print the Definition of Any Aliase, Function, or Script!             #
 ################################################################################
-alias k='gitk --all --full-history --select-commit=$(git rev-parse HEAD) & disown'
-alias gh='gittyup .'
-alias s="git status"
-alias ga='git add'
-alias gr='git reset'
-alias a="ga -A;s"
-alias ags='a; git stash'
-alias c="git commit"
-alias b="git branch"
-alias ch="git checkout"
-alias chowmain="ch main || ch master && pulp"
-alias gf='git fetch'
-alias remain='git rebase main'
-alias pull="git pull"
-alias pulp='git pull --prune'
-alias push="git push"
-alias pfwl="git push --force-with-lease"
-alias pushsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
-alias pp="s;line;pull;push;line;s"
-alias gms='git maintenance start'
-alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP"'
-alias gd="git diff"
-alias giturl="git remote get-url origin | tee >(clipin)"
-alias gsui='git submodule update --init --recursive'
-alias rebase='git rebase'
-alias grc='git rebase --continue'
-alias gcpc='git cherry-pick --continue'
-alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
-# move to the top-level directory of the current git repo
-alias cdr='cd $(git rev-parse --show-toplevel)'
-
 # Example: To see what the chowmain command does, run `cw chowmain` in a terminal
 function cw()
 {
@@ -60,7 +29,7 @@ function bw(){
     if [ "$function_definition" != "" ]; then
         echo "$function_definition" | bat
     else
-        bat $(which "$1") --style header-filename,grid
+        bat $(which "$1") --style full
     fi
 }
 
@@ -124,9 +93,9 @@ mkcd() {
 
 #finders
 alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
-alias sd='cd $(fz) && lv'
+alias cdf='cd $(fz) && lv'
 # fuzzy find in your command history :)
-alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tr -d "\n" | tee >(clipin)'
+alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
 
 # greps
 alias grep='grep --color=auto '
@@ -177,11 +146,13 @@ alias s="git status"
 alias ga='git add'
 alias gr='git reset'
 alias a="ga -A;s"
+alias gf='git fetch'
 alias ags='a; git stash'
 alias c="git commit"
 alias b="git branch"
 alias ch="git checkout"
-alias chowmain="ch main || ch master && pulp"
+alias chm='ch main || ch master'
+alias chowmain="chm && pulp"
 alias remain='git rebase main'
 alias pull="git pull"
 alias pulp='git pull --prune'
@@ -191,13 +162,11 @@ alias pushsu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias pp="s;line;pull;push;line;s"
 alias gms='git maintenance start'
 alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP"'
-alias gd="git diff"
 alias giturl="git remote get-url origin | tee >(clipin)"
 alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
 alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
-alias mvb='git branch --force' # <branch-name> [<new-tip-commit>]
 # move to the top-level directory of the current git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
 
@@ -235,6 +204,15 @@ alias ed1='export DEBUG=1; ed'
 alias eddev='export DEVKIT=1; export ELF_FILE="build/app/app"; ed1'
 alias edc='unset DEBUG; unset DEVKIT; unset ELF_FILE; ed'
 alias dgt='dronecan_gui_tool &'
+
+
+################################################################################
+#                               Arch Linux                                     #
+################################################################################
+# this shouldn't be necessary... oh well
+if [ "$distro" == "arch" ]; then
+    alias neofetch='neofetch --ascii_distro Arch'
+fi
 
 
 ################################################################################

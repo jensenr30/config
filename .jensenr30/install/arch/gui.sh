@@ -1,40 +1,52 @@
 #!/bin/bash
 # basic GUI programs I want on every linux desktop environment
-source .install-helper
+source install-helper.sh
 
-pacman-full-system-upgrade
+$i xorg
+$i polybar
+$i dmenu
+$y albert
+$i terminator
+$i alacritty
+$i --asdeps tk # for gitk to work
+$i nm-connection-editor
 
-i xorg
-y albert # i dmenu
-i terminator
-i alacritty
-i --asdeps tk # for gitk to work
-i nm-connection-editor
+$i dolphin
+$i --asdeps konsole # for dolphin's integrated terminal
+$i thunar
+$i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailer
 
-i dolphin
-i --asdeps konsole # for dolphin's integrated terminal
-i thunar
-i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailerf
-
-i keepass xdotool xsel
-i ark p7zip unrar
-y nomacs
-i gparted
+$i keepass xdotool xsel
+$i ark p7zip unrar
+$i gparted
 
 # media consumption
-i vlc
-i mplayer
+$i vlc
+$i mplayer
+$y nomacs
+$y qimgv
 
 # audio
-i pulseaudio
-i pavucontrol
-i pulseaudio-equalizer-ladspa
+# TODO remove:
+# pipewire-pulse conflicts with (replaces?) pulseaudio
+# if test -z $(type -P pipewire-pulse); then
+#     $i pulseaudio
+# fi
+
+# TODO test:
+$i pipewire-pulse || $i pulseaudio
+
+$i pavucontrol
+$i pulseaudio-equalizer-ladspa
 
 # fix font issues on firefox where special japanese / chinese character don't render
-i noto-fonts-cjk
+$i noto-fonts-cjk
+
+# emoji selector
+$y emote
 
 # notification server
-i libnotify dunst
+$i libnotify dunst
 
 # authorization agent & GUI
-i polkit
+$i polkit

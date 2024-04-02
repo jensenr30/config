@@ -3,10 +3,24 @@
 r="$HOME/repos"
 
 if [ $(pwd) = "$r/gittyup" ]; then
-    echo "running gittyup..."
-    ./build/release/gittyup "$r/test-repo"
+    if [[ -z "${DEBUG}" ]]; then
+        echo "running gittyup Release"
+        ./build/release/gittyup "$r/test-repo"
+    else
+        echo "running gittyup Debug"
+        ./build/debug/gittyup "$r/test-repo"
+    fi
+elif [ $(pwd) = "$r/cli-visualizer-sdl" ]; then
+    if [[ -z "${DEBUG}" ]]; then
+        echo "running vis Release"
+        ./build/vis
+    else
+        echo "TODO"
+    fi
+elif [ $(pwd) = "$r/fractile" ]; then
+    echo "running fractile..."
+    ./build/fractile
 else
-    echo "Your current working directory is not on the list!"
-    echo "See $(realpath $0)"
+    flash $@ || echo "Your current working directory is not on the list!  See $(realpath $0)"
+    exit 1
 fi
-
