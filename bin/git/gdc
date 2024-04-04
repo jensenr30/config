@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-git diff --cached -U6
-exit 0
+# TODO: install git-delta on more platforms, then uncomment this:
+# git diff --cached -U6
+# exit 0
 
 # old git diff viewer:
 

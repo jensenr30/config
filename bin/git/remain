@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+if [ `git rev-parse --verify main 2>/dev/null` ]; then
+    echo "main exists"
+elif [ `git rev-parse --verify master 2>/dev/null` ]; then
+    echo "master exists"
+else
+    echo "no primary branch exists!"
+    exit 1
+fi
+
