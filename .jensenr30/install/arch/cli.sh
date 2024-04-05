@@ -33,7 +33,7 @@ $y systemd-numlockontty
 $sys enable --now numLockOnTty
 
 # git
-$i git
+# $i git
 $i git-delta
 
 # coreutils
