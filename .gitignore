@@ -49,6 +49,8 @@
 !.config/kdeglobals
 !.config/polybar
 !.config/polybar/config.ini
+!.config/nixpkgs/
+!.config/nixpkgs/*
 !.config/nvim/
 !.config/nvim/**
 !.config/nvim_disabled/
