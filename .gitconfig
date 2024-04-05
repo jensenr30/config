@@ -2,8 +2,9 @@
 	name = Ryan Jensen
 [core]
 	editor = e
-	excludesFile = /home/ryan/.gitignore_global
+	excludesFile = /home/ryan/.gitignore-global
     pager = delta
+	autocrlf = input
 [pull]
 	rebase = false
 [init]

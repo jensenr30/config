@@ -14,7 +14,7 @@ else
     echo "unknown which line endings to use for sysname: $sysname"
 fi
     
-git config --global core.excludesFile ~/.gitignore_global
+git config --global core.excludesFile ~/.gitignore-global
 
 git config --global pull.rebase false
 git config --global init.defaultBranch main
