@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+set -e
+
 line-bold
 echo $(pwd)
 line-bold
