@@ -1,9 +1,11 @@
 #!/usr/bin/bash
 
 if [ `git rev-parse --verify main 2>/dev/null` ]; then
-    echo "main exists"
+    echo "rebasing to main..."
+    git rebase main
 elif [ `git rev-parse --verify master 2>/dev/null` ]; then
-    echo "master exists"
+    echo "rebasing to master..."
+    git rebase master
 else
     echo "no primary branch exists!"
     exit 1

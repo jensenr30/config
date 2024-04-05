@@ -39,6 +39,8 @@
 !.config/Code
 !.config/Code/User/
 !.config/Code/User/settings.json
+!.config/home-manager/
+!.config/home-manager/*
 !.config/htop/
 !.config/htop/htoprc
 !.config/i3
