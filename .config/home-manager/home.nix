@@ -106,6 +106,7 @@
     # terminal tools
     screen
     tmux
+    yazi # file system explorer
 
     # media
     abcde
