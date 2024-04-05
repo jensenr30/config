@@ -1,5 +1,4 @@
 [user]
-	email = jensenr30@gmail.com
 	name = Ryan Jensen
 [core]
 	editor = e
@@ -25,3 +24,7 @@
 
 [includeIf "gitdir:~/pd/"]
   path = ~/pd/.gitconfig
+
+# automatic replacement of https in favor of ssh
+# [url "ssh://git@github.com/"]
+	# insteadOf = https://github.com/
