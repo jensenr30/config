@@ -101,3 +101,12 @@ else
     esac
 fi
 export SESSION_TYPE
+
+#===============================================================================
+# Misc
+#===============================================================================
+# firefox smooth scrolling
+export MOZ_USE_XINPUT2=1
+
+# I do not plan on "having Home Manager manage your shell configuration then you must source"
+. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"

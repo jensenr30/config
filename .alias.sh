@@ -153,7 +153,6 @@ alias b="git branch"
 alias ch="git checkout"
 alias chm='ch main || ch master'
 alias chowmain="chm && pulp"
-alias remain='git rebase main'
 alias pull="git pull"
 alias pulp='git pull --prune'
 alias push="git push"

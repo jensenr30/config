@@ -16,6 +16,7 @@
 !.bash_profile
 !.bashrc
 !.dictionary.txt
+!.gitconfig
 !.gitignore
 !.gitignore-global
 !.inputrc
@@ -38,6 +39,8 @@
 !.config/Code
 !.config/Code/User/
 !.config/Code/User/settings.json
+!.config/home-manager/
+!.config/home-manager/*
 !.config/htop/
 !.config/htop/htoprc
 !.config/i3
@@ -46,6 +49,8 @@
 !.config/kdeglobals
 !.config/polybar
 !.config/polybar/config.ini
+!.config/nixpkgs/
+!.config/nixpkgs/*
 !.config/nvim/
 !.config/nvim/**
 !.config/nvim_disabled/

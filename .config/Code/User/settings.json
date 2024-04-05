@@ -382,5 +382,6 @@
     ],
     "makefile.configureAfterCommand": false,
     "makefile.configureOnEdit": false,
-    "makefile.configureOnOpen": false
+    "makefile.configureOnOpen": false,
+    "githubPullRequests.pullBranch": "never"
 }
