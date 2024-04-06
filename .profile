@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 export CFGDIR="$HOME/.jensenr30"
-
+export EDITOR=nvim
 
 #===============================================================================
 # OS

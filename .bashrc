@@ -127,8 +127,8 @@ fi
 
 # todo fix
 # bash auto-completion for aliases!
-# source "$HOME/repos/utils/complete-alias/complete_alias"
-# complete -F _complete_alias "${!BASH_ALIASES[@]}"
+source "$HOME/repos/utils/complete-alias/complete_alias"
+complete -F _complete_alias "${!BASH_ALIASES[@]}"
 
 
 #===============================================================================
