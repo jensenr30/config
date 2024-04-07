@@ -104,6 +104,7 @@ alias gi='g -i'
 alias psg="ps -A | grep -i"
 
 # misc *nix
+alias h='home-manager'
 alias dtop='sudo dmesg -wH'
 alias k9='killall -9'
 alias mkdir="mkdir -p"
