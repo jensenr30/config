@@ -118,14 +118,17 @@ shopt -s checkwinsize
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
+  if [ -f /home/ryan/.local/state/nix/profiles/profile/share/bash-completion/bash_completion ]; then
+    . /home/ryan/.local/state/nix/profiles/profile/share/bash-completion/bash_completion
+  elif [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  else
+    echo "WARNING: no bash_completion script found on system"
   fi
 fi
 
-# todo fix
 # bash auto-completion for aliases!
 source "$HOME/repos/utils/complete-alias/complete_alias"
 complete -F _complete_alias "${!BASH_ALIASES[@]}"
