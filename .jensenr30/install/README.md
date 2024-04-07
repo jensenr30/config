@@ -3,9 +3,10 @@
 directories are organized by linux distribution
 
 ## .sh scripts in distribution-specific sub-directories
-E.g. `./cli.sh` will install essential command-line tools.
+E.g. `./cli.sh` will install essential command-line tools. (mostly replaced by nix home-manager.
+run `home-manager switch`)
 E.g. `./gui.sh` will install simple gui programs.
-E.g. `./workstation.sh` will install a shitload of useful (possibly bloated) programs, mostly GUI.
+E.g. `./workstation.sh` will install a shitload of bloated programs, mostly GUI.
 
 ## master_startup.py
 To activate your startup scripts, use crontab:

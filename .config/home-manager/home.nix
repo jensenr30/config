@@ -15,6 +15,10 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  # automatically set some environment variables that will ease usage of software installed with nix
+  # on non-NixOS linux (fixing local issues, settings XDG_DATA_DIRS, etc.):
+  targets.genericLinux.enable = true;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
