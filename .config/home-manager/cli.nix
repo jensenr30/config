@@ -8,6 +8,8 @@
     fd # friendly find
     fzf # fuzzy finder
     neovim # the new vim
+    man
+    man-pages
 
     # git
     git

@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./cli.nix
-    ./gui.nix
-    ./embedded-systems.nix
+    # hostname.nix is symlink to a .nix file created for your machine, e.g. by-hostname/jenbox2.nix
+    # the symlink is created by ~/.profile
+    ./hostname.nix
   ];
 
   home.username = "ryan";

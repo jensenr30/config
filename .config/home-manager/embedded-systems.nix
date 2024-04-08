@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     dfu-util
     openocd
-    # gcc-arm-embedded
+    gcc-arm-embedded
     # newlib
     # newlib-nano
     minicom

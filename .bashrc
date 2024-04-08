@@ -18,8 +18,6 @@ shopt -s globstar # "**" in a pathname expansion context will match all files an
 shopt -s expand_aliases # aliases work in non-interactive shells
 source $HOME/.alias.sh
 chmod --recursive a+x "$HOME/bin" # automatically enable executing any file placed into bin/
-# set up home manager for this machine
-ln -s ".config/home-manager/by-hostname/$HOSTNAME.nix" ".config/home-manager/hostname.nix"
 
 
 #===============================================================================
