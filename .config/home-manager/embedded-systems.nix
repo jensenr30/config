@@ -10,7 +10,7 @@
     # newlib
     # newlib-nano
     minicom
-    pulseview
+
     # TODO install dronecan gui via nix... someday...
     # can-utils
     # # this is for dronecan_gui_tool:

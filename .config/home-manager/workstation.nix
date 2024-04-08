@@ -3,11 +3,6 @@
 {
   home.packages = with pkgs; [
 
-# package managers
-# TODO pdm, pip, pipx, etc?
-# TODO will installing flatpak via nix cause an issue??
-# flatpak
-
 # internet
 firefox
 tor-browser
