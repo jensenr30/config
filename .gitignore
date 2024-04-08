@@ -40,7 +40,7 @@
 !.config/Code/User/
 !.config/Code/User/settings.json
 !.config/home-manager/
-!.config/home-manager/*
+!.config/home-manager/**
 !.config/htop/
 !.config/htop/htoprc
 !.config/i3
@@ -68,6 +68,7 @@
 !.config/vis/config
 !.config/vis/colors/
 !.config/vis/colors/**
+
 !.screenlayout/
 !.screenlayout/**
 

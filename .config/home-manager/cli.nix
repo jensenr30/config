@@ -11,24 +11,11 @@
 
     # git
     git
-    gittyup
-
 
     # programming
     # python3 will doubtless already be installed on the system
     pipx
     pre-commit
-
-    # embedded systems
-    # TODO: add these to an embedded systems / programming flake?
-    dfu-util
-    openocd
-    # gcc-arm-embedded
-    # newlib
-    # newlib-nano
-    minicom
-    gtkterm
-    can-utils
 
     # system monitor
     htop
@@ -88,14 +75,6 @@
 
     # media
     abcde
-
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    # TODO: inconsolata?
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
