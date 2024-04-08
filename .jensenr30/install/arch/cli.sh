@@ -34,6 +34,7 @@ $sys enable --now numLockOnTty
 
 # git
 # $i git
+# todo: install via home-manager?
 $i git-delta
 
 # coreutils
