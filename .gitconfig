@@ -3,7 +3,7 @@
 	email = jensenr30@gmail.com
 [core]
 	editor = e
-	excludesFile = /home/ryan/.gitignore-global
+	excludesFile = ~/.gitignore-global
     pager = delta
 	autocrlf = input
 [pull]
