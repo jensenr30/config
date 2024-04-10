@@ -1,8 +1,7 @@
 #!/usr/bin/bash
 
-
 ################################################################################
-#         Print the Definition of Any Aliase, Function, or Script!             #
+#         Print the Definition of Any Alias, Function, or Script!             #
 ################################################################################
 # Example: To see what the chowmain command does, run `cw chowmain` in a terminal
 function cw()
@@ -198,13 +197,12 @@ alias nas="ssh ryan@server"
 ################################################################################
 #                                redacted                                      #
 ################################################################################
-alias ed='echo DEBUG = $DEBUG; echo DEVKIT = $DEVKIT; echo ELF_FILE = $ELF_FILE'
-alias ed0='unset DEBUG; ed'
-alias ed1='export DEBUG=1; ed'
-alias eddev='export DEVKIT=1; export ELF_FILE="build/app/app"; ed1'
-alias edc='unset DEBUG; unset DEVKIT; unset ELF_FILE; ed'
-alias dgt='dronecan_gui_tool &'
+alias menv0='unset DEBUG; menv'
+alias menv1='export DEBUG=1; menv'
+alias menvdev='export DEVKIT=1; export ELF_FILE="build/app/app"; menv1'
+alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 
+. ~/pd/.alias.sh
 
 ################################################################################
 #                               Arch Linux                                     #
