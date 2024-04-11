@@ -2,6 +2,10 @@
 
 {
   home.packages = with pkgs; [
+    # nix-related 
+    #nox
+    nix-diff
+
     # coreutils & new coreutils
     bat # cat with style
     eza # ls with style
@@ -10,6 +14,7 @@
     neovim # the new vim
     man
     man-pages
+    gdu
 
     # git
     git
@@ -26,7 +31,7 @@
     nethogs
     sysstat
     usbutils
-    # btop
+    btop
     usbtop
     # bashtop
 

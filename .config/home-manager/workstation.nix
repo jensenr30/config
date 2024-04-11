@@ -4,8 +4,9 @@
   home.packages = with pkgs; [
 
 # internet
-firefox
 tor-browser
+# fonts are not right in firefox (or nix?)
+# firefox
 qbittorrent
 
 # office
