@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+set -e
+
+echo "Comparing changes between the last two home-manager generations:"
+generations=$(home-manager generations | sed -n "1,2p")
+echo "$generations"
+generations=$(printf "$generations" | grep -o "/nix/store/.*")
+
+if [ ! -z ${DEBUG} ]; then
+    echo "$generations"
+fi
+
+ gen_now=$(printf "$generations" | sed -n "1,1p")
+gen_prev=$(printf "$generations" | sed -n "2,2p")
+
+if [ ! -z ${DEBUG} ]; then
+    echo "gen_now:  $gen_now"
+    echo "gen_prev: $gen_prev"
+fi
+
+ bin_now=$(ls -la "$gen_now/bin")
+bin_prev=$(ls -la "$gen_prev/bin")
+
+diff --color=auto "$bin_prev" "$bin_now"
+# TODO this doesn't work
+
