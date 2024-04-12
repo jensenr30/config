@@ -20,7 +20,8 @@ hunspellDicts.en-us
 inconsolata-nerdfont
 
 # media editing
-gimp
+# weird problems running from dolphin???
+# gimp
 inkscape
 audacity
 kdenlive
