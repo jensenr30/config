@@ -4,8 +4,9 @@
   home.packages = with pkgs; [
 
 # internet
-firefox
 tor-browser
+# fonts are not right in firefox (or nix?)
+# firefox
 qbittorrent
 
 # office
@@ -19,7 +20,8 @@ hunspellDicts.en-us
 inconsolata-nerdfont
 
 # media editing
-gimp
+# weird problems running from dolphin???
+# gimp
 inkscape
 audacity
 kdenlive
