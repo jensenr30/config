@@ -1,6 +1,6 @@
 [user]
 	name = Ryan Jensen
-	email = jensenr30@gmail.com
+    #email = jensenr30@gmail.com
 [core]
 	editor = e
 	excludesFile = ~/.gitignore-global
