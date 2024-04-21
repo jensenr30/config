@@ -15,6 +15,7 @@
     man
     man-pages
     gdu
+    yazi
 
     # git
     git
