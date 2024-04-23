@@ -3,8 +3,12 @@
 {
   home.packages = with pkgs; [
     gittyup
+    hardinfo
 
     gtkterm
+
+    smile
+    emote
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
