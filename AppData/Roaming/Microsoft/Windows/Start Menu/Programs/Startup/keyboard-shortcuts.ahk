@@ -1,3 +1,27 @@
+; FUCK CAPS
+SetCapsLockState "AlwaysOff"
+
+; CAPSLOCK vim motions
+Capslock & h::{
+    Send "{Left}"
+}
+Capslock & j::{
+    Send "{Down}"
+}
+Capslock & k::{
+    Send "{Up}"
+}
+Capslock & l::{
+    Send "{Right}"
+}
+Capslock & d::{
+    Send "{PgDn}"
+}
+Capslock & u::{
+    Send "{PgUp}"
+}
+
+
 !#w::
 {
 
