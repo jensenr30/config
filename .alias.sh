@@ -37,14 +37,20 @@ alias ea="e $HOME/.alias.sh && rlal"        # Edit Aliases
 
 
 ################################################################################
-#                               GNU / Linux                                    #
+#                                      cd                                      #
 ################################################################################
 
-# quick cd into install script directories
-alias cdi="cd $CFGDIR/install"
-alias cdid="cd $CFGDIR/install/$distro"
-# quick cd into nas storage
-alias cdn='cl /nas/safe'
+# move to the top-level directory of the current git repo
+alias cdr='cd $(git rev-parse --show-toplevel)'
+
+# make directoy, then cd into it
+mkcd() {
+    # if the directory does not exist, make it.
+    test -d "$1" && echo "directory $1 already existed.  Entering it..."
+    test -d "$1" || mkdir -p "$1"
+    test -d "$1" && cd "$1"
+}
+
 # quickly jump up N directories
 # what's nice about this is that it allows `cd -` to work as expected  :)
 function cu(){
@@ -60,6 +66,24 @@ function cu(){
     cd "$path"
 }
 
+alias cdf='cd $(fz) && lv'
+
+# cd into a directory and immediately print the contents
+function cl(){
+    cd $1 && la
+}
+
+# quick cd into install script directories
+alias cdi="cd $CFGDIR/install"
+alias cdid="cd $CFGDIR/install/$distro"
+# quick cd into nas storage
+alias cdn='cl /nas/safe'
+
+
+################################################################################
+#                               GNU / Linux                                    #
+################################################################################
+
 # my weirdo ls aliases
 alias ls='exa --color=automatic --group-directories-first'
 alias l='ls'
@@ -71,28 +95,14 @@ alias la='ls -a'
 alias lv='ls -lh'
 alias lva='lv -a'
 
-# cd into a directory and immediately print the contents
-function cl(){
-    cd $1 && la
-}
-
 # ls-type commands for non-directories
 alias lsuuid='sudo blkid | grep -i UUID='
 alias lsnet="sudo arp-scan -l"
 alias lsb='lsblk -o NAME,SIZE,FSUSE%,LABEL,MOUNTPOINT'
 alias lss='ls /dev/serial/by-id/'
 
-# make directoy, then cd into it
-mkcd() {
-    # if the directory does not exist, make it.
-    test -d "$1" && echo "directory $1 already existed.  Entering it..."
-    test -d "$1" || mkdir -p "$1"
-    test -d "$1" && cd "$1"
-}
-
 #finders
 alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
-alias cdf='cd $(fz) && lv'
 # fuzzy find in your command history :)
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
 
@@ -106,7 +116,6 @@ alias psg="ps -A | grep -i"
 alias h='home-manager'
 alias dtop='sudo dmesg -wH'
 alias k9='killall -9'
-alias mkdir="mkdir -p"
 alias path='echo $PATH | tr ":" "\n"'
 alias rm='rm -d'
 alias sl='screen -list'
@@ -166,8 +175,6 @@ alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
 alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
-# move to the top-level directory of the current git repo
-alias cdr='cd $(git rev-parse --show-toplevel)'
 
 
 ################################################################################
