@@ -11,10 +11,9 @@ if [ -f "$HOME/.ssh/$pubkey"  ]; then
     printf "\n"
 else
     echo "ssh key does not exist.  Creating new key..."
-    ssh-keygen -t -rsa
+    ssh-keygen -t rsa
 fi
 
-source ~/.cfgdir
 dest_path="$CFGDIR/private/$HOSTNAME/.ssh"
 echo "copying public ssh key ($HOME/.ssh/$pubkey) to your private repository:"
 echo "$dest_path/$pubkey"

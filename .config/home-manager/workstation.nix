@@ -98,6 +98,9 @@ via
 # etcher
 virtualbox
 
+# game dev
+# nng
+
 # TODO: configure this in top level?
 # #===============================================================================
 # # themes

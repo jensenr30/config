@@ -383,5 +383,6 @@
     "makefile.configureAfterCommand": false,
     "makefile.configureOnEdit": false,
     "makefile.configureOnOpen": false,
+    "terminal.integrated.fontSize": 16,
     "githubPullRequests.pullBranch": "never"
 }

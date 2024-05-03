@@ -126,6 +126,10 @@ $i --asdeps kicad-library kicad-library-3d
 $y usbtop
 sudo modprobe usbmon
 
+$i docker
+sudo usermod -aG docker ryan
+sudo systemctl enable --now docker
+
 # via (keyboard customization)
 $y via-bin
 
