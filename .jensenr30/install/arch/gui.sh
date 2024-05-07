@@ -26,6 +26,9 @@ $i mplayer
 $y nomacs
 $y qimgv
 
+# media creation
+$i kolourpaint
+
 # audio
 # TODO remove:
 # pipewire-pulse conflicts with (replaces?) pulseaudio

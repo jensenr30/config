@@ -22,5 +22,4 @@ sudo apt install -y iperf3
 sudo apt install -y nomacs
 sudo apt install -y keepass2
 sudo apt install -y gparted
-
-
+sudo apt install -y kolourpaint
