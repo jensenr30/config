@@ -405,5 +405,6 @@
     "git-graph.repository.fetchAndPrune": true,
     "git-graph.repository.onLoad.scrollToHead": true,
     "git-graph.repository.showRemoteHeads": false,
-    "git-graph.showStatusBarItem": false
+    "git-graph.showStatusBarItem": false,
+    "githubPullRequests.terminalLinksHandler": "github"
 }

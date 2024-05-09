@@ -128,6 +128,7 @@ $y usbtop
 sudo modprobe usbmon
 
 $i docker
+$i --asdeps docker-buildx
 sudo usermod -aG docker ryan
 sudo systemctl enable --now docker
 
