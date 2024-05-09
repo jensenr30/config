@@ -1,17 +1,17 @@
 [user]
-	name = Ryan Jensen
+    name = Ryan Jensen
     #email = jensenr30@gmail.com
 [core]
-	editor = e
-	excludesFile = ~/.gitignore-global
+    editor = e
+    excludesFile = ~/.gitignore-global
     pager = delta
-	autocrlf = input
+    autocrlf = input
 [pull]
-	rebase = false
+    rebase = false
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [rerere]
-	enabled = true
+    enabled = true
 [interactive]
     diffFilter = delta --color-only
 [delta]
@@ -29,4 +29,4 @@
 
 # automatic replacement of https in favor of ssh
 # [url "ssh://git@github.com/"]
-	# insteadOf = https://github.com/
+    # insteadOf = https://github.com/

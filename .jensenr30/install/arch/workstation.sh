@@ -69,6 +69,7 @@ $y wacom-utility
 # $i sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
 # $i emscripten
 # $y nng
+$i valgrind
 
 # # installing shit for mcuxpresso IDE
 # $y python38
@@ -127,6 +128,7 @@ $y usbtop
 sudo modprobe usbmon
 
 $i docker
+$i --asdeps docker-buildx
 sudo usermod -aG docker ryan
 sudo systemctl enable --now docker
 
