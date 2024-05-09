@@ -42,6 +42,11 @@ lame
 opusTools
 vorbisgain
 
+
+#===============================================================================
+# Programming
+#===============================================================================
+
 # TODO: move to programming.nix
 # # programming
 # visual-studio-code-bin
@@ -55,6 +60,9 @@ vorbisgain
 # sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
 # emscripten
 # nng
+
+# misc
+ascii
 
 # C
 # gdb

@@ -2,15 +2,7 @@
 
 r="$HOME/repos"
 
-if [ $(pwd) = "$r/gittyup" ]; then
-    if [[ -z "${DEBUG}" ]]; then
-        echo "running gittyup Release"
-        ./build/release/gittyup "$r/test-repo"
-    else
-        echo "running gittyup Debug"
-        ./build/debug/gittyup "$r/test-repo"
-    fi
-elif [ $(pwd) = "$r/cli-visualizer-sdl" ]; then
+if [ $(pwd) = "$r/cli-visualizer-sdl" ]; then
     if [[ -z "${DEBUG}" ]]; then
         echo "running vis Release"
         ./build/vis
@@ -23,6 +15,17 @@ elif [ $(pwd) = "$r/fractile" ]; then
 elif [ $(pwd) = "$r/git-bent" ]; then
     echo "running git-bent..."
     ./build/git-bent
+elif [ $(pwd) = "$r/gittyup" ]; then
+    if [[ -z "${DEBUG}" ]]; then
+        echo "running gittyup Release"
+        ./build/release/gittyup "$r/test-repo"
+    else
+        echo "running gittyup Debug"
+        ./build/debug/gittyup "$r/test-repo"
+    fi
+elif [ $(pwd) = "$r/tile-venture" ]; then
+    echo "running tile-venture..."
+    make run
 else
     flash $@ || echo "Your current working directory is not on the list!  See $(realpath $0)"
     exit 1

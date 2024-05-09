@@ -152,6 +152,7 @@
         "rxmsgobj",
         "rxring",
         "scpi",
+        "SDLK",
         "sharedlibrary",
         "SHUTDOWNPOWERSUPPLY",
         "smallsim",
