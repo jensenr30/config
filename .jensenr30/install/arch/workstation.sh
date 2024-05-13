@@ -40,7 +40,7 @@ sudo sed -i "s/Name=GNU Image Manipulation Program/Name=GIMP - GNU Image Manipul
 # $i inkscape
 # $i audacity
 # $i kdenlive
-# $i obs-studio
+$i obs-studio
 $i v4l2loopback-dkms
 # $y simplescreenrecorder
 # $y gcolor2

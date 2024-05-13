@@ -25,9 +25,6 @@ inconsolata-nerdfont
 inkscape
 audacity
 kdenlive
-obs-studio
-# TODO install in arch script?  or here?
-# v4l2loopback-dkms
 simplescreenrecorder
 # gcolor2
 gcolor3

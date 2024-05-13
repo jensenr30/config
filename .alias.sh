@@ -151,6 +151,7 @@ alias mt='m test && cp test/build/compile_commands.json compile_commands.json'
 ################################################################################
 alias k='gitk --all --full-history --select-commit=$(mit) & disown'
 alias gh='gittyup .'
+alias gdcs='DELTA_FEATURES=+side-by-side gdc'
 alias s="git status"
 alias ga='git add'
 alias gr='git reset'
