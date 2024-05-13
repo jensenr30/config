@@ -58,9 +58,6 @@ vorbisgain
 # emscripten
 # nng
 
-# misc
-ascii
-
 # C
 # gdb
 check
@@ -70,7 +67,6 @@ gnumake
 cmake
 clang
 # multilib-devel   # 32-bit libraries for compiling for ARM etc.
-openocd
 bear # used generate compilation database for clang tooling
 
 

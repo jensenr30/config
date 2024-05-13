@@ -20,11 +20,13 @@
 
     # git
     git
+    delta
 
     # programming
     # python3 will doubtless already be installed on the system
     pipx
     pre-commit
+    ascii
 
     # system monitor
     htop
