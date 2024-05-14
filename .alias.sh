@@ -144,7 +144,7 @@ alias makenewapp='rm -rf build/app; make app'
 alias bmake="bear -- make" # generates compile_commands.json for clangd
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
 alias mf='m && flash'
-alias mt='m test && cp test/build/compile_commands.json compile_commands.json'
+alias mt='m test' # && cp test/build/compile_commands.json compile_commands.json'
 
 
 ################################################################################
