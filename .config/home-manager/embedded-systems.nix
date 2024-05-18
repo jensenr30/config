@@ -5,7 +5,8 @@
     can-utils
     dfu-util
     openocd
-    gcc-arm-embedded
+# there was some python issue when trying to run gdb so for now use arch or native
+#    gcc-arm-embedded
     # TODO
     # newlib
     # newlib-nano
