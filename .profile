@@ -88,7 +88,7 @@ fi
 # used to compile web client for tileventure
 export PATH="$PATH:/usr/lib/emscripten"
 
-export STM32CubeMX_PATH=$HOME/programs/stm32cubemx
+export STM32CubeMX_PATH="$HOME/programs/stm32cubemx6.11.1"
 
 
 #===============================================================================
@@ -117,3 +117,4 @@ export SESSION_TYPE
 #===============================================================================
 # firefox smooth scrolling
 export MOZ_USE_XINPUT2=1
+
