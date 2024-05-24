@@ -39,7 +39,7 @@ sudo sed -i "s/Name=GNU Image Manipulation Program/Name=GIMP - GNU Image Manipul
     /usr/share/applications/gimp.desktop
 # $i inkscape
 # $i audacity
-# $i kdenlive
+$i kdenlive
 $i obs-studio
 $i v4l2loopback-dkms
 # $y simplescreenrecorder

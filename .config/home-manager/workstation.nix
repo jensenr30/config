@@ -24,7 +24,7 @@ inconsolata-nerdfont
 # gimp
 inkscape
 audacity
-kdenlive
+# kdenlive # broken?
 simplescreenrecorder
 # gcolor2
 gcolor3
