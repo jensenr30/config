@@ -11,7 +11,7 @@ $endif
 # change cursor style (line / block) based on insert/normal mode on command line
 set vi-ins-mode-string \1\e[5 q\2
 set vi-cmd-mode-string \1\e[2 q\2
-set show-mode-in-prompt on
+set show-mode-in-prompt off
 
 # handy for case-sensitive file systems!
 set completion-ignore-case On

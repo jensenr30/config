@@ -2,12 +2,7 @@
 
 
 set e+ # a single error will not crash my .bashrc
-set -o vi # vim motions in bash - now you can get stuck in vim right on the command line!
-
-
-# asdfkalsdkfalsdjkf
-# asldfalsdkfja
-#
+# set -o vi # vim motions in bash - now you can get stuck in vim right on the command line!
 
 if test -z $sysname; then
     source "$HOME/.profile"
