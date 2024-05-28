@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+git_diff_cmd="git diff -U6"
+
+$git_diff_cmd main $(mit) || $git_diff_cmd master $(mit)
+

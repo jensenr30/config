@@ -86,7 +86,6 @@ fsearch
 piper
 qdirstat
 shutter
-wine
 
 # benchmarking
 geekbench
