@@ -12,7 +12,8 @@ $i --asdeps tk # for gitk to work
 $i nm-connection-editor
 
 $i dolphin
-$i --asdeps konsole # for dolphin's integrated terminal
+# all dolphin deps
+$i --asdeps ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
 $i thunar
 $i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailer
 

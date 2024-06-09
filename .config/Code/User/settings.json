@@ -23,9 +23,11 @@
         "asdeps",
         "BAUDRATE",
         "BDTR",
+        "bools",
         "boundf",
         "CCER",
         "cgrahn",
+        "chgr",
         "choco",
         "cirbuf",
         "CIRCUITSTATUS",
@@ -51,6 +53,7 @@
         "EEPROM",
         "EXTI",
         "extid",
+        "FBOUT",
         "fets",
         "Flashsim",
         "ftofix",
@@ -116,6 +119,7 @@
         "OCNIDLESTATE",
         "OCNPOLARITY",
         "OCPOLARITY",
+        "opengl",
         "openocd",
         "OSSI",
         "OSSR",
@@ -174,6 +178,7 @@
         "todohighlight",
         "transimpedance",
         "TRGO",
+        "triangulite",
         "txbuff",
         "TXBUFFERSIZE",
         "TXREQUEST",
@@ -192,6 +197,7 @@
         "vbuckin",
         "VCHRG",
         "VCON",
+        "vfmt",
         "VLIM",
         "VMON",
         "VOUT",
@@ -222,16 +228,16 @@
         "**/*.scss"
     ],
     "todohighlight.keywordsPattern": "Todo|TODO|todo|FIXME|fixme|FixMe",
+    "todohighlight.defaultStyle": {
+        "color": "#000000",
+        "backgroundColor": "#00db00",
+        "overviewRulerColor": "#00db00",
+        "isWholeLine": false
+    },
     "clangd.checkUpdates": true,
     "diffEditor.codeLens": true,
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
-    },
-    "todohighlight.defaultStyle": {
-        "color": "#ff5500",
-        "backgroundColor": "#000000",
-        "overviewRulerColor": "#ff4400",
-        "isWholeLine": false
     },
     "cmake.configureOnOpen": false,
     "editor.minimap.maxColumn": 80,
@@ -282,7 +288,6 @@
     "editor.minimap.enabled": false,
     "terminal.integrated.shellIntegration.history": 10000,
     "terminal.integrated.tabStopWidth": 4,
-    "terminal.integrated.scrollback": 100000,
     "workbench.editor.empty.hint": "hidden",
     "settingsSync.ignoredExtensions": [
         "llvm-vs-code-extensions.vscode-clangd"
@@ -411,5 +416,8 @@
     "githubPullRequests.terminalLinksHandler": "github",
     "window.menuBarVisibility": "toggle",
     "git-graph.repository.commits.order": "topo",
-    "rewrap.autoWrap.enabled": true
+    "rewrap.autoWrap.enabled": true,
+    "terminal.integrated.scrollback": 10000,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "indent"
 }

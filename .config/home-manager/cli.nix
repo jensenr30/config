@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    # nix-related 
+    # nix-related
     #nox
     nix-diff
 
@@ -15,7 +15,6 @@
     man
     man-pages
     gdu
-    yazi
     zsh
 
     # git

@@ -161,6 +161,7 @@ alias gf='git fetch'
 alias ags='a; git stash'
 alias c="git commit"
 alias b="git branch"
+alias bdr="git push --delete origin"
 alias ch="git checkout"
 alias chm='ch main || ch master'
 alias chowmain="chm && pulp"

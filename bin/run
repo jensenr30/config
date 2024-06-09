@@ -12,6 +12,9 @@ if [ $(pwd) = "$r/cli-visualizer-sdl" ]; then
 elif [ $(pwd) = "$r/fractile" ]; then
     echo "running fractile..."
     ./build/fractile
+elif [ $(pwd) = "$r/triangulite" ]; then
+    echo "running Triangulite..."
+    ./run
 elif [ $(pwd) = "$r/git-bent" ]; then
     echo "running git-bent..."
     ./build/git-bent

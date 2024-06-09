@@ -39,7 +39,7 @@ sudo sed -i "s/Name=GNU Image Manipulation Program/Name=GIMP - GNU Image Manipul
     /usr/share/applications/gimp.desktop
 # $i inkscape
 # $i audacity
-# $i kdenlive
+$i kdenlive
 $i obs-studio
 $i v4l2loopback-dkms
 # $y simplescreenrecorder
@@ -56,7 +56,6 @@ $y wacom-utility
 #===============================================================================
 # programming
 #===============================================================================
-# TODO: move to programming.nix
 # $i kdiff3
 # $y visual-studio-code-bin
 # $y gnome-keyring # for vs code
@@ -70,6 +69,7 @@ $y wacom-utility
 # $i emscripten
 # $y nng
 $i valgrind
+$i lib32-mesa # amd 32-bit libraries
 
 # # installing shit for mcuxpresso IDE
 # $y python38
