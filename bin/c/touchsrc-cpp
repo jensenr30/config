@@ -1,0 +1,24 @@
+#!/usr/bin/sh
+
+# create a pair of .cpp and .hpp files
+# E.g.
+# touchsrc-cpp app/src/analog/instrumentation
+# will create:
+# app/src/analog/instrumentation.cpp
+# app/src/analog/instrumentation.hpp
+
+set -e
+
+directory="$(dirname "$1")" ; filename="$(basename "$1")"
+echo "directory = $directory"
+
+mkdir -p "$directory"
+
+header="$directory/$filename.hpp"
+sourcefile="$directory/$filename.cpp"
+echo "header = $header"
+echo "sourcefile = $sourcefile"
+
+touch "$header"
+wrap-c-header "$header"
+echo "#include \"$filename.hpp\"" > "$sourcefile"
