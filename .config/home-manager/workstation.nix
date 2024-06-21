@@ -64,7 +64,6 @@ check
 cppcheck
 lcov
 gnumake
-cmake
 clang
 # multilib-devel   # 32-bit libraries for compiling for ARM etc.
 bear # used generate compilation database for clang tooling

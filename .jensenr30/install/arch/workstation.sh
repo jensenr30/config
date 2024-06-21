@@ -80,11 +80,13 @@ $i lib32-mesa # amd 32-bit libraries
 # $i check
 # $i cppcheck
 # $i lcov
-# $i make cmake
+$i make cmake
 # $i clang
 $i multilib-devel   # 32-bit libraries for compiling for ARM etc.
 # $i bear # used generate compilation database for clang tooling
 
+# graphics
+$i opengl-man-pages
 
 #===============================================================================
 # Embedded systems
