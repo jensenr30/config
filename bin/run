@@ -2,6 +2,11 @@
 
 r="$HOME/repos"
 
+if test -f run ; then
+    ./run
+    exit $?
+fi
+
 if [ $(pwd) = "$r/cli-visualizer-sdl" ]; then
     if [[ -z "${DEBUG}" ]]; then
         echo "running vis Release"

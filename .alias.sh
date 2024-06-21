@@ -141,7 +141,7 @@ alias m='make'
 #alias m="make -j $(nproc)"
 alias makenew='make clean && m'
 alias makenewapp='rm -rf build/app; make app'
-alias bmake="bear -- make" # generates compile_commands.json for clangd
+alias bm="bear -- make" # generates compile_commands.json for clangd
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
 alias mf='m && flash'
 alias mt='m test' # && cp test/build/compile_commands.json compile_commands.json'
