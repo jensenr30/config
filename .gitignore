@@ -36,6 +36,8 @@
 !.config/alacritty/
 !.config/alacritty/*
 !.config/albert.conf
+!.config/atuin/
+!.config/atuin/config.toml
 !.config/Code
 !.config/Code/User/
 !.config/Code/User/settings.json

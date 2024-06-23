@@ -129,6 +129,7 @@
         "overvolt",
         "packetdigital",
         "pacman",
+        "PAGEUP",
         "PCLK",
         "pdvpn",
         "periph",
@@ -424,5 +425,6 @@
     "search.exclude": {
         "test/unity": true,
         "test/Unity": true
-    }
+    },
+    "editor.parameterHints.enabled": false
 }

@@ -16,6 +16,7 @@ if test ! -d "$HOME/repos/utils/yay"; then
 fi
 
 $i man-pages
+$i atuin
 $i networkmanager
 $sys enable --now NetworkManager.service
 # this prevents NFS mounts from causing shutdown to hang for 1 m 30 s
