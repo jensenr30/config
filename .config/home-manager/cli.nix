@@ -16,6 +16,7 @@
     man-pages
     gdu
     zsh
+    nix-tree
 
     # git
     git
