@@ -267,3 +267,4 @@ bar {
 }
 
 exec_always sleep 0.3 && polybar-launch-on-all-monitors
+exec_always source .jensenr30/$HOSTNAME/screen.sh

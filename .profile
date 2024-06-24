@@ -117,4 +117,3 @@ export SESSION_TYPE
 #===============================================================================
 # firefox smooth scrolling
 export MOZ_USE_XINPUT2=1
-
