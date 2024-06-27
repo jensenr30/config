@@ -7,7 +7,7 @@ sudo apt-get install -y ca-certificates fonts-liberation libappindicator3-1 liba
 #===============================================================================
 # C programming
 #===============================================================================
-# bear is a drop-in-replacement for make which generates compile_commands.json
+# bear generates compile_commands.json
 sudo apt install -y bear
 
 #===============================================================================
