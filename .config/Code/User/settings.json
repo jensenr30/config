@@ -423,6 +423,7 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wrappingIndent": "indent",
     "search.exclude": {
+        "extern/imgui/examples": true,
         "test/unity": true,
         "test/Unity": true
     },

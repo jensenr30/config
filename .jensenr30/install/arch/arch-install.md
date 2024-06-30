@@ -95,6 +95,10 @@ ParallelDownloads = 5
 uncomment the `multilib` section in `/etc/pacman.conf`
 
 
+sudo vim /etc/makepkg.conf
+and add 'MAKEFLAGS="--jobs=$(nproc)"' to the file so that when you compile, you will use multiple cores.
+
+
 UNTESTED: edit `/etc/makepkg.conf` and add / uncomment for and set `MAKEFLAGS="-j10"` to compile with 10 CPU cores.
 
 ## SSH
