@@ -83,7 +83,7 @@ $i lib32-mesa # amd 32-bit libraries
 $i make cmake
 # $i clang
 $i multilib-devel   # 32-bit libraries for compiling for ARM etc.
-# $i bear # used generate compilation database for clang tooling
+$i bear # generates compile_commands.json
 
 # graphics
 $i opengl-man-pages

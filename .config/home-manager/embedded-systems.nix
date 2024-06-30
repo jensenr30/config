@@ -11,7 +11,6 @@
     # newlib
     # newlib-nano
     minicom
-    bear
 
     # TODO install dronecan gui via nix... someday...
     # can-utils
