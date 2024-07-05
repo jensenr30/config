@@ -29,6 +29,7 @@
         "cgrahn",
         "chgr",
         "choco",
+        "chrg",
         "cirbuf",
         "CIRCUITSTATUS",
         "clangd",
@@ -427,5 +428,6 @@
         "test/unity": true,
         "test/Unity": true
     },
-    "editor.parameterHints.enabled": false
+    "editor.parameterHints.enabled": false,
+    "update.mode": "manual"
 }
