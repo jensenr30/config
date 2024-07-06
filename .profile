@@ -39,7 +39,7 @@ fi
 # home-manager & nix packages
 #===============================================================================
 # home manager will import a .nix file specific to this machine
-ln -s "$HOME/.config/home-manager/by-hostname/$HOSTNAME.nix" "$HOME/.config/home-manager/hostname.nix"
+ln -f -s "$HOME/.config/home-manager/by-hostname/$HOSTNAME.nix" "$HOME/.config/home-manager/hostname.nix"
 # I do not plan on "having Home Manager manage your shell configuration then you must source"
 . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 # now run `home-manager switch` to make nix pkgs available to current user
