@@ -117,3 +117,5 @@ export SESSION_TYPE
 #===============================================================================
 # firefox smooth scrolling
 export MOZ_USE_XINPUT2=1
+# fix dolphin's broken 'open with' menu - also you need to install archlinux-xdg-menu
+export XDG_MENU_PREFIX=arch-
