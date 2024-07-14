@@ -17,6 +17,8 @@
     gdu
     zsh
     nix-tree
+    # better command history
+    atuin
 
     # git
     git
