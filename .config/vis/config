@@ -2,7 +2,7 @@
 # colors.scheme=jensenr30
 
 #Refresh rate of the visualizers. A really high refresh rate may cause screen tearing. Default is 20.
-visualizer.fps=30
+visualizer.fps=60
 
 #Defaults to "/tmp/mpd.fifo"
 mpd.fifo.path
@@ -37,7 +37,7 @@ visualizers=spectrum,ellipse,lorenz
 
 #The amount of space between each bar in the spectrum visualizer. Defaults to 1. It's possible to set this to
 #zero to have no space between bars
-visualizer.spectrum.bar.spacing=0
+visualizer.spectrum.bar.spacing=1
 
 #Available smoothing options are monstercat, sgs, none. Defaults to sgs.
 # visualizer.spectrum.smoothing.mode=monstercat
@@ -50,11 +50,11 @@ visualizer.sgs.smoothing.passes=1
 
 #This configures the falloff effect on the spectrum visualizer. Available falloff options are fill,top,none.
 #Defaults to "fill"
-visualizer.spectrum.falloff.mode=fill
+visualizer.spectrum.falloff.mode=none
 
 #Configures how fast the falloff character falls. This is an exponential falloff so values usually look
 #best 0.9+ and small changes in this value can have a large effect. Defaults to 0.95
-visualizer.spectrum.falloff.weight=0.87
+visualizer.spectrum.falloff.weight=0.99 #0.87
 
 #Margins in percent of total screen for spectrum visualizer. All margins default to 0
 visualizer.spectrum.top.margin=0.0
@@ -72,12 +72,12 @@ audio.sources=pulse
 ##vis tries to find the correct pulseaudio sink, however this will not work on all systems.
 #If pulse audio is not working with vis try switching the audio source. A list can be found by running the
 #command pacmd list-sinks  | grep -e 'name:'  -e 'index'
-audio.pulse.source=0
+audio.pulse.source=2986
 
 #vis tries to find the correct portaudio device (through portaudio default method), however its not for-sure.
 #If port audio is not working with vis try switching the audio srouce. A list can be found by setting
 #this value to "list" and checking the vis log file. Replace this value with the device name desired
-audio.port.source=auto
+; audio.port.source=list
 
 
 #Configures what character the ellipse visualizer will use. Specifying a space (e.g " ") means the
