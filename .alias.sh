@@ -223,20 +223,23 @@ alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 
 . ~/pd/.alias.sh
 
+
+# TODO make these last 2 if statements work in zsh and bash
+
 ################################################################################
 #                               Arch Linux                                     #
 ################################################################################
 # this shouldn't be necessary... oh well
-if [ "$distro" == "arch" ]; then
-    alias neofetch='neofetch --ascii_distro Arch'
-fi
+#if [ "$distro" == "arch" ]; then
+#    alias neofetch='neofetch --ascii_distro Arch'
+#fi
 
 
 ################################################################################
 #                                 Windows                                      #
 ################################################################################
-if [ $sysname == "windows" ]; then
-    alias lsu='usbipd wsl list | tee >(wc)'
-    unalias ls
-    alias ls='ls --color=auto --group-directories-first'
-fi
+#if [ $sysname == "windows" ]; then
+#    alias lsu='usbipd wsl list | tee >(wc)'
+#    unalias ls
+#    alias ls='ls --color=auto --group-directories-first'
+#fi
