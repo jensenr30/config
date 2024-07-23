@@ -34,3 +34,7 @@
 # automatic replacement of https in favor of ssh
 # [url "ssh://git@github.com/"]
     # insteadOf = https://github.com/
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@gitlab.packetdigital.com:"]
+	insteadOf = https://gitlab.packetdigital.com/
