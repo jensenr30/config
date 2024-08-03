@@ -1,6 +1,10 @@
 [Colors:View]
 BackgroundNormal=#2E2E2E
 
+[General]
+TerminalApplication=alacritty
+TerminalService=Alacritty.desktop
+
 [KDE]
 ShowDeleteCommand=false
 
