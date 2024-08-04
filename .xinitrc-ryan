@@ -10,3 +10,8 @@ export DPI=$(dpi-get)
 
 i3
 #awesome
+
+# plasma:
+#export DESKTOP_SESSION=plasma
+#exec startplasma-x11
+
