@@ -35,7 +35,7 @@ blinking = "Off"
 shape = "Beam"
 
 [font]
-size = 12
+size = 16
 
 [font.normal]
 family = "Inconsolata Nerd Font Mono"
