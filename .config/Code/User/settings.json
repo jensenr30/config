@@ -56,6 +56,7 @@
         "EXTI",
         "extid",
         "FBOUT",
+        "FDCAN",
         "fets",
         "Flashsim",
         "ftofix",
@@ -78,6 +79,7 @@
         "hcomp",
         "hdma",
         "hdmarx",
+        "hfdcan",
         "Hocevar",
         "htim",
         "huart",
@@ -199,6 +201,7 @@
         "undervoltage",
         "undervolted",
         "USART",
+        "usbpd",
         "usec",
         "vbat",
         "vboostout",
@@ -377,7 +380,7 @@
         }
     ],
     "terminal.integrated.hideOnStartup": "always",
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 17,
     "terminal.integrated.mouseWheelZoom": true,
     "git-graph.dialog.rebase.launchInteractiveRebase": true,
     "markdown.extension.toc.unorderedList.marker": "*",
@@ -434,5 +437,8 @@
         "test/Unity": true
     },
     "editor.parameterHints.enabled": false,
-    "update.mode": "manual"
+    "update.mode": "manual",
+    "files.insertFinalNewline": true,
+    "editor.accessibilitySupport": "off",
+    "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert"
 }
