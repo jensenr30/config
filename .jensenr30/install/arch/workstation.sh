@@ -139,14 +139,3 @@ $y via-bin
 
 $y etcher-bin
 $i virtualbox
-
-#===============================================================================
-# themes
-#===============================================================================
-$flat flathub org.kde.KStyle.Adwaita
-$i lxappearance || $i lxappearance-gtk3
-$i qt5ct qt6ct
-$i gnome-themes-extra
-# TODO: is this necessary?  -git?  can't i just get these from the arch repos?
-$y adwaita-qt4 adwaita-qt5-git adwaita-qt6-git
-$i papirus-icon-theme
