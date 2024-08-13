@@ -12,7 +12,7 @@ exec_always ~/.screenlayout/$HOSTNAME.sh
 exec_always dunst &
 exec_always lxpolkit &
 # desktop background
-exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/desktop.jpg"
+exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/layout-art.png"
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
 
 # program launcher
