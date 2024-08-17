@@ -1,4 +1,5 @@
 from flask import Flask, request
+import re
 
 app = Flask(__name__)
 
@@ -37,7 +38,7 @@ def is_vid_in_file(vid, filename):
 
 
 def get_video_id_from_url(url):
-    url_fragments = url.split("watch?v=")
+    url_fragments = re.split(r'watch?.*v=', url)
     if (len(url_fragments) < 2):
         return None
     return url_fragments[1][0:11]

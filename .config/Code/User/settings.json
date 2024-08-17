@@ -268,7 +268,6 @@
         "--compile-commands-dir=test/build"
     ],
     "editor.fontFamily": "'Inconsolata Nerd Font'",
-    "editor.fontSize": 17,
     "python.autoComplete.extraPaths": [],
     "python.analysis.extraPaths": [],
     "[jsonc]": {
@@ -440,5 +439,6 @@
     "update.mode": "manual",
     "files.insertFinalNewline": true,
     "editor.accessibilitySupport": "off",
-    "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert"
+    "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
+    "editor.fontSize": 17
 }
