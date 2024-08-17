@@ -20,7 +20,7 @@ $i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailer
 $i archlinux-xdg-menu
 kbuildsycoca6
 
-$i keepass xdotool xsel
+$i keepassxc xdotool xsel
 $i ark p7zip unrar
 $i gparted
 
