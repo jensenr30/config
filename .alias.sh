@@ -238,8 +238,8 @@ alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 ################################################################################
 #                                 Windows                                      #
 ################################################################################
-#if [ $sysname == "windows" ]; then
-#    alias lsu='usbipd wsl list | tee >(wc)'
-#    unalias ls
-#    alias ls='ls --color=auto --group-directories-first'
-#fi
+if [ $sysname == "windows" ]; then
+    alias lsu='usbipd wsl list | tee >(wc)'
+    unalias ls
+    alias ls='ls --color=auto --group-directories-first'
+fi
