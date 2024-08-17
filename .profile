@@ -88,7 +88,6 @@ fi
 # used to compile web client for tileventure
 export PATH="$PATH:/usr/lib/emscripten"
 
-export STM32CubeMX_PATH="$HOME/programs/stm32cubemx6.11.1"
 
 
 #===============================================================================
@@ -119,3 +118,5 @@ export SESSION_TYPE
 export MOZ_USE_XINPUT2=1
 # fix dolphin's broken 'open with' menu - also you need to install archlinux-xdg-menu
 export XDG_MENU_PREFIX=arch-
+
+export STM32CubeMX_PATH=/home/ryan/programs/stm32cubemx_6.12.0
