@@ -70,7 +70,7 @@ alias cdf='cd $(fz) && lv'
 
 # cd into a directory and immediately print the contents
 function cl(){
-    cd $1 && la
+    cd $1 && lva
 }
 
 # quick cd into install script directories
@@ -146,6 +146,7 @@ alias makenewapp='rm -rf build/app; make app'
 alias bm="bear -- make" # generates compile_commands.json for clangd
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
 alias mf='m && flash'
+alias t='mt'
 alias mt='m test'
 
 
@@ -167,6 +168,7 @@ alias bdr="git push --delete origin"
 alias ch="git checkout"
 alias chm='ch main || ch master'
 alias chowmain="chm && pulp"
+alias chowmake='chowmain && makenew'
 alias pull="git pull"
 alias pulp='git pull --prune'
 alias push="git push"

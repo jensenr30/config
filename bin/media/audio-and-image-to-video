@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+# audio is argument 1
+# image is argument 2
+ffmpeg -loop 1 -framerate 1 -i "$2" -i "$1" -c:a copy -c:v libx264 -tune stillimage -shortest -vf scale=-1:1920 "${@:3}" "$1.mkv"
+
