@@ -20,6 +20,6 @@ sudo apt install -y iperf3
 
 # misc
 sudo apt install -y nomacs
-sudo apt install -y keepass2
+sudo apt install -y keepassxc
 sudo apt install -y gparted
 sudo apt install -y kolourpaint
