@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+abcde -B -f -o mp3 -x $@
