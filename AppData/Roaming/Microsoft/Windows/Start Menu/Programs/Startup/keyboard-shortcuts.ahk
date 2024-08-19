@@ -22,102 +22,81 @@ Capslock & u::{
 }
 
 
+; Meta + Shift + R - reload
++#r::
+{
+    Reload
+}
+
+
+; Meta + Alt + W - close window
 !#w::
 {
-
+    Send "!{F4}"
+    Return
 }
 
+
+; Meta + D - application launcher
 #d::
 {
-    ; todo: open start menu
+    Send "^{Esc}"
 }
 
+
+; Meta + E - editor
 #e::
 {
     Run "notepad++.exe"
 }
 
+
+; Meta + F - file explorer
 #f::
 {
     Run "explorer.exe"
 }
 
+
+; Ctrl + Meta + F - file search
 ^#f::
 {
     Run "C:\Program Files (x86)\Everything\Everything.exe"
 }
 
-;-------------------------------------------------------------------------------
-; Meta + comma (,)  :: open this file (edit shortcuts)
-;-------------------------------------------------------------------------------
-; #,::
-;     Run notepad.exe "C:\Users\RyanJ\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\keyboard-shortcuts.ahk"
-; return
 
-;-------------------------------------------------------------------------------
 ; Ctrl + Meta + s :: sleep
-;-------------------------------------------------------------------------------
 ^#s::
 {
     DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 }
 
 
+; Meta + c :: open calculator
+#c::
+{
+     Run "C:\Windows\System32\calc.exe"
+}
 
 
-; ;-------------------------------------------------------------------------------
-; ; Meta + t :: open a terminal (git bash)
-; ;-------------------------------------------------------------------------------
-; #t::
-;     Run, "C:\Program Files\Git\git-bash.exe"
-; return
+; Meta + m :: open task Manager
+#m::
+{R
+    Run "Taskmgr.exe"
+}
 
 
-; ;-------------------------------------------------------------------------------
-; ; Ctrl + Meta + t :: open powershell
-; ;-------------------------------------------------------------------------------
-; ^#t::
-;     Run, "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe"
-; return
-
-
-; ;-------------------------------------------------------------------------------
-; ; Meta + Alt + t :: open Cmder.exe
-; ;-------------------------------------------------------------------------------
-; !#t::
-;     Run, "C:\Users\jense\cmder\Cmder.exe"
-; return
-
-
-; ;-------------------------------------------------------------------------------
-; ; Meta + c :: open calculator
-; ;-------------------------------------------------------------------------------
-; #c::
-;     Run, "C:\Windows\System32\calc.exe"
-; return
-
-
-; ;-------------------------------------------------------------------------------
-; ; Meta + m :: open task Manager
-; ;-------------------------------------------------------------------------------
-; #m::
-;     Run, "Taskmgr.exe"
-; return
-
-
-;-------------------------------------------------------------------------------
 ; Meta + i :: open simple Image editor
-;-------------------------------------------------------------------------------
-;#i::
-;    Run, "mspaint.exe"
-;return
+#i::
+{
+    Run "mspaint.exe"
+}
 
-
-;-------------------------------------------------------------------------------
 ; Meta + g :: open Gimp
-;-------------------------------------------------------------------------------
-;#g::
-;    Run, "C:\Program Files\GIMP 2\bin\gimp-2.10.exe"
-;return
+#g::
+{
+    Run "C:\Users\ryan.jensen\AppData\Local\Programs\GIMP 2\bin\gimp-2.10.exe"
+    Return
+}
 
 

@@ -70,7 +70,7 @@ alias cdf='cd $(fz) && lv'
 
 # cd into a directory and immediately print the contents
 function cl(){
-    cd $1 && la
+    cd $1 && lva
 }
 
 # quick cd into install script directories
@@ -168,6 +168,7 @@ alias bdr="git push --delete origin"
 alias ch="git checkout"
 alias chm='ch main || ch master'
 alias chowmain="chm && pulp"
+alias chowmake='chowmain && makenew'
 alias pull="git pull"
 alias pulp='git pull --prune'
 alias push="git push"
@@ -239,8 +240,8 @@ alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 ################################################################################
 #                                 Windows                                      #
 ################################################################################
-#if [ $sysname == "windows" ]; then
-#    alias lsu='usbipd wsl list | tee >(wc)'
-#    unalias ls
-#    alias ls='ls --color=auto --group-directories-first'
-#fi
+if [ $sysname == "windows" ]; then
+    alias lsu='usbipd wsl list | tee >(wc)'
+    unalias ls
+    alias ls='ls --color=auto --group-directories-first'
+fi
