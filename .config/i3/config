@@ -7,7 +7,7 @@ exec_always killall -9 picom
 exec_always killall -9 albert
 exec_always sleep 0.5
 
-exec_always ~/.screenlayout/$HOSTNAME.sh
+exec_always ~/.jensenr30/screen-layout/$HOSTNAME.sh
 # notifications
 exec_always dunst &
 exec_always lxpolkit &
@@ -271,4 +271,3 @@ bar {
 }
 
 exec_always sleep 0.3 && polybar-launch-on-all-monitors
-exec_always source .jensenr30/$HOSTNAME/screen.sh
