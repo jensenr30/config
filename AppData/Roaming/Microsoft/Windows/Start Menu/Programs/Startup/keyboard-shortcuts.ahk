@@ -81,7 +81,7 @@ Capslock & u::{
 
 ; Meta + m :: open task Manager
 #m::
-{R
+{
     Run "Taskmgr.exe"
 }
 
