@@ -69,6 +69,8 @@
 !.config/REAPER
 !.config/REAPER/Configurations
 !.config/REAPER/Configurations/*
+!.config/REAPER/KeyMaps
+!.config/REAPER/KeyMaps/*
 !.config/vis/
 !.config/vis/config
 !.config/vis/colors/
