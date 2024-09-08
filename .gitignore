@@ -76,9 +76,6 @@
 !.config/vis/colors/
 !.config/vis/colors/**
 
-!.screenlayout/
-!.screenlayout/**
-
 !.ssr/
 !.ssr/output-profiles/
 !.ssr/output-profiles/*
