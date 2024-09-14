@@ -1,0 +1,39 @@
+SCR 4 0 RS1ee9bb229dabffe151848d7efa3c10f748e1a1cf "Custom: lyrics.lua" Cockos/lyrics.lua
+SCR 4 32060 RS7d3c_1ee9bb229dabffe151848d7efa3c10f748e1a1cf "Custom: lyrics.lua" Cockos/lyrics.lua
+SCR 4 0 RS1cbf05b0c4f875518496f34a5ce45adefe05cb67 "Custom: Default_6.0_theme_adjuster.lua" Cockos/Default_6.0_theme_adjuster.lua
+SCR 4 0 RS6c2efb3f983d062c88752f161da4cbbd6ab222e9 "Custom: Default_7.0_theme_adjuster.lua" Cockos/Default_7.0_theme_adjuster.lua
+KEY 255 251 0 0		 # Main : Ctrl+Alt+Mousewheel : DISABLED DEFAULT
+KEY 255 218 0 0		 # Main : Alt+HorizWheel : DISABLED DEFAULT
+KEY 13 84 0 0		 # Main : Ctrl+Shift+T : DISABLED DEFAULT
+KEY 1 32801 0 0		 # Main : Page Up : DISABLED DEFAULT
+KEY 1 32802 0 0		 # Main : Page Down : DISABLED DEFAULT
+KEY 255 6396 977 0		 # Main : Shift+Mousewheel : View: Scroll horizontally reversed (MIDI CC relative/mousewheel)
+KEY 255 248 989 0		 # Main : Mousewheel : OVERRIDE DEFAULT : View: Scroll vertically (MIDI CC relative/mousewheel)
+KEY 255 249 990 0		 # Main : Ctrl+Mousewheel : OVERRIDE DEFAULT : View: Zoom horizontally (MIDI CC relative/mousewheel)
+KEY 255 250 991 0		 # Main : Alt+Mousewheel : OVERRIDE DEFAULT : View: Zoom vertically, snap to theme-defined sizes (MIDI CC relative/mousewheel)
+KEY 1 88 40078 0		 # Main : X : OVERRIDE DEFAULT : View: Toggle mixer visible
+KEY 9 77 0 0		 # Main : Ctrl+M : DISABLED DEFAULT
+KEY 17 68 40099 0		 # Main : Alt+D : OVERRIDE DEFAULT : Audio device configuration...
+KEY 9 32814 40129 0		 # Main : Ctrl+Delete : OVERRIDE DEFAULT : Take: Delete active take from items
+KEY 9 68 40157 0		 # Main : Ctrl+D : OVERRIDE DEFAULT : Markers: Insert marker at current position
+KEY 1 77 40175 0		 # Main : M : OVERRIDE DEFAULT : Item properties: Toggle mute
+KEY 1 81 40183 0		 # Main : Q : Item properties: Toggle items/tracks mute (depending on focus)
+KEY 17 77 40183 0		 # Main : Alt+M : OVERRIDE DEFAULT : Item properties: Toggle items/tracks mute (depending on focus)
+KEY 1 82 40251 0		 # Main : R : OVERRIDE DEFAULT : View: Show routing matrix window
+KEY 17 82 0 0		 # Main : Alt+R : DISABLED DEFAULT
+KEY 5 71 40362 0		 # Main : Shift+G : OVERRIDE DEFAULT : Item: Glue items, ignoring time selection
+KEY 1 8 40630 0		 # Main : Backspace : Go to start of time selection
+KEY 9 86 41221 0		 # Main : Ctrl+V : OVERRIDE DEFAULT : Item: Paste items/tracks at mouse position
+KEY 1 83 42575 0		 # Main : S : OVERRIDE DEFAULT : Item: Split item under mouse cursor (no change selection)
+KEY 1 90 _BR_PLAY_MOUSECURSOR 0		 # Main : Z : OVERRIDE DEFAULT : 
+KEY 5 32814 _S&M_DELTAKEANDFILE2 0		 # Main : Shift+Delete : 
+KEY 255 218 0 32060		 # MIDI Editor : Alt+HorizWheel : DISABLED DEFAULT
+KEY 255 250 40430 32060		 # MIDI Editor : Alt+Mousewheel : OVERRIDE DEFAULT : View: Zoom vertically (MIDI relative/mousewheel)
+KEY 255 249 40431 32060		 # MIDI Editor : Ctrl+Mousewheel : OVERRIDE DEFAULT : View: Zoom horizontally (MIDI relative/mousewheel)
+KEY 255 248 40432 32060		 # MIDI Editor : Mousewheel : OVERRIDE DEFAULT : View: Scroll vertically (MIDI relative/mousewheel)
+KEY 255 251 40432 32060		 # MIDI Editor : Ctrl+Alt+Mousewheel : OVERRIDE DEFAULT : View: Scroll vertically (MIDI relative/mousewheel)
+KEY 8 61 40462 32060		 # MIDI Editor : Ctrl+= : Edit: Note velocity +01
+KEY 0 43 40463 32060		 # MIDI Editor : + : OVERRIDE DEFAULT : Edit: Note velocity +10
+KEY 8 45 40464 32060		 # MIDI Editor : Ctrl+- : Edit: Note velocity -01
+KEY 0 95 40465 32060		 # MIDI Editor : _ : Edit: Note velocity -10
+KEY 255 252 40660 32060		 # MIDI Editor : Shift+Mousewheel : OVERRIDE DEFAULT : View: Scroll horizontally reversed (MIDI relative/mousewheel)

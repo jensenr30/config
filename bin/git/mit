@@ -1,4 +1,4 @@
 #!/bin/bash
-# writes the current commit hash to STDOUT
+# writes the current commit hash to STDOUT and clipboard
 git rev-parse --short HEAD | tee >(tr -d '[:space:]' | clipin)
 
