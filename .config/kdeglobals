@@ -103,8 +103,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:View]
-BackgroundAlternate=35,38,41
-BackgroundNormal=27,30,32
+BackgroundAlternate=35,35,35
+BackgroundNormal=30,30,30
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -165,9 +165,9 @@ Dialog Size=705,480
 MaximumRemoteSize=524288000
 
 [WM]
-activeBackground=49,54,59
+activeBackground=30,30,30
 activeBlend=252,252,252
 activeForeground=252,252,252
-inactiveBackground=42,46,50
+inactiveBackground=30,30,30
 inactiveBlend=161,169,177
 inactiveForeground=161,169,177
