@@ -146,8 +146,8 @@ alias makenewapp='rm -rf build/app; make app'
 alias bm="bear -- make" # generates compile_commands.json for clangd
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
 alias mf='m && flash'
-alias t='mt'
-alias mt='m test'
+alias t='m test'
+alias mnt='makenew test'
 
 
 ################################################################################
@@ -240,8 +240,8 @@ alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 ################################################################################
 #                                 Windows                                      #
 ################################################################################
-#if [ $sysname == "windows" ]; then
-#    alias lsu='usbipd wsl list | tee >(wc)'
-#    unalias ls
-#    alias ls='ls --color=auto --group-directories-first'
-#fi
+if [ $sysname == "windows" ]; then
+    alias lsu='usbipd wsl list | tee >(wc)'
+    unalias ls
+    alias ls='ls --color=auto --group-directories-first'
+fi
