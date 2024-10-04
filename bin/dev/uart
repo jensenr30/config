@@ -4,16 +4,20 @@ open() {
 	gtkterm -p $(realpath "$1") &
 }
 
+uart='unknown'
 case $1 in
 	0)
-		open '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_ABSCEYQW-if00-port0'
+		uart='/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_ABSCEYQW-if00-port0'
 	;;
 
 	1)
-		open '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_ABSCDQNA-if00-port0'
+		uart='/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_ABSCDQNA-if00-port0'
 	;;
 
 	2)
-		open '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AB8AT4RI-if00-port0'
+		uart='/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AB8AT4RI-if00-port0'
 	;;
 esac
+echo $(realpath "$uart")
+echo "$uart"
+open "$uart"
