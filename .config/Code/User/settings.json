@@ -297,7 +297,6 @@
     ],
     "pythonIndent.trimLinesWithOnlyWhitespace": true,
     "explorer.confirmDelete": false,
-    "editor.minimap.enabled": false,
     "terminal.integrated.shellIntegration.history": 10000,
     "terminal.integrated.tabStopWidth": 4,
     "workbench.editor.empty.hint": "hidden",
@@ -442,5 +441,6 @@
     "files.insertFinalNewline": true,
     "editor.accessibilitySupport": "off",
     "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
-    "editor.fontSize": 17
+    "editor.fontSize": 17,
+    "editor.minimap.enabled": false
 }
