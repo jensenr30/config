@@ -38,6 +38,7 @@
         "COUNTOF",
         "Cplt",
         "cstdout",
+        "dacs",
         "datasheet",
         "DBGMCU",
         "dcdc",
@@ -55,6 +56,7 @@
         "EEPROM",
         "EXTI",
         "extid",
+        "FBIN",
         "FBOUT",
         "FDCAN",
         "fets",
@@ -92,6 +94,7 @@
         "ILIM",
         "ilimit",
         "iloc",
+        "imon",
         "INTID",
         "IOUT",
         "ISET",
@@ -442,5 +445,7 @@
     "files.insertFinalNewline": true,
     "editor.accessibilitySupport": "off",
     "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
-    "editor.fontSize": 17
+    "editor.fontSize": 17,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false
 }
