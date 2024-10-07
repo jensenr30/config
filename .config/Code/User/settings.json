@@ -38,6 +38,7 @@
         "COUNTOF",
         "Cplt",
         "cstdout",
+        "dacs",
         "datasheet",
         "DBGMCU",
         "dcdc",
@@ -55,6 +56,7 @@
         "EEPROM",
         "EXTI",
         "extid",
+        "FBIN",
         "FBOUT",
         "FDCAN",
         "fets",
@@ -92,6 +94,7 @@
         "ILIM",
         "ilimit",
         "iloc",
+        "imon",
         "INTID",
         "IOUT",
         "ISET",
@@ -297,6 +300,7 @@
     ],
     "pythonIndent.trimLinesWithOnlyWhitespace": true,
     "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
     "terminal.integrated.shellIntegration.history": 10000,
     "terminal.integrated.tabStopWidth": 4,
     "workbench.editor.empty.hint": "hidden",
@@ -442,5 +446,6 @@
     "editor.accessibilitySupport": "off",
     "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
     "editor.fontSize": 17,
-    "editor.minimap.enabled": false
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false
 }
