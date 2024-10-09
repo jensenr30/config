@@ -46,6 +46,7 @@
         "devpkg",
         "dischgr",
         "dllname",
+        "doesnt",
         "doxygen",
         "dpot",
         "DRINGFS",
@@ -384,7 +385,7 @@
         }
     ],
     "terminal.integrated.hideOnStartup": "always",
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": 16,
     "terminal.integrated.mouseWheelZoom": true,
     "git-graph.dialog.rebase.launchInteractiveRebase": true,
     "markdown.extension.toc.unorderedList.marker": "*",
@@ -429,7 +430,6 @@
     "git-graph.repository.showRemoteHeads": false,
     "git-graph.showStatusBarItem": false,
     "githubPullRequests.terminalLinksHandler": "github",
-    "window.menuBarVisibility": "toggle",
     "git-graph.repository.commits.order": "topo",
     "rewrap.autoWrap.enabled": true,
     "terminal.integrated.scrollback": 10000,
@@ -447,5 +447,7 @@
     "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
     "editor.fontSize": 17,
     "zenMode.hideLineNumbers": false,
-    "zenMode.hideStatusBar": false
+    "zenMode.hideStatusBar": false,
+    "git-blame.config.inlineBlameHoverMessage": true,
+    "git-blame.config.ignoreWhitespace": true
 }
