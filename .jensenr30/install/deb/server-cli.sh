@@ -9,7 +9,7 @@ i='sudo apt install -y'
 $i bat
 $i fd-find
 $i 7zip
-$i exa
+$i eza
 $i neovim
 $i bash-completion
 
