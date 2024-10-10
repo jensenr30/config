@@ -120,3 +120,5 @@ export MOZ_USE_XINPUT2=1
 export XDG_MENU_PREFIX=arch-
 
 export STM32CubeMX_PATH=/home/ryan/programs/stm32cubemx_6.12.0
+
+. "$HOME/.atuin/bin/env"
