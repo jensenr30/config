@@ -4,7 +4,7 @@ source install-helper.sh
 $i i3-wm
 $i polybar
 $i arandr # GUI tool for monitor config using xrandr
-$i picom # compositor
+# $i picom # compositor
 $i feh
 
 $i xorg-xinit
