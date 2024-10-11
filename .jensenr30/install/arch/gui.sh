@@ -50,3 +50,6 @@ $i libnotify dunst
 
 # authorization agent & GUI
 $i polkit
+
+# information about hardware
+$y hardinfo2

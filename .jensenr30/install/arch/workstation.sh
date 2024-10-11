@@ -47,7 +47,7 @@ $y wacom-utility
 
 # cd ripping
 $y abcde
-$i --asdeps glyr flac cdparanoia lame opus-tools vorbisgain
+$i --asdeps glyr flac cdparanoia lame opus-tools
 $y --asdeps python-eyed3
 
 #===============================================================================

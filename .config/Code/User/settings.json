@@ -25,6 +25,8 @@
         "BDTR",
         "bools",
         "boundf",
+        "cbus",
+        "cbuses",
         "CCER",
         "cgrahn",
         "chgr",
@@ -395,7 +397,7 @@
     "editor.hover.sticky": false,
     "editor.cursorSurroundingLinesStyle": "all",
     "search.quickOpen.includeHistory": false,
-    "search.useIgnoreFiles": true,
+    "search.useIgnoreFiles": false,
     "files.exclude": {
         "**/.cache": true,
         "**/compile_commands.json": true,
