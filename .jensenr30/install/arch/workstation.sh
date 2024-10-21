@@ -49,6 +49,7 @@ $y wacom-utility
 $y abcde
 $i --asdeps glyr flac cdparanoia lame opus-tools
 $y --asdeps python-eyed3
+$y mp3tag
 
 #===============================================================================
 # programming
