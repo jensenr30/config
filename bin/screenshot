@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+import -window root image.png
+mv image.png "/nas/safe/pictures/screenshots/screenshot-$(date +%Y%m%d_%H%M%S).png"

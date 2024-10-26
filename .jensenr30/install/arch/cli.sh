@@ -43,6 +43,7 @@ $i which
 $i eza
 $i atool
 $i unrar zip unzip
+$i gdu
 
 # programming & dev tools
 $i python3
