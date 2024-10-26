@@ -1,4 +1,6 @@
 #!/usr/bin/bash
 
+filename="/nas/safe/pictures/screenshots/screenshot-$(date +%Y%m%d_%H%M%S).png"
 import -window root image.png
-mv image.png "/nas/safe/pictures/screenshots/screenshot-$(date +%Y%m%d_%H%M%S).png"
+mv image.png "$filename"
+echo "$filename" | tee >(clipin) 
