@@ -84,7 +84,7 @@ kicad
 fsearch
 piper
 qdirstat
-shutter
+imagemagick
 
 # benchmarking
 geekbench

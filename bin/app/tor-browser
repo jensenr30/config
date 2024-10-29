@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-
-/opt/tor-browser/Browser/start-tor-browser
-

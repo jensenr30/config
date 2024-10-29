@@ -43,6 +43,7 @@ $i which
 $i eza
 $i atool
 $i unrar zip unzip
+$i gdu
 
 # programming & dev tools
 $i python3
@@ -73,6 +74,7 @@ $i traceroute
 $i arp-scan
 $i nmap
 $i sshfs
+$i speedtest-cli
 
 # network time protocol
 sudo timedatectl set-timezone America/Chicago
