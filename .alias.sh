@@ -87,7 +87,7 @@ alias exp='cd ~/repos/exp && ide'
 ################################################################################
 
 # my weirdo ls aliases
-alias ls='exa --color=automatic --group-directories-first'
+alias ls='eza --color=automatic --group-directories-first'
 alias l='ls'
 alias l1='ls -1'
 alias l1a='l1 -a'
@@ -96,6 +96,7 @@ alias l1a='l1 -a'
 alias la='ls -a'
 alias lv='ls -lh'
 alias lva='lv -a'
+alias lvt='lva -s modified'
 
 # ls-type commands for non-directories
 alias lsuuid='sudo blkid | grep -i UUID='
