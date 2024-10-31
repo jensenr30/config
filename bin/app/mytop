@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+htop -H -d 3 --sort PID -t
+

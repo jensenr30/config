@@ -15,6 +15,8 @@ exec_always lxpolkit &
 exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/layout-art.png"
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
 
+
+
 # program launcher
 exec_always albert &
 bindsym $mod+p exec --no-startup-id start-menu
@@ -83,13 +85,15 @@ bindsym $mod+$alt+m exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec term
+bindsym $mod+Return exec myterminal
 
 bindsym $mod+Ctrl+f exec fsearch
 bindsym $mod+f exec dolphin
 bindsym $mod+$alt+e exec emote
 bindsym $mod+e exec term -e e
 bindsym $mod+a exec pavucontrol
+bindsym $mod+Ctrl+a exec qpwgraph
+bindsym $mod+t exec myterminal-open mytop
 
 focus_on_window_activation focus
 
@@ -146,7 +150,7 @@ bindsym $mod+$alt+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
+bindsym $mod+$alt+t layout tabbed
 #bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -268,5 +272,7 @@ bar {
         status_command i3status
         mode invisible
 }
+
+
 
 exec_always sleep 0.3 && polybar-launch-on-all-monitors

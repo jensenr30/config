@@ -51,6 +51,7 @@ $i --asdeps glyr flac cdparanoia lame opus-tools
 $y --asdeps python-eyed3
 $y mp3tag
 
+
 #===============================================================================
 # programming
 #===============================================================================
@@ -138,3 +139,10 @@ $y via-bin
 
 $y etcher-bin
 $i virtualbox
+
+
+# audio server
+sudo pacman -R pulseaudio || echo 'good :)'
+$i pipewire
+$i --asdeps pipewire-audio pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+sudo systemctl --user enable --now pipewire pipewire-pulse
