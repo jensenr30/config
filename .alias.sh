@@ -96,6 +96,7 @@ alias l1a='l1 -a'
 alias la='ls -a'
 alias lv='ls -lh'
 alias lva='lv -a'
+alias lvt='lva -s modified'
 
 # ls-type commands for non-directories
 alias lsuuid='sudo blkid | grep -i UUID='

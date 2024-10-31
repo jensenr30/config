@@ -63,8 +63,7 @@ font pango:FreeSans 9
 bindsym $mod+Ctrl+s exec --no-startup-id sleep 0.5 && systemctl suspend
 
 ## Screenshots
-exec shutter --min_at_startup
-bindsym Print exec --no-startup-id shutter -s
+bindsym Print exec --no-startup-id screenshot-and-edit
 for_window [class="Shutter"] floating enable
 for_window [class="SimpleScreen"] floating enable
 for_window [class="pavucontrol"] floating enable

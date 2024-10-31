@@ -40,8 +40,12 @@ fi
 #===============================================================================
 # home manager will import a .nix file specific to this machine
 ln -f -s "$HOME/.config/home-manager/by-hostname/$HOSTNAME.nix" "$HOME/.config/home-manager/hostname.nix"
+
 # I do not plan on "having Home Manager manage your shell configuration then you must source"
-. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+hm_source_file="$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+if [ -f "$hm_source_file" ]; then
+    . "$hm_source_file"
+fi
 # now run `home-manager switch` to make nix pkgs available to current user
 
 
@@ -121,4 +125,7 @@ export XDG_MENU_PREFIX=arch-
 
 export STM32CubeMX_PATH=/home/ryan/programs/stm32cubemx_6.12.0
 
-. "$HOME/.atuin/bin/env"
+atuin_source="$HOME/.atuin/bin/env"
+if [ -f "$atuin_source" ]; then
+    . "$atuin_source"
+fi
