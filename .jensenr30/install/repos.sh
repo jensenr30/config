@@ -56,6 +56,11 @@ $cdrepos
 gc git@github.com:jensenr30/cli-visualizer-sdl.git cli-visualizer-sdl
 
 $cdrepos
+gc https://aur.archlinux.org/yay.git
+cd yay
+git fetch up || git remote add up git clone https://aur.archlinux.org/yay.git
+
+$cdrepos
 gc "$HOME" test-repo
 gc "$HOME" test-remote
 cd test-repo
