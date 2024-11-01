@@ -24,9 +24,6 @@ $i xournalpp # annotating PDFs and adding signatures.
 $i libreoffice
 $i --asdeps hunspell hunspell-en_us # libre office (spell check)
 
-# fonts
-$i ttf-inconsolata-nerd
-
 #===============================================================================
 # media editing
 #===============================================================================

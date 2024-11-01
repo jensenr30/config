@@ -11,6 +11,9 @@ $i alacritty
 $i --asdeps tk # for gitk to work
 $i nm-connection-editor
 
+# fonts
+$i ttf-inconsolata-nerd
+
 $i dolphin
 # all dolphin deps
 $i --asdeps ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
