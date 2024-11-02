@@ -1,4 +1,3 @@
-#!/usr/bin/sh
 set -e
 
 mkdir -p ~/repos
@@ -47,18 +46,13 @@ gc $base/microcontrollers.git microcontrollers
 $cdrepos
 gc $base/TAoE3Solutions.git TAoE3Solutions
 
-$cdrepos
-gc $base/TileVenture.git tile-venture
-cd tile-venture
-git fetch up || git remote add up https://github.com/JPisaBrony/TileVenture.git
+#$cdrepos
+#gc $base/TileVenture.git tile-venture
+#cd tile-venture
+#git fetch up || git remote add up https://github.com/JPisaBrony/TileVenture.git
 
 $cdrepos
 gc git@github.com:jensenr30/cli-visualizer-sdl.git cli-visualizer-sdl
-
-$cdrepos
-gc https://aur.archlinux.org/yay.git
-cd yay
-git fetch up || git remote add up git clone https://aur.archlinux.org/yay.git
 
 $cdrepos
 gc "$HOME" test-repo

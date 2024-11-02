@@ -37,7 +37,7 @@ $y qimgv
 $i kolourpaint
 
 $i pavucontrol
-$i pulseaudio-equalizer-ladspa
+# $i pulseaudio-equalizer-ladspa this conflicts with pipewire
 
 # fonts
 $i ttf-inconsolata-nerd
