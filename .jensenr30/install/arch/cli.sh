@@ -37,14 +37,7 @@ $i git
 $i git-delta
 
 # coreutils
-$i bat
-$i fd
-$i which
-$i eza
-$i atool
-$i unrar zip unzip
-$i gdu
-$i yazi
+$i bat fd which eza atool unrar zip unzip gdu yazi tree
 
 # programming & dev tools
 $i python3
