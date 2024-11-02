@@ -142,4 +142,3 @@ $i virtualbox
 sudo pacman -R pulseaudio || echo 'good :)'
 $i pipewire
 $i --asdeps pipewire-audio pipewire-pulse pipewire-alsa pipewire-jack wireplumber
-sudo systemctl --user enable --now pipewire pipewire-pulse
