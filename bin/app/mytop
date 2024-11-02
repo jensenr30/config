@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-htop -H -d 3 --sort PID -t
+htop -H -d 3 --sort ELAPSED
 

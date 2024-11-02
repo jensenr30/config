@@ -44,6 +44,7 @@ $i eza
 $i atool
 $i unrar zip unzip
 $i gdu
+$i yazi
 
 # programming & dev tools
 $i python3
