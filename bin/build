@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 r="$HOME/repos"
+if [ -e "build.sh" ]; then
+    ./build.sh
+    exit
+fi
 
 if [ $(pwd) = "$r/gittyup" ]; then
     echo "building gittyup..."
