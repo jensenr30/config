@@ -12,5 +12,6 @@ systemkeymap='/etc/keyd/default.conf'
 echo "copying user keymap    $keymap"
 echo "to system:             $systemkeymap"
 sudo cp "$keymap" "$systemkeymap"
-sudo keyd reload
 
+sudo systemctl enable --now keyd.service
+sudo keyd reload
