@@ -1,6 +1,11 @@
-#!/usr/bin/sh
+#!/bin/bash
 
-sudo pacman -S --noconfirm alsa-scarlett-gui
+source install-helper.sh
+
+$i alsa-scarlett-gui
+$i calf
+$y vital-synth
+
 FILE='/etc/modprobe.d/scarlett.conf'
 
 printf "\nconfig file: $FILE\n"
