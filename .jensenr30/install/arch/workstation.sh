@@ -137,9 +137,3 @@ $y via-bin
 
 $y etcher-bin
 $i virtualbox
-
-
-# audio server
-sudo pacman -R pulseaudio || echo 'good :)'
-$i pipewire
-$i --asdeps pipewire-audio pipewire-pulse pipewire-alsa pipewire-jack wireplumber

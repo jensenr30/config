@@ -2,8 +2,13 @@
 
 source install-helper.sh
 
+# audio server
+sudo pacman -R pulseaudio || echo 'good :)'
+$i pipewire
+$i --asdeps pipewire-audio pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+
 $i alsa-scarlett-gui
-$i calf
+$i calf cardinal
 $y vital-synth
 
 FILE='/etc/modprobe.d/scarlett.conf'
