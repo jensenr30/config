@@ -10,7 +10,7 @@ exec_always sleep 0.5
 exec_always ~/.jensenr30/screen-layout/$HOSTNAME.sh
 # notifications
 exec_always dunst &
-exec_always lxpolkit &
+exec_always lxqt-policykit-agent &
 # desktop background
 exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/layout-art.png"
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &

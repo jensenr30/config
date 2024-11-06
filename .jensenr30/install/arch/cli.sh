@@ -37,7 +37,7 @@ $i git
 $i git-delta
 
 # coreutils
-$i bat fd which eza atool unrar zip unzip gdu yazi tree
+$i bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep
 
 # programming & dev tools
 $i python3
