@@ -2,20 +2,15 @@
 # settings and cli programs for every linux system
 sudo apt update
 
-alias i='sudo apt install -y'
+i='sudo apt install -y'
 
 # coreutils replacements / enhancements
-# i bat
-# i fd-find
-i 7zip
-# i exa
-# i neovim
-# i bash-completion
+$i bat ripgrep fd-find 7zip exa neovim bash-completion atool
 
 # programming languages
-i python3 python3-pip
-i python3-pip
-i python-is-python3
+$i python3 python3-pip
+$i python3-pip
+$i python-is-python3
 #i rustc cargo
 
 # development tools

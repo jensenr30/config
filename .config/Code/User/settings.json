@@ -260,7 +260,6 @@
     "cSpell.customDictionaries": {
 
     },
-    "cortex-debug.showDevDebugOutput": "both",
     "cmake.configureOnEdit": false,
     "gitlens.hovers.enabled": false,
     "clangd.arguments": [
