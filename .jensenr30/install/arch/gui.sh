@@ -13,6 +13,8 @@ $i nm-connection-editor
 
 # fonts
 $i ttf-inconsolata-nerd
+$i noto-fonts-cjk #chinese, japan, korean
+$i ttf-joypixels # emoji
 
 $i dolphin
 # all dolphin deps
@@ -39,12 +41,6 @@ $i kolourpaint
 $i pavucontrol
 # $i pulseaudio-equalizer-ladspa this conflicts with pipewire
 
-# fonts
-$i ttf-inconsolata-nerd
-# fix font issues on firefox where special japanese / chinese character don't render
-$i noto-fonts-cjk
-
-
 # emoji selector
 $y emote
 
@@ -53,6 +49,7 @@ $i libnotify dunst
 
 # authorization agent & GUI
 $i polkit
+$i lxqt-policykit
 
 # information about hardware
 $y hardinfo2

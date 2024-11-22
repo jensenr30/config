@@ -12,8 +12,7 @@ source install-helper.sh
 $i flatpak
 
 # internet
-$i firefox
-# $i torbrowser-launcher
+$i firefox chromium
 $i qbittorrent
 
 #===============================================================================
@@ -124,7 +123,9 @@ $y geekbench
 
 # usbtop
 $y usbtop
-sudo modprobe usbmon
+RED='\x1b[31;1m'
+NOCOLOR='\033[0m'
+sudo modprobe usbmon || echo -e "${RED}error modprobe usbmon!${NOCOLOR}"
 
 $i docker
 $i --asdeps docker-buildx
@@ -136,9 +137,3 @@ $y via-bin
 
 $y etcher-bin
 $i virtualbox
-
-
-# audio server
-sudo pacman -R pulseaudio || echo 'good :)'
-$i pipewire
-$i --asdeps pipewire-audio pipewire-pulse pipewire-alsa pipewire-jack wireplumber

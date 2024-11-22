@@ -37,7 +37,7 @@ $i git
 $i git-delta
 
 # coreutils
-$i bat fd which eza atool unrar zip unzip gdu yazi tree
+$i bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep
 
 # programming & dev tools
 $i python3
@@ -69,6 +69,7 @@ $i arp-scan
 $i nmap
 $i sshfs
 $i speedtest-cli
+$i openvpn
 
 # network time protocol
 sudo timedatectl set-timezone America/Chicago

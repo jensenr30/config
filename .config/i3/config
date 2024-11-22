@@ -10,7 +10,7 @@ exec_always sleep 0.5
 exec_always ~/.jensenr30/screen-layout/$HOSTNAME.sh
 # notifications
 exec_always dunst &
-exec_always lxpolkit &
+exec_always lxqt-policykit-agent &
 # desktop background
 exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/layout-art.png"
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
@@ -88,7 +88,7 @@ floating_modifier $mod
 bindsym $mod+Return exec myterminal
 
 bindsym $mod+Ctrl+f exec fsearch
-bindsym $mod+f exec dolphin
+bindsym $mod+f exec thunar
 bindsym $mod+$alt+e exec emote
 bindsym $mod+e exec term -e e
 bindsym $mod+a exec pavucontrol

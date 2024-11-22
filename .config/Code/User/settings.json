@@ -81,6 +81,7 @@
         "hdma",
         "hdmarx",
         "Hocevar",
+        "hspi",
         "htim",
         "huart",
         "HWCONTROL",
