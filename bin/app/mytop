@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-htop -H -d 3 --sort ELAPSED
+htop --highlight-changes=20 -d 3 --sort ELAPSED
 
