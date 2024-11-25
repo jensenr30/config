@@ -45,7 +45,7 @@ $i pavucontrol
 $y emote
 
 # notification server
-$i libnotify dunst
+$i libnotify xfce4-notifyd
 
 # authorization agent & GUI
 $i polkit

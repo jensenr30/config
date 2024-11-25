@@ -69,7 +69,6 @@
 !.config/qt6ct/qt6ct.conf
 !.config/qt6ct/colors/
 !.config/qt6ct/colors/**
-
 !.config/REAPER
 !.config/REAPER/Configurations
 !.config/REAPER/Configurations/*
@@ -79,6 +78,10 @@
 !.config/vis/config
 !.config/vis/colors/
 !.config/vis/colors/**
+!.config/xfce4/
+!.config/xfce4/xfconf/
+!.config/xfce4/xfconf/xfce-perchannel-xml
+!.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml
 
 !.ssr/
 !.ssr/output-profiles/
