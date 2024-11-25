@@ -224,7 +224,9 @@ alias menv1='export DEBUG=1; menv'
 alias menvdev='export DEVKIT=1; export ELF_FILE="build/app/app"; menv1'
 alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 
-. ~/pd/.alias.sh
+if [ -f ~/pd/.alias.sh ]; then
+    . pd/.alias.sh
+fi
 
 
 # TODO make these last 2 if statements work in zsh and bash
