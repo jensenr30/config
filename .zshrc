@@ -18,7 +18,4 @@ bindkey -v
 
 source ~/.alias.sh
 
-
-. "$HOME/.atuin/bin/env"
-
 eval "$(atuin init zsh)"

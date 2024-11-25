@@ -129,5 +129,3 @@ atuin_source="$HOME/.atuin/bin/env"
 if [ -f "$atuin_source" ]; then
     . "$atuin_source"
 fi
-
-. "$HOME/.atuin/bin/env"

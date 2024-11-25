@@ -69,6 +69,7 @@ $i arp-scan
 $i nmap
 $i sshfs
 $i speedtest-cli
+$i openvpn
 
 # network time protocol
 sudo timedatectl set-timezone America/Chicago
