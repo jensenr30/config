@@ -9,7 +9,7 @@ if [ "$USER" != "root" ]; then
     exit 1
 fi
 
-$i openvpn
+$i openvpn virt-manager
 
 dir='/etc/openvpn/client'
 
