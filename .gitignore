@@ -77,10 +77,6 @@
 !.config/vis/config
 !.config/vis/colors/
 !.config/vis/colors/**
-!.config/xfce4/
-!.config/xfce4/xfconf/
-!.config/xfce4/xfconf/xfce-perchannel-xml
-!.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml
 
 !.ssr/
 !.ssr/output-profiles/
