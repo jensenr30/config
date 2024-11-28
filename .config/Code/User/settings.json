@@ -98,6 +98,7 @@
         "iterrows",
         "iwdg",
         "jensenr",
+        "KEYR",
         "korad",
         "Kosma",
         "LALT",
@@ -129,6 +130,8 @@
         "OCPOLARITY",
         "opengl",
         "openocd",
+        "OPTKEYR",
+        "OPTSTRT",
         "OSSI",
         "OSSR",
         "overcurrent",
@@ -274,7 +277,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "debug.onTaskErrors": "debugAnyway",
     "editor.wordWrapColumn": 100,
     "evenBetterToml.formatter.columnWidth": 100,
     "rewrap.wrappingColumn": 100,
@@ -348,11 +350,10 @@
         //"diffEditor.move.border": "#000000",
     },
     "cmake.showOptionsMovedNotification": false,
-    "workbench.panel.defaultLocation": "right",
+    "workbench.panel.defaultLocation": "left",
     "window.zoomLevel": 1,
     "editor.lineNumbers": "relative",
     "vim.history": 500,
-    "workbench.editor.showTabs": "single",
     "remote.autoForwardPortsSource": "hybrid",
     "gitHistory.sideBySide": true,
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -441,5 +442,10 @@
     "files.insertFinalNewline": true,
     "editor.accessibilitySupport": "off",
     "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
-    "editor.fontSize": 17
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "editor.fontSize": 17,
+    "debug.onTaskErrors": "debugAnyway"
 }
