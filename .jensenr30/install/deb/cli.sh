@@ -23,7 +23,7 @@ $i wget curl
 $i htop atop iftop nethogs sysstat usbtop bashtop
 
 # networking
-$i net-tools sshfs traceroute arp-scan bridge-utils
+$i net-tools sshfs traceroute arp-scan bridge-utils nmap
 
 # misc
 $i rsync minicom fd-find fzf numlockx xsel
