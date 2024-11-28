@@ -28,6 +28,3 @@ sudo add-apt-repository ppa:libratbag-piper/piper-libratbag-git
 sudo apt-get update
 sudo apt install -y piper
 
-# Programming
-$i dfu-util
-
