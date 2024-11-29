@@ -9,9 +9,14 @@ if [ "$USER" != "root" ]; then
     exit
 fi
 
-echo "192.168.0.200 server" >> /etc/hosts
+realdir='/home/ryan/nas'
+
 $i nfs-utils
-showmount -e server
-echo 'server:/media  /nas  nfs defaults,timeo=900,retrans=5,_netdev  0 0' >> /etc/fstab
-mkdir -p /nas
-mount -m server:/media /nas
+showmount -e server2
+# todo ln -s /nas "$realdir"
+mkdir -p "$realdir/safe"
+mkdir -p "$realdir/junk"
+echo "server2:/nas/safe  $realdir/safe  nfs defaults,timeo=900,retrans=5,_netdev  0 0" >> /etc/fstab
+echo "server2:/nas/junk  $realdir/junk  nfs defaults,timeo=900,retrans=5,_netdev  0 0" >> /etc/fstab
+mount -m server2:/nas/safe "$realdir/safe"
+mount -m server2:/nas/junk "$realdir/junk"
