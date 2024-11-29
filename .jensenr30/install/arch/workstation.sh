@@ -86,6 +86,7 @@ $i ruby rubygems # for building unity tests
 
 # electronics
 $i pulseview
+$y gtkterm
 
 # CAD
 $i freecad
