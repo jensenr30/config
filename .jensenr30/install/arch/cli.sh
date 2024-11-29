@@ -32,44 +32,20 @@ $i syslinux
 $y systemd-numlockontty
 $sys enable --now numLockOnTty
 
-# git
-$i git
-$i git-delta
-
-# coreutils
-$i bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep
+$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux
 
 # programming & dev tools
-$i python3
-$i python-pip
-$i python-pipx
-
-#terminal managers
-$i screen
-$i tmux
+$i python3 python-pip python-pipx
 
 # downloaders
-$i wget
-$i curl
+$i wget curl
 $p yt-dlp
 
 #system monitor
-$i htop
-$i atop
-$i iftop
-$i nethogs
-$i sysstat # for iostat
-$i usbutils # for lsusb
-$i bashtop
+$i htop atop iftop nethogs sysstat usbutils bashtop
 
 # networking
-$i net-tools
-$i traceroute
-$i arp-scan
-$i nmap
-$i sshfs
-$i speedtest-cli
-$i openvpn
+$i net-tools traceroute arp-scan nmap sshfs speedtest-cli openvpn
 
 # network time protocol
 sudo timedatectl set-timezone America/Chicago
@@ -77,23 +53,11 @@ sudo timedatectl set-ntp true
 timedatectl # print info
 
 # file systems
-$i dosfstools mtools
-$i ntfs-3g
+$i dosfstools mtools ntfs-3g
 
 # misc
-$i rsync
-$i minicom
-$i fzf
-$i numlockx
-$i bash-completion
-$i exfatprogs
-$i  pkgstats # volunteer some info to arch developers
-$i cronie
+$i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel neofetch lsb-release
 $sys enable --now cronie.service
-$i xclip
-$i xsel
-$i neofetch
-$i lsb-release
 
 # crontab -e
 # see README.md for crontab entry
