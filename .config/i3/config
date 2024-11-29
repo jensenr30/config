@@ -23,7 +23,7 @@ bindsym $mod+p exec --no-startup-id start-menu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
 
 # disable window borders
-for_window [class=.*] border pixel 0
+for_window [class=.*] border pixel 1
 
 set $mod Mod4
 set $alt Mod1
