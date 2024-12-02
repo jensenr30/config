@@ -2,18 +2,11 @@
 # install programs for my primary workstation
 source install-helper.sh
 
-# NOTE: commented items are covered by workstation.nix
-
-# disable EndeavourOS's firewall
-# this is necessary for things like network printing to work.
-# $sys disable --now firewalld
-
 # package managers
 $i flatpak
 
 # internet
-$i firefox chromium
-$i qbittorrent
+$i firefox chromium qbittorrent discord
 
 #===============================================================================
 # office
@@ -22,6 +15,7 @@ $i fbreader
 $i xournalpp # annotating PDFs and adding signatures.
 $i libreoffice
 $i --asdeps hunspell hunspell-en_us # libre office (spell check)
+$i skanlite
 
 #===============================================================================
 # media editing
@@ -34,12 +28,15 @@ $i inkscape
 $i audacity
 $i kdenlive
 $i obs-studio
-$i v4l2loopback-dkms
 $y simplescreenrecorder
 $y gcolor2
 $i xf86-input-wacom
 # TODO: do I actually use this?
 $y wacom-utility
+
+# allow obs to make virtual webcam
+$i v4l2loopback-dkms linux-headers
+sudo modprobe v4l2loopback
 
 # cd ripping
 $y abcde
@@ -54,8 +51,6 @@ $y mp3tag
 $i kdiff3
 $y visual-studio-code-bin
 $y gnome-keyring # for vs code
-# #$i rustc  # TODO: fix this
-# #$i cargo
 $p pre-commit
 $i python-pdm
 $i doxygen
@@ -71,14 +66,8 @@ $i lib32-mesa # amd 32-bit libraries
 # $y ncurses5-compat-libs
 
 # C
-$i gdb
-$i check
-$i cppcheck
-$i lcov
-$i make cmake
-$i clang
-$i multilib-devel   # 32-bit libraries for compiling for ARM etc.
-$i bear # generates compile_commands.json
+$i gcc gdb clang make cmake ninja bear
+$i check cppcheck lcov
 
 # graphics
 $i opengl-man-pages
@@ -87,8 +76,7 @@ $i opengl-man-pages
 # Embedded systems
 #===============================================================================
 # this is for dronecan_gui_tool:
-$i python-pip python-setuptools python-wheel
-$i python-numpy python-pyqt5
+$i python-pip python-setuptools python-wheel python-numpy python-pyqt5
 $i --asdeps qt5-svg
 $p dronecan
 $p git+https://github.com/DroneCAN/gui_tool@master
@@ -96,11 +84,12 @@ $p git+https://github.com/DroneCAN/gui_tool@master
 #
 $i arm-none-eabi-gcc arm-none-eabi-gdb
 $i --asdeps arm-none-eabi-newlib
-# for building unity tests
-$i ruby rubygems
+$i multilib-devel   # 32-bit libraries for compiling for ARM etc.
+$i ruby rubygems # for building unity tests
 
 # electronics
 $i pulseview
+$y gtkterm
 
 # CAD
 $i freecad
@@ -108,18 +97,21 @@ $i kicad
 $i --asdeps kicad-library kicad-library-3d
 
 #===============================================================================
+# containers / virtualization
+#===============================================================================
+$i docker
+$i --asdeps docker-buildx
+sudo usermod -aG docker ryan
+sudo systemctl enable --now docker
+
+$i virtualbox
+$i virt-manager
+
+
+#===============================================================================
 # misc
 #===============================================================================
-$i discord
-$y fsearch
-$i piper
-$y qdirstat
-$i shutter
-$i deepin-screenshot
-$i wine
-
-# benchmarking
-$y geekbench
+$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench
 
 # usbtop
 $y usbtop
@@ -127,13 +119,4 @@ RED='\x1b[31;1m'
 NOCOLOR='\033[0m'
 sudo modprobe usbmon || echo -e "${RED}error modprobe usbmon!${NOCOLOR}"
 
-$i docker
-$i --asdeps docker-buildx
-sudo usermod -aG docker ryan
-sudo systemctl enable --now docker
-
-# via (keyboard customization)
-$y via-bin
-
-$y etcher-bin
-$i virtualbox
+$y via-bin (keyboard customization)

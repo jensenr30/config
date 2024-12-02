@@ -98,6 +98,7 @@
         "iterrows",
         "iwdg",
         "jensenr",
+        "KEYR",
         "korad",
         "Kosma",
         "LALT",
@@ -129,6 +130,8 @@
         "OCPOLARITY",
         "opengl",
         "openocd",
+        "OPTKEYR",
+        "OPTSTRT",
         "OSSI",
         "OSSR",
         "overcurrent",
@@ -274,7 +277,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "debug.onTaskErrors": "debugAnyway",
     "editor.wordWrapColumn": 100,
     "evenBetterToml.formatter.columnWidth": 100,
     "rewrap.wrappingColumn": 100,
@@ -313,7 +315,6 @@
     "git-graph.repository.commits.loadMore": 200,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
-    "terminal.integrated.tabs.enabled": false,
     "coverage-gutters.coverageFileNames": [
         "total_coverage.info",
         "test_coverage.info",
@@ -348,11 +349,10 @@
         //"diffEditor.move.border": "#000000",
     },
     "cmake.showOptionsMovedNotification": false,
-    "workbench.panel.defaultLocation": "right",
+    "workbench.panel.defaultLocation": "left",
     "window.zoomLevel": 1,
     "editor.lineNumbers": "relative",
     "vim.history": 500,
-    "workbench.editor.showTabs": "single",
     "remote.autoForwardPortsSource": "hybrid",
     "gitHistory.sideBySide": true,
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -380,7 +380,7 @@
         }
     ],
     "terminal.integrated.hideOnStartup": "always",
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": -84,
     "terminal.integrated.mouseWheelZoom": true,
     "git-graph.dialog.rebase.launchInteractiveRebase": true,
     "markdown.extension.toc.unorderedList.marker": "*",
@@ -441,5 +441,11 @@
     "files.insertFinalNewline": true,
     "editor.accessibilitySupport": "off",
     "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
-    "editor.fontSize": 17
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "editor.fontSize": 17,
+    "debug.onTaskErrors": "debugAnyway",
+    "terminal.integrated.tabs.enabled": false
 }

@@ -4,6 +4,3 @@
 [submodule ".jensenr30/private"]
 	path = .jensenr30/private
 	url = git@github.com:jensenr30/private.git
-[submodule "pd"]
-	path = pd
-	url = git@github.com:jensenr30/pd.git
