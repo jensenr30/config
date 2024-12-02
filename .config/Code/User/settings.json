@@ -315,7 +315,6 @@
     "git-graph.repository.commits.loadMore": 200,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
-    "terminal.integrated.tabs.enabled": false,
     "coverage-gutters.coverageFileNames": [
         "total_coverage.info",
         "test_coverage.info",
@@ -447,5 +446,6 @@
         "compounds": []
     },
     "editor.fontSize": 17,
-    "debug.onTaskErrors": "debugAnyway"
+    "debug.onTaskErrors": "debugAnyway",
+    "terminal.integrated.tabs.enabled": false
 }
