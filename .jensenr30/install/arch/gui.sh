@@ -5,6 +5,7 @@ source install-helper.sh
 $i xorg
 $i polybar
 $i dmenu
+$i unclutter
 # $y albert
 $i terminator
 $i alacritty
