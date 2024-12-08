@@ -61,7 +61,6 @@
 .config/nvim/plugin/**
 !.config/obs-studio/
 !.config/obs-studio/basic/
-!.config/obs-studio/basic/**
 !.config/polybar
 !.config/polybar/config.ini
 !.config/qt6ct/
@@ -103,8 +102,6 @@
 # lots of good scripts in here :)
 !bin/
 !bin/**
-
-!pd/
 
 #===============================================================================
 # 3. Ignore specific junk

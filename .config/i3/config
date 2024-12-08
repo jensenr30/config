@@ -22,8 +22,11 @@ exec_always albert &
 bindsym $mod+p exec --no-startup-id start-menu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
 
-# disable window borders
-for_window [class=.*] border pixel 0
+# set window border size
+for_window [class=.*] border pixel 3
+# hide borders adjacent to screen edges
+hide_edge_borders both
+
 
 set $mod Mod4
 set $alt Mod1

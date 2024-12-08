@@ -206,6 +206,7 @@
         "undervoltage",
         "undervolted",
         "USART",
+        "usbc",
         "usbpd",
         "usec",
         "vbat",
@@ -315,7 +316,6 @@
     "git-graph.repository.commits.loadMore": 200,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
-    "terminal.integrated.tabs.enabled": false,
     "coverage-gutters.coverageFileNames": [
         "total_coverage.info",
         "test_coverage.info",
@@ -381,7 +381,7 @@
         }
     ],
     "terminal.integrated.hideOnStartup": "always",
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": -84,
     "terminal.integrated.mouseWheelZoom": true,
     "git-graph.dialog.rebase.launchInteractiveRebase": true,
     "markdown.extension.toc.unorderedList.marker": "*",
@@ -426,7 +426,6 @@
     "git-graph.repository.showRemoteHeads": false,
     "git-graph.showStatusBarItem": false,
     "githubPullRequests.terminalLinksHandler": "github",
-    "window.menuBarVisibility": "toggle",
     "git-graph.repository.commits.order": "topo",
     "rewrap.autoWrap.enabled": true,
     "terminal.integrated.scrollback": 10000,
@@ -447,5 +446,39 @@
         "compounds": []
     },
     "editor.fontSize": 17,
-    "debug.onTaskErrors": "debugAnyway"
+    "debug.onTaskErrors": "debugAnyway",
+    "terminal.integrated.tabs.enabled": false,
+    "highlight.regexes": {
+        // this terrifying regex will highlight the entire line
+        // "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|FIXME)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+        //     "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+        //     "decorations": [
+        //         {
+        //             "overviewRulerColor": "#00cc33",
+        //             "backgroundColor": "#00cc33",
+        //             "color": "#1f1f1f",
+        //             "fontWeight": "bold"
+        //         },
+        //         {
+        //             "backgroundColor": "#00cc33",
+        //             "color": "#1f1f1f"
+        //         }
+        //     ]
+        // },
+        "(TODO|FIXME)": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#00cc33",
+                    "backgroundColor": "#00cc33",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#00cc33",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+    }
 }
