@@ -71,6 +71,7 @@ $i check cppcheck lcov
 
 # graphics
 $i opengl-man-pages
+$i radeontop # gpu usage monitor
 
 #===============================================================================
 # Embedded systems
