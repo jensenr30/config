@@ -17,7 +17,7 @@ exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/layout-art.png"
 # compositor
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
 # auto hide the mouse
-exec_always unclutter --timeout 3 --jitter 50 --ignore-scrolling &
+exec_always unclutter --timeout 3 --ignore-scrolling &
 
 # program launcher
 exec_always albert &
