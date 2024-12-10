@@ -170,9 +170,16 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 --
 --
 --
--- Ryan Jensen's custom keymaps
+-- Ryan Jensen's customizations
 vim.keymap.set("n", "<A-h>", "<C-o>", { desc = "Jump to previous location" })
 vim.keymap.set("n", "<A-l>", "<C-i>", { desc = "Jump to next location" })
+-- Open files at last position
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+	--group = "userconfig",
+	desc = "return cursor to where it was last time closing the file",
+	pattern = "*",
+	command = 'silent! normal! g`"zv',
+})
 --
 --
 --
@@ -539,6 +546,10 @@ require("lazy").setup({
 							buffer = event.buf,
 							callback = vim.lsp.buf.clear_references,
 						})
+						-- enable lsp-overloads - also Guard against servers without the signatureHelper capability
+						if client.server_capabilities.signatureHelpProvider then
+							require("lsp-overloads").setup(client, {})
+						end
 					end
 				end,
 			})
@@ -657,6 +668,10 @@ require("lazy").setup({
 		},
 	},
 
+	{ -- function overloading
+		"Issafalcon/lsp-overloads.nvim",
+	},
+
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -756,6 +771,7 @@ require("lazy").setup({
 				}),
 				sources = {
 					{ name = "nvim_lsp" },
+					-- { name = "nvim_lsp_signature_help" }, -- not sure if this is necessary
 					{ name = "luasnip" },
 					{ name = "path" },
 				},
