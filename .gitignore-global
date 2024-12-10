@@ -7,4 +7,4 @@
 ryans-secret-code*
 compile_commands.json
 gmon.out
-
+gprof_output.txt

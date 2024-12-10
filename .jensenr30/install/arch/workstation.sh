@@ -60,6 +60,7 @@ $i emscripten
 $y nng
 $i valgrind
 $i lib32-mesa # amd 32-bit libraries
+$i cloc # count lines of code
 
 # # installing shit for mcuxpresso IDE
 # $y python38
