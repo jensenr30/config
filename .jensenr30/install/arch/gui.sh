@@ -21,7 +21,7 @@ $i dolphin
 # all dolphin deps
 $i --asdeps ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
 $i thunar
-$i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailer
+$i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailer xfce4-settings
 # fix dolphin's broken 'open with' menu - see .profile too
 $i archlinux-xdg-menu
 kbuildsycoca6

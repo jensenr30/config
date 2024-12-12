@@ -78,8 +78,8 @@ alias cdi="cd $CFGDIR/install"
 alias cdid="cd $CFGDIR/install/$distro"
 # quick cd into nas storage
 alias cdn='cl /nas/safe'
-alias tri='cd ~/repos/triangulite && ide'
-alias exp='cd ~/repos/exp && ide'
+alias tri='cd ~/repos/triangulite'
+alias exp='cd ~/repos/exp'
 
 
 ################################################################################

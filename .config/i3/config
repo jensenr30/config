@@ -148,7 +148,7 @@ bindsym $mod+z split h
 
 # split in vertical orientation
 # I use this keybinding for push-to-talk so I disable it
-# bindsym $mod+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+$alt+f fullscreen toggle
