@@ -56,7 +56,7 @@ timedatectl # print info
 $i dosfstools mtools ntfs-3g
 
 # misc
-$i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel neofetch lsb-release
+$i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel fastfetch lsb-release
 $sys enable --now cronie.service
 
 # crontab -e
