@@ -39,6 +39,10 @@
 !.config/albert.conf
 !.config/atuin/
 !.config/atuin/config.toml
+!.config/bat/
+!.config/bat/config
+!.config/bat/themes
+!.config/bat/themes/**
 !.config/Code
 !.config/Code/User/
 !.config/Code/User/settings.json
