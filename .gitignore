@@ -76,6 +76,8 @@
 !.config/vis/config
 !.config/vis/colors/
 !.config/vis/colors/**
+!.config/zellij/
+!.config/zellij/config.kdl
 
 !.ssr/
 !.ssr/output-profiles/

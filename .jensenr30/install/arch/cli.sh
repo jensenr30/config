@@ -32,7 +32,7 @@ $i syslinux
 $y systemd-numlockontty
 $sys enable --now numLockOnTty
 
-$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux
+$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux zellij
 
 # programming & dev tools
 $i python3 python-pip python-pipx
