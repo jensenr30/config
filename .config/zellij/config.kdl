@@ -128,6 +128,7 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
+        bind "Alt q" { CloseFocus; }
         bind "Ctrl g" { SwitchToMode "locked"; }
         // bind "Alt h" { MoveFocusOrTab "left"; }
         //bind "Alt j" { MoveFocus "down"; }
