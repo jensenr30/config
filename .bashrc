@@ -156,8 +156,8 @@ export LS_COLORS
 export GREP_COLORS='ms=01;91'
 
 # man pages basic syntax highlighting
-# export MANPAGER="less -R --use-color -Dd+ -Du+b"
-export MANPAGER="bat --style plain"
+export MANPAGER="less -R --use-color -Dd+2 -Du+4"
+# export MANPAGER="bat --style plain"
 export MANROFFOPT="-P -c"
 
 
