@@ -173,6 +173,8 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 -- Ryan Jensen's customizations
 vim.keymap.set("n", "<A-h>", "<C-o>", { desc = "Jump to previous location" })
 vim.keymap.set("n", "<A-l>", "<C-i>", { desc = "Jump to next location" })
+-- todo it would be nice to not need to <Esc>, because that changes the mode in the current buffer
+vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>", { noremap = true, silent = true })
 -- Open files at last position
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	--group = "userconfig",
