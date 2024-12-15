@@ -129,14 +129,18 @@ keybinds clear-defaults=true {
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Ctrl g" { SwitchToMode "locked"; }
-        bind "Alt h" { MoveFocusOrTab "left"; }
-        bind "Alt i" { MoveTab "left"; }
-        bind "Alt j" { MoveFocus "down"; }
-        bind "Alt k" { MoveFocus "up"; }
-        bind "Alt l" { MoveFocusOrTab "right"; }
+        // bind "Alt h" { MoveFocusOrTab "left"; }
+        //bind "Alt j" { MoveFocus "down"; }
+        //bind "Alt k" { MoveFocus "up"; }
+        //bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
-        bind "Alt o" { MoveTab "right"; }
         bind "Ctrl q" { Quit; }
+
+        // ryan's custom shortcuts
+        bind "Ctrl tab" { GoToNextTab; }
+        bind "Ctrl Shift tab" { GoToPreviousTab; }
+        // todo bind "Alt i" { MoveTab "left"; }
+        // todo bind "Alt o" { MoveTab "right"; }
     }
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }

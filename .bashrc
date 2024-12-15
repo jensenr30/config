@@ -155,6 +155,11 @@ export LS_COLORS
 # set grep colors
 export GREP_COLORS='ms=01;91'
 
+# man pages basic syntax highlighting
+# export MANPAGER="less -R --use-color -Dd+ -Du+b"
+export MANPAGER="bat --style plain"
+export MANROFFOPT="-P -c"
+
 
 #===============================================================================
 # PS1
