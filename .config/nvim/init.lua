@@ -182,6 +182,13 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	pattern = "*",
 	command = 'silent! normal! g`"zv',
 })
+-- necessary for making neovim recognize .frag and .vert files as glsl
+vim.filetype.add({
+	extension = {
+		frag = "glsl",
+		vert = "glsl",
+	},
+})
 --
 --
 --
@@ -248,7 +255,8 @@ require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
 	-- opengl shader syntax highlighting and auto-indent
-	"tikhomirov/vim-glsl",
+	-- "tikhomirov/vim-glsl",
+
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
@@ -613,6 +621,7 @@ require("lazy").setup({
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				clangd = {},
+				glsl_analyzer = {},
 				-- gopls = {},
 				-- pyright = {},
 				-- rust_analyzer = {},
