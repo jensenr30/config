@@ -5,11 +5,16 @@
 exec_always killall -9 polybar
 exec_always killall -9 picom
 exec_always killall -9 albert
+exec_always killall -9 lxqt-policykit-agent
+exec_always killall -9 unclutter
+exec_always killall -9 dunst
+exec_always killall -9 lxqt-notificationd
+exec_always killall -9 xfce4-notifyd
 exec_always sleep 0.5
 
 exec_always ~/.jensenr30/screen-layout/$HOSTNAME.sh
 # notification
-exec_always lxqt-notificationd &
+exec_always dunst &
 # GUI authentication
 exec_always lxqt-policykit-agent &
 # desktop background

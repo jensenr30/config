@@ -46,7 +46,7 @@ $i pavucontrol
 $y emote
 
 # notification server
-$i libnotify lxqt-notificationd
+$i libnotify dunst
 
 # authorization agent & GUI
 $i polkit
