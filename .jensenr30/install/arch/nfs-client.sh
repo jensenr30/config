@@ -21,4 +21,6 @@ echo "$junk_fstab" >> /etc/fstab
 bat /etc/fstab
 systemctl daemon-reload
 systemctl restart remote-fs.target
+# prevent shutdown from hanging - network manager must wait until NFS unmounts before quitting
+systemctl enable --now NetworkManager-wait-online.service
 tree -L 2 /nas
