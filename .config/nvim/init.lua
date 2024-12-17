@@ -170,7 +170,18 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 --
 --
 --
--- Ryan Jensen's customizations
+-----------------------------------------------------------------------------------------------------------------------
+-- Some of Ryan Jensen's customizations
+--
+-- Close every floating window
+local function close_floating_windows()
+	for _, win in pairs(vim.api.nvim_list_wins()) do
+		if vim.api.nvim_win_get_config(win).relative == "win" then
+			vim.api.nvim_win_close(win, false)
+		end
+	end
+end
+vim.keymap.set("n", "<Esc>", close_floating_windows, { desc = "Close floating Windows" })
 vim.keymap.set("n", "<A-h>", "<C-o>", { desc = "Jump to previous location" })
 vim.keymap.set("n", "<A-l>", "<C-i>", { desc = "Jump to next location" })
 -- todo it would be nice to not need to <Esc>, because that changes the mode in the current buffer
@@ -870,7 +881,28 @@ require("lazy").setup({
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = { signs = false },
+		opts = {
+			-- signs = false,
+			highlight = {
+				pattern = [[.*<(KEYWORDS)\s*]],
+			},
+			keywords = {
+				FIX = {
+					icon = " ", -- icon used for the sign, and in search results
+					color = "error", -- can be a hex color, or a named color (see below)
+					alt = { "fixme", "Fixme", "FixMe", "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+					-- signs = false, -- configure signs for some keywords individually
+				},
+				TODO = { icon = " ", color = "warning", alt = { "todo", "Todo", "ToDo", "TODo" } },
+				HACK = { icon = " ", color = "warning" },
+				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+			},
+			search = {
+				pattern = [[\b(KEYWORDS)\b]], -- overriding default: don't require a ':' character at the end
+			},
+		},
 	},
 
 	{ -- Collection of various small independent plugins/modules
