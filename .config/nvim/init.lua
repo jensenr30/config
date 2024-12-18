@@ -200,6 +200,9 @@ vim.filetype.add({
 		vert = "glsl",
 	},
 })
+-- make Ctrl+Delete and Ctrl+Backspace work in insert mode
+vim.keymap.set("i", "<C-Del>", "<C-o>dw", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
 --
 --
 --
@@ -765,6 +768,7 @@ require("lazy").setup({
 	},
 
 	{ -- function overloading
+		-- default mapping: <C-j>  <C-k>
 		"Issafalcon/lsp-overloads.nvim",
 	},
 
@@ -816,7 +820,10 @@ require("lazy").setup({
 						luasnip.lsp_expand(args.body)
 					end,
 				},
-				completion = { completeopt = "menu,menuone,noinsert" },
+				completion = {
+					keyword_length = 4,
+					completeopt = "menu,menuone,noinsert",
+				},
 
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`
@@ -841,7 +848,7 @@ require("lazy").setup({
 					--  Generally you don't need this, because nvim-cmp will display
 					--  completions whenever it has completion options available.
 					["<C-Space>"] = cmp.mapping.complete({}),
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
+					["<Right>"] = cmp.mapping.confirm({ select = true }),
 
 					-- Think of <c-l> as moving to the right of your snippet expansion.
 					--  So if you have a snippet that's like:
