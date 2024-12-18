@@ -74,6 +74,7 @@ bindsym $mod+Ctrl+s exec --no-startup-id sleep 0.5 && systemctl suspend
 
 ## Screenshots
 bindsym Print exec --no-startup-id screenshot-and-edit
+bindsym Ctrl+Print exec shutter -s
 for_window [class="Shutter"] floating enable
 for_window [class="SimpleScreen"] floating enable
 for_window [class="pavucontrol"] floating enable
