@@ -214,8 +214,8 @@ alias menv1='export DEBUG=1; menv'
 alias menvdev='export DEVKIT=1; export ELF_FILE="build/app/app"; menv1'
 alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 
-if [ -f ~/pd/.alias.sh ]; then
-    . pd/.alias.sh
+if [ -f $HOME/pd/.alias.sh ]; then
+    . $HOME/pd/.alias.sh
 fi
 
 
