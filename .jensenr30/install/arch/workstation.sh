@@ -113,7 +113,7 @@ $i virt-manager
 #===============================================================================
 # misc
 #===============================================================================
-$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench
+$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench ccze
 
 # usbtop
 $y usbtop
