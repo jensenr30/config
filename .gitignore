@@ -61,8 +61,6 @@
 !.config/nvim/
 !.config/nvim/**
 .config/nvim/lazy-lock.json
-!.config/nvim_disabled/
-!.config/nvim_disabled/**
 .config/nvim/lazy-lock.json
 .config/nvim/plugin/**
 !.config/obs-studio/
