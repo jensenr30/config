@@ -142,6 +142,11 @@ keybinds clear-defaults=true {
         bind "Ctrl Shift w" { CloseTab; }
         // todo bind "Alt i" { MoveTab "left"; }
         // todo bind "Alt o" { MoveTab "right"; }
+        bind "Ctrl Shift Down"  { NewPane "Down"; SwitchToMode "normal"; }
+        bind "Ctrl Shift Right" { NewPane "Right"; SwitchToMode "normal"; }
+        // up and left currently not supported by zellij according to docs and testing
+        // bind "Ctrl Shift Up"    { NewPane "up"; SwitchToMode "normal"; }
+        // bind "Ctrl Shift Left"  { NewPane "left"; SwitchToMode "normal"; }
     }
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }
@@ -284,7 +289,7 @@ load_plugins {
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-default_layout "compact"
+// default_layout "compact"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
