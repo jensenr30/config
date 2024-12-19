@@ -203,6 +203,29 @@ vim.filetype.add({
 -- make Ctrl+Delete and Ctrl+Backspace work in insert mode
 vim.keymap.set("i", "<C-Del>", "<C-o>dw", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
+
+vim.o.cindent = true
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true -- Use spaces instead of tabs
+vim.o.smartindent = true -- Enable smart indentation
+--
+-- vim visual multi-cursor
+-- existing shortcuts must be cleared first 🙄
+vim.g.VM_maps = {
+	["Select Cursor Down"] = "",
+	["Select Cursor Up"] = "",
+}
+-- remap vim visual multi cursor keybinds
+vim.g.VM_maps = {
+	["Select Cursor Down"] = "<C-S-j>", -- vim visual multi re-map shortcut to add new cursors above/below
+	["Select Cursor Up"] = "<C-S-k>",
+}
+--
+--
+--
+--
+--
 --
 --
 --
@@ -268,9 +291,121 @@ require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
-	-- opengl shader syntax highlighting and auto-indent
-	-- "tikhomirov/vim-glsl",
-
+	"mg979/vim-visual-multi", -- multi cursor
+	-- {
+	-- 	"jake-stewart/multicursor.nvim",
+	-- 	branch = "1.0",
+	-- 	config = function()
+	-- 		local mc = require("multicursor-nvim")
+	--
+	-- 		mc.setup()
+	--
+	-- 		local set = vim.keymap.set
+	--
+	-- 		-- Add or skip cursor above/below the main cursor.
+	-- 		set({ "n", "v" }, "<up>", function()
+	-- 			mc.lineAddCursor(-1)
+	-- 		end)
+	-- 		set({ "n", "v" }, "<down>", function()
+	-- 			mc.lineAddCursor(1)
+	-- 		end)
+	-- 		set({ "n", "v" }, "<leader><up>", function()
+	-- 			mc.lineSkipCursor(-1)
+	-- 		end)
+	-- 		set({ "n", "v" }, "<leader><down>", function()
+	-- 			mc.lineSkipCursor(1)
+	-- 		end)
+	--
+	-- 		-- Add or skip adding a new cursor by matching word/selection
+	-- 		set({ "n", "v" }, "<leader>n", function()
+	-- 			mc.matchAddCursor(1)
+	-- 		end)
+	-- 		set({ "n", "v" }, "<leader>s", function()
+	-- 			mc.matchSkipCursor(1)
+	-- 		end)
+	-- 		set({ "n", "v" }, "<leader>N", function()
+	-- 			mc.matchAddCursor(-1)
+	-- 		end)
+	-- 		set({ "n", "v" }, "<leader>S", function()
+	-- 			mc.matchSkipCursor(-1)
+	-- 		end)
+	--
+	-- 		-- Add all matches in the document
+	-- 		set({ "n", "v" }, "<leader>A", mc.matchAllAddCursors)
+	--
+	-- 		-- You can also add cursors with any motion you prefer:
+	-- 		-- set("n", "<right>", function()
+	-- 		--     mc.addCursor("w")
+	-- 		-- end)
+	-- 		-- set("n", "<leader><right>", function()
+	-- 		--     mc.skipCursor("w")
+	-- 		-- end)
+	--
+	-- 		-- Rotate the main cursor.
+	-- 		set({ "n", "v" }, "<left>", mc.nextCursor)
+	-- 		set({ "n", "v" }, "<right>", mc.prevCursor)
+	--
+	-- 		-- Delete the main cursor.
+	-- 		set({ "n", "v" }, "<leader>x", mc.deleteCursor)
+	--
+	-- 		-- Add and remove cursors with alt + left click.
+	-- 		-- TODO why does this not work?
+	-- 		set("n", "<A-LeftMouse>", mc.handleMouse)
+	--
+	-- 		-- Easy way to add and remove cursors using the main cursor.
+	-- 		set({ "n", "v" }, "<c-q>", mc.toggleCursor)
+	--
+	-- 		-- Clone every cursor and disable the originals.
+	-- 		set({ "n", "v" }, "<leader><c-q>", mc.duplicateCursors)
+	--
+	-- 		set("n", "<esc>", function()
+	-- 			if not mc.cursorsEnabled() then
+	-- 				mc.enableCursors()
+	-- 			elseif mc.hasCursors() then
+	-- 				mc.clearCursors()
+	-- 			else
+	-- 				-- Default <esc> handler.
+	-- 			end
+	-- 		end)
+	--
+	-- 		-- bring back cursors if you accidentally clear them
+	-- 		set("n", "<leader>gv", mc.restoreCursors)
+	--
+	-- 		-- Align cursor columns.
+	-- 		set("n", "<leader>a", mc.alignCursors)
+	--
+	-- 		-- Split visual selections by regex.
+	-- 		set("v", "S", mc.splitCursors)
+	--
+	-- 		-- Append/insert for each line of visual selections.
+	-- 		set("v", "I", mc.insertVisual)
+	-- 		set("v", "A", mc.appendVisual)
+	--
+	-- 		-- match new cursors within visual selections by regex.
+	-- 		set("v", "M", mc.matchCursors)
+	--
+	-- 		-- Rotate visual selection contents.
+	-- 		set("v", "<leader>t", function()
+	-- 			mc.transposeCursors(1)
+	-- 		end)
+	-- 		set("v", "<leader>T", function()
+	-- 			mc.transposeCursors(-1)
+	-- 		end)
+	--
+	-- 		-- Jumplist support
+	-- 		set({ "v", "n" }, "<c-i>", mc.jumpForward)
+	-- 		set({ "v", "n" }, "<c-o>", mc.jumpBackward)
+	--
+	-- 		-- Customize how cursors look.
+	-- 		local hl = vim.api.nvim_set_hl
+	-- 		hl(0, "MultiCursorCursor", { link = "Cursor" })
+	-- 		hl(0, "MultiCursorVisual", { link = "Visual" })
+	-- 		hl(0, "MultiCursorSign", { link = "SignColumn" })
+	-- 		hl(0, "MultiCursorDisabledCursor", { link = "Visual" })
+	-- 		hl(0, "MultiCursorDisabledVisual", { link = "Visual" })
+	-- 		hl(0, "MultiCursorDisabledSign", { link = "SignColumn" })
+	-- 	end,
+	-- },
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.

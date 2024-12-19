@@ -66,7 +66,7 @@ keybinds clear-defaults=true {
         bind "j" { Resize "Increase down"; }
         bind "k" { Resize "Increase up"; }
         bind "l" { Resize "Increase right"; }
-        bind "Ctrl n" { SwitchToMode "normal"; }
+        bind "Alt r" { SwitchToMode "normal"; }
     }
     move {
         bind "left" { MovePane "left"; }
@@ -130,16 +130,16 @@ keybinds clear-defaults=true {
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Alt q" { CloseFocus; }
         bind "Ctrl g" { SwitchToMode "locked"; }
-        // bind "Alt h" { MoveFocusOrTab "left"; }
-        //bind "Alt j" { MoveFocus "down"; }
-        //bind "Alt k" { MoveFocus "up"; }
-        //bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
         bind "Ctrl q" { Quit; }
 
-        // ryan's custom shortcuts
+        bind "Shift PageUp" { HalfPageScrollUp;HalfPageScrollUp; }
+        bind "Shift PageDown" { HalfPageScrollDown;HalfPageScrollDown; }
+
         bind "Ctrl tab" { GoToNextTab; }
         bind "Ctrl Shift tab" { GoToPreviousTab; }
+        bind "Ctrl Shift t" { NewTab; }
+        bind "Ctrl Shift w" { CloseTab; }
         // todo bind "Alt i" { MoveTab "left"; }
         // todo bind "Alt o" { MoveTab "right"; }
     }
@@ -162,7 +162,7 @@ keybinds clear-defaults=true {
     //    bind "Ctrl p" { SwitchToMode "pane"; }
     //}
     shared_except "locked" "resize" {
-        bind "Ctrl n" { SwitchToMode "resize"; }
+        bind "Alt r" { SwitchToMode "resize"; }
     }
     shared_except "normal" "locked" "entersearch" {
         bind "enter" { SwitchToMode "normal"; }
@@ -310,7 +310,7 @@ load_plugins {
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -362,7 +362,7 @@ load_plugins {
 // Enable automatic copying (and clearing) of selection when releasing mouse
 // Default: true
 // 
-// copy_on_select true
+copy_on_select false
  
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
