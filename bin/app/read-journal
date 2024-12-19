@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-journalctl --follow | ccze
+journalctl --follow | ccze --mode ansi
