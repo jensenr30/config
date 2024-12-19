@@ -10,8 +10,7 @@ layout {
             pane command="mytop" size="65%"
             pane split_direction="horizontal" {
                 pane command="radeontop"
-                pane command="journalctl" size="35%" {
-                    args "--follow"
+                pane command="read-journal" size="35%" {
                 }
                 pane command="pkexec" size="35%" {
                     args "dmesg" "-wH"
