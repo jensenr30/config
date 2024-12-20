@@ -1,0 +1,13 @@
+layout {
+    tab_template name="tab_with_tabbar" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+    }
+    tab_with_tabbar name="term" {
+    }
+    tab_with_tabbar name="editor" {
+    }
+}
+

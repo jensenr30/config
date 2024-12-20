@@ -9,7 +9,7 @@ $i unclutter
 # $y albert
 $i terminator
 $i alacritty
-$i --asdeps tk # for gitk to work
+$i tk # for gitk to work
 $i nm-connection-editor
 
 # fonts
@@ -19,9 +19,10 @@ $i ttf-joypixels # emoji
 
 $i dolphin
 # all dolphin deps
-$i --asdeps ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
+$i ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
 $i thunar
-$i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailer xfce4-settings
+$i thunar-archive-plugin tumbler xfce4-settings 
+$y ffmpegthumbnailer tumbler-folder-thumbnailer
 # fix dolphin's broken 'open with' menu - see .profile too
 $i archlinux-xdg-menu
 kbuildsycoca6
