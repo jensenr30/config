@@ -54,7 +54,6 @@ fi
 #===============================================================================
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.nix-profile/bin"
-export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/bin/app"
 export PATH="$PATH:$HOME/bin/c"
