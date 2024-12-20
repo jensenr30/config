@@ -7,7 +7,8 @@ layout {
     }
     tab_with_tabbar name="term" {
     }
-    tab_with_tabbar name="editor" {
+    tab_with_tabbar name="editor" focus=true {
+        pane command="e"
     }
 }
 
