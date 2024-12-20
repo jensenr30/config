@@ -75,8 +75,8 @@ function cl(){
 # quick cd into install script directories
 alias cdi="cd $CFGDIR/install"
 alias cdid="cd $CFGDIR/install/$distro"
-alias tri='cd ~/repos/triangulite'
-alias exp='cd ~/repos/exp'
+alias tri='cd ~/repos/triangulite && ide'
+alias exp='cd ~/repos/exp && ide'
 
 
 ################################################################################
