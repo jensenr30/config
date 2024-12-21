@@ -131,7 +131,7 @@ keybinds clear-defaults=true {
         bind "Alt q" { CloseFocus; }
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Alt n" { NewPane; }
-        bind "Ctrl q" { Quit; }
+        bind "Ctrl Alt Shift q" { Quit; }
 
         bind "Shift PageUp" { HalfPageScrollUp;HalfPageScrollUp; }
         bind "Shift PageDown" { HalfPageScrollDown;HalfPageScrollDown; }
