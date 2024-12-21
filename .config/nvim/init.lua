@@ -131,6 +131,8 @@ vim.opt.signcolumn = "yes"
 -- Decrease update time
 vim.opt.updatetime = 250
 
+vim.opt.timeoutlen = 300
+
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -182,6 +184,8 @@ vim.keymap.set("n", "<A-h>", "<C-o>", { desc = "Jump to previous location" })
 vim.keymap.set("n", "<A-l>", "<C-i>", { desc = "Jump to next location" })
 -- todo it would be nice to not need to <Esc>, because that changes the mode in the current buffer
 vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>", { noremap = true, silent = true })
+-- todo figure out how to make p not yank without remapping it to P because P places text on previous line instead of next line
+-- vim.keymap.set({ "n", "v" }, "p", "P", { noremap = true, silent = true })
 -- Open files at last position
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	--group = "userconfig",
@@ -467,7 +471,7 @@ require("lazy").setup({
 		"folke/which-key.nvim",
 		event = "VimEnter", -- Sets the loading event to 'VimEnter'
 		opts = {
-			delay = 600,
+			delay = 0,
 			icons = {
 				-- set icon mappings to true if you have a Nerd Font
 				mappings = vim.g.have_nerd_font,

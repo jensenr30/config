@@ -8,7 +8,10 @@ layout {
     tab_with_tabbar name="term" {
     }
     tab_with_tabbar name="editor" focus=true {
-        pane command="e"
+        pane {
+            command "$SHELL"
+            args "-c" "e && $SHELL"
+        }
     }
 }
 
