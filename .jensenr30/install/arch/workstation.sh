@@ -28,12 +28,15 @@ $i inkscape
 $i audacity
 $i kdenlive
 $i obs-studio
-$i v4l2loopback-dkms
 $y simplescreenrecorder
 $y gcolor2
 $i xf86-input-wacom
 # TODO: do I actually use this?
 $y wacom-utility
+
+# allow obs to make virtual webcam
+$i v4l2loopback-dkms linux-headers
+sudo modprobe v4l2loopback
 
 # cd ripping
 $y abcde
@@ -57,6 +60,7 @@ $i emscripten
 $y nng
 $i valgrind
 $i lib32-mesa # amd 32-bit libraries
+$i cloc # count lines of code
 
 # # installing shit for mcuxpresso IDE
 # $y python38
@@ -68,6 +72,7 @@ $i check cppcheck lcov
 
 # graphics
 $i opengl-man-pages
+$i radeontop # gpu usage monitor
 
 #===============================================================================
 # Embedded systems
@@ -86,6 +91,7 @@ $i ruby rubygems # for building unity tests
 
 # electronics
 $i pulseview
+$y gtkterm
 
 # CAD
 $i freecad
@@ -107,7 +113,7 @@ $i virt-manager
 #===============================================================================
 # misc
 #===============================================================================
-$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench
+$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench ccze
 
 # usbtop
 $y usbtop

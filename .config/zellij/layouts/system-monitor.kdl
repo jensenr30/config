@@ -1,0 +1,24 @@
+layout {
+    tab_template name="tab_with_tabbar" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+    }
+    tab_with_tabbar name="htop" {
+        pane split_direction="vertical" {
+            pane command="mytop" size="65%"
+            pane split_direction="horizontal" {
+                pane command="radeontop"
+                pane command="read-journal" size="35%" {
+                }
+                pane command="pkexec" size="35%" {
+                    args "dmesg" "-wH"
+                }
+            }
+        }
+    }
+    tab_with_tabbar name="btop" {
+        pane command="btop"
+    }
+}

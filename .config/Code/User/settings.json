@@ -206,6 +206,7 @@
         "undervoltage",
         "undervolted",
         "USART",
+        "usbc",
         "usbpd",
         "usec",
         "vbat",
@@ -425,7 +426,6 @@
     "git-graph.repository.showRemoteHeads": false,
     "git-graph.showStatusBarItem": false,
     "githubPullRequests.terminalLinksHandler": "github",
-    "window.menuBarVisibility": "toggle",
     "git-graph.repository.commits.order": "topo",
     "rewrap.autoWrap.enabled": true,
     "terminal.integrated.scrollback": 10000,
@@ -445,7 +445,40 @@
         "configurations": [],
         "compounds": []
     },
-    "editor.fontSize": 17,
+    "editor.fontSize": 16,
     "debug.onTaskErrors": "debugAnyway",
-    "terminal.integrated.tabs.enabled": false
+    "terminal.integrated.tabs.enabled": false,
+    "highlight.regexes": {
+        // this terrifying regex will highlight the entire line
+        // "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|FIXME)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+        //     "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+        //     "decorations": [
+        //         {
+        //             "overviewRulerColor": "#00cc33",
+        //             "backgroundColor": "#00cc33",
+        //             "color": "#1f1f1f",
+        //             "fontWeight": "bold"
+        //         },
+        //         {
+        //             "backgroundColor": "#00cc33",
+        //             "color": "#1f1f1f"
+        //         }
+        //     ]
+        // },
+        "(TODO|FIXME)": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#00cc33",
+                    "backgroundColor": "#00cc33",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#00cc33",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+    }
 }

@@ -32,7 +32,7 @@ $i syslinux
 $y systemd-numlockontty
 $sys enable --now numLockOnTty
 
-$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux
+$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux zellij
 
 # programming & dev tools
 $i python3 python-pip python-pipx
@@ -56,7 +56,7 @@ timedatectl # print info
 $i dosfstools mtools ntfs-3g
 
 # misc
-$i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel neofetch lsb-release
+$i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel fastfetch lsb-release
 $sys enable --now cronie.service
 
 # crontab -e

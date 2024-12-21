@@ -11,7 +11,6 @@
     eza # ls with style
     fd # friendly find
     fzf # fuzzy finder
-    neovim # the new vim
     man
     man-pages
     gdu

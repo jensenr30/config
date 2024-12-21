@@ -5,25 +5,33 @@
 exec_always killall -9 polybar
 exec_always killall -9 picom
 exec_always killall -9 albert
+exec_always killall -9 lxqt-policykit-agent
+exec_always killall -9 unclutter
+exec_always killall -9 dunst
+exec_always killall -9 lxqt-notificationd
+exec_always killall -9 xfce4-notifyd
 exec_always sleep 0.5
 
 exec_always ~/.jensenr30/screen-layout/$HOSTNAME.sh
-# notifications
+# notification
 exec_always dunst &
+# GUI authentication
 exec_always lxqt-policykit-agent &
 # desktop background
 exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/layout-art.png"
+# compositor
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
-
-
+# auto hide the mouse
+exec_always unclutter --timeout 3 --ignore-scrolling &
 
 # program launcher
-exec_always albert &
-bindsym $mod+p exec --no-startup-id start-menu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
 
-# disable window borders
-for_window [class=.*] border pixel 1
+# set window border size
+for_window [class=.*] border pixel 3
+# hide borders adjacent to screen edges
+hide_edge_borders both
+
 
 set $mod Mod4
 set $alt Mod1
@@ -66,6 +74,7 @@ bindsym $mod+Ctrl+s exec --no-startup-id sleep 0.5 && systemctl suspend
 
 ## Screenshots
 bindsym Print exec --no-startup-id screenshot-and-edit
+bindsym Ctrl+Print exec shutter -s
 for_window [class="Shutter"] floating enable
 for_window [class="SimpleScreen"] floating enable
 for_window [class="pavucontrol"] floating enable
@@ -143,7 +152,7 @@ bindsym $mod+z split h
 
 # split in vertical orientation
 # I use this keybinding for push-to-talk so I disable it
-# bindsym $mod+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+$alt+f fullscreen toggle

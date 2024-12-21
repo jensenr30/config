@@ -8,7 +8,7 @@ sudo apt update
 i='sudo apt install -y'
 
 # coreutils replacements / enhancements
-$i bat ripgrep fd-find 7zip eza neovim bash-completion atool git git-delta
+$i bat ripgrep fd-find 7zip eza neovim bash-completion atool git git-delta gdu
 
 # programming languages
 $i python3 python3-pip python3-pip python-is-python3
@@ -20,7 +20,7 @@ $i screen tmux
 $i wget curl
 
 #system monitor
-$i htop atop iftop nethogs sysstat usbtop bashtop
+$i htop atop iftop nethogs sysstat usbtop bashtop iotop
 
 # networking
 $i net-tools sshfs traceroute arp-scan bridge-utils nmap

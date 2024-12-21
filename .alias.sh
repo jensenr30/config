@@ -32,8 +32,7 @@ function bw(){
     fi
 }
 
-alias rlal='source $HOME/.alias.sh'         # ReLoad ALiases
-alias ea="e $HOME/.alias.sh && rlal"        # Edit Aliases
+alias ea="e $HOME/.alias.sh && source $HOME/.alias.sh"        # Edit Aliases
 
 
 ################################################################################
@@ -76,8 +75,6 @@ function cl(){
 # quick cd into install script directories
 alias cdi="cd $CFGDIR/install"
 alias cdid="cd $CFGDIR/install/$distro"
-# quick cd into nas storage
-alias cdn='cl /nas/safe'
 alias tri='cd ~/repos/triangulite && ide'
 alias exp='cd ~/repos/exp && ide'
 
@@ -106,7 +103,6 @@ alias lss='ls /dev/serial/by-id/'
 
 #finders
 alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
-# fuzzy find in your command history :)
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
 
 # greps
@@ -115,11 +111,12 @@ alias g='grep'
 alias gi='g -i'
 alias psg="ps -A | grep -i"
 
-# misc *nix
-alias h='home-manager'
+# misc
 alias dtop='sudo dmesg -wH'
 alias k9='killall -9'
+alias o='xdg-open'
 alias path='echo $PATH | tr ":" "\n"'
+alias pwdc='pwd | tee >(clipin)'
 alias rm='rm -d'
 alias sl='screen -list'
 alias w='watch -n 0.1 --color'
@@ -134,7 +131,6 @@ function pdfd() {
     pdf "$filename"
 }
 
-alias o='xdg-open'
 
 
 ################################################################################
@@ -211,12 +207,6 @@ alias tvs='ssh ubuntu@tileventure.crabdance.com'
 
 
 ################################################################################
-#                                     misc                                     #
-################################################################################
-alias d='docker'
-
-
-################################################################################
 #                                redacted                                      #
 ################################################################################
 alias menv0='unset DEBUG; menv'
@@ -224,8 +214,8 @@ alias menv1='export DEBUG=1; menv'
 alias menvdev='export DEVKIT=1; export ELF_FILE="build/app/app"; menv1'
 alias menvc='unset DEBUG; unset DEVKIT; unset ELF_FILE; menv'
 
-if [ -f ~/pd/.alias.sh ]; then
-    . pd/.alias.sh
+if [ -f $HOME/pd/.alias.sh ]; then
+    . $HOME/pd/.alias.sh
 fi
 
 

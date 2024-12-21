@@ -39,6 +39,10 @@
 !.config/albert.conf
 !.config/atuin/
 !.config/atuin/config.toml
+!.config/bat/
+!.config/bat/config
+!.config/bat/themes
+!.config/bat/themes/**
 !.config/Code
 !.config/Code/User/
 !.config/Code/User/settings.json
@@ -56,12 +60,11 @@
 !.config/nixpkgs/*
 !.config/nvim/
 !.config/nvim/**
-!.config/nvim_disabled/
-!.config/nvim_disabled/**
+.config/nvim/lazy-lock.json
+.config/nvim/lazy-lock.json
 .config/nvim/plugin/**
 !.config/obs-studio/
 !.config/obs-studio/basic/
-!.config/obs-studio/basic/**
 !.config/polybar
 !.config/polybar/config.ini
 !.config/qt6ct/
@@ -77,6 +80,10 @@
 !.config/vis/config
 !.config/vis/colors/
 !.config/vis/colors/**
+!.config/zellij/
+!.config/zellij/config.kdl
+!.config/zellij/layouts
+!.config/zellij/layouts/**
 
 !.ssr/
 !.ssr/output-profiles/
@@ -103,8 +110,6 @@
 # lots of good scripts in here :)
 !bin/
 !bin/**
-
-!pd/
 
 #===============================================================================
 # 3. Ignore specific junk
