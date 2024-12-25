@@ -12,10 +12,10 @@ fi
 realdir='/home/ryan/nas'
 
 $i nfs-utils
-showmount -e server2
+showmount -e server
 ln -s "$realdir" /nas
-safe_fstab="server2:$realdir/safe  $realdir/safe  nfs defaults,timeo=900,retrans=5,_netdev  0 0"
-junk_fstab="server2:$realdir/junk  $realdir/junk  nfs defaults,timeo=900,retrans=5,_netdev  0 0"
+safe_fstab="server:$realdir/safe  $realdir/safe  nfs defaults,timeo=900,retrans=5,_netdev  0 0"
+junk_fstab="server:$realdir/junk  $realdir/junk  nfs defaults,timeo=900,retrans=5,_netdev  0 0"
 echo "$safe_fstab" >> /etc/fstab
 echo "$junk_fstab" >> /etc/fstab
 bat /etc/fstab

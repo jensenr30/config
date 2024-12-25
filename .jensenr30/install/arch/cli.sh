@@ -4,7 +4,7 @@ source install-helper.sh
 # NOTE: commented lines are probably covered by home-manager
 
 # install yay
-$i base-devel
+$i base-devel neovim
 
 if test ! -d "$HOME/repos/utils/yay"; then
     echo "installing yay..."
