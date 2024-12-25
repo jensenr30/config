@@ -102,7 +102,7 @@ bindsym $mod+$alt+e exec emote
 bindsym $mod+e exec term -e e
 bindsym $mod+a exec pavucontrol
 bindsym $mod+Ctrl+a exec qpwgraph
-bindsym $mod+t exec myterminal-open mytop
+#bindsym $mod+t exec myterminal-open mytop
 
 focus_on_window_activation focus
 

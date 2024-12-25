@@ -80,15 +80,15 @@
             "id": "v4l2_input",
             "versioned_id": "v4l2_input",
             "settings": {
-                "device_id": "/dev/video0",
+                "device_id": "/dev/video1",
+                "input": 0,
+                "pixelformat": 875967048,
                 "Auto Exposure": 1,
-                "Focus, Automatic Continuous": false,
-                "Zoom, Absolute": 120,
-                "Focus, Absolute": 0,
                 "Exposure Time, Absolute": 166,
                 "Tilt, Absolute": 0,
-                "input": 0,
-                "pixelformat": 875967048
+                "Focus, Absolute": 0,
+                "Focus, Automatic Continuous": false,
+                "Zoom, Absolute": 100
             },
             "mixers": 0,
             "sync": 0,
@@ -143,8 +143,8 @@
                         "gamma": 0.22,
                         "contrast": 0.34999999999999998,
                         "brightness": -0.41239999999999999,
-                        "saturation": 5.0,
-                        "hue_shift": 122.75,
+                        "saturation": -1.0,
+                        "hue_shift": 0.0,
                         "opacity": 1
                     },
                     "mixers": 0,
@@ -455,28 +455,28 @@
                         "id": 2,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 2585.0,
-                            "y": 1454.0
+                            "x": 2586.0,
+                            "y": 1933.0
                         },
                         "pos_rel": {
-                            "x": 1.8125,
-                            "y": 1.019444465637207
+                            "x": 1.8138889074325562,
+                            "y": 1.6847221851348877
                         },
                         "scale": {
-                            "x": 2.01953125,
-                            "y": 2.019444465637207
+                            "x": 4.0265626907348633,
+                            "y": 4.0270833969116211
                         },
                         "scale_rel": {
-                            "x": 2.01953125,
-                            "y": 2.019444465637207
+                            "x": 4.0265626907348633,
+                            "y": 4.0270833969116211
                         },
                         "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 0.0013888889225199819,
+                            "y": 0.0013888889225199819
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",

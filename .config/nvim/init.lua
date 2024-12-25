@@ -204,13 +204,14 @@ vim.filetype.add({
 vim.keymap.set("i", "<C-Del>", "<C-o>dw", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
 
+-- indentation
 vim.o.cindent = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.expandtab = true -- Use spaces instead of tabs
-vim.o.smartindent = true -- Enable smart indentation
+vim.o.smartindent = true
 -- -- vim visual multi-cursor
--- -- existing shortcuts must be cleared first 🙄
+-- -- existing shortcuts must be cleared first
 -- vim.g.VM_maps = {
 -- 	["Select Cursor Down"] = "",
 -- 	["Select Cursor Up"] = "",
