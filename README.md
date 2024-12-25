@@ -7,3 +7,12 @@
 - `.config/`
 - `.jensenr30/install/`
 - `bin/`
+
+## Init
+
+```
+git clone https://github.com/jensenr30/config.git
+rsync -a config/ $HOME 
+rm -rf config/
+bash
+```
