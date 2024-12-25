@@ -7,10 +7,12 @@ $i polybar
 $i dmenu
 $i unclutter
 # $y albert
-$i terminator
 $i alacritty
+$i terminator
 $i tk # for gitk to work
 $i nm-connection-editor
+
+$i firefox
 
 # fonts
 $i ttf-inconsolata-nerd
