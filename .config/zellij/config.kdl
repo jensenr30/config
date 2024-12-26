@@ -131,13 +131,13 @@ keybinds clear-defaults=true {
         bind "Alt q" { CloseFocus; }
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Alt n" { NewPane; }
-        bind "Ctrl Alt Shift q" { Quit; }
+        bind "Alt Shift q" { Quit; }
 
         bind "Shift PageUp" { HalfPageScrollUp;HalfPageScrollUp; }
         bind "Shift PageDown" { HalfPageScrollDown;HalfPageScrollDown; }
 
-        bind "Ctrl tab" { GoToNextTab; }
-        bind "Ctrl Shift tab" { GoToPreviousTab; }
+        bind "Alt Shift l" { GoToNextTab; }
+        bind "Alt Shift h" { GoToPreviousTab; }
         bind "Ctrl Shift t" { NewTab; }
         bind "Ctrl Shift w" { CloseTab; }
         // todo bind "Alt i" { MoveTab "left"; }

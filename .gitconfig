@@ -21,7 +21,7 @@
     line-numbers = true
     wrap-max-lines = 40
     # delta detects terminal colors automatically; set one of these to disable auto-detection
-    # dark = true
+    dark = true
     # light = true
 [merge]
     conflictstyle = diff3
