@@ -47,6 +47,3 @@ mods = "Control|Shift"
 
 [scrolling]
 history = 50000
-
-[shell]
-program = "/bin/bash"
