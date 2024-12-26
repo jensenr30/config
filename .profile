@@ -21,7 +21,9 @@ export sysname_short
 # distro
 #===============================================================================
 if [ $sysname == "linux" ]; then
-    distro=$(lsb_release -i | sed "s/Distributor ID:\t//g")
+    # distro=$(lsb_release -i | sed "s/Distributor ID:\t//g")
+    distro=$(cat /etc/os-release | grep -e '^NAME="' | sed "s/NAME=//g" | sed "s/\"//g")
+    distro=$(echo -n "$distro" | sed "s/ Linux//g")
     if   [ "$distro" == "Ubuntu" ]; then
         distro="deb"
     elif [ "$distro" == "Debian" ]; then
@@ -54,7 +56,6 @@ fi
 #===============================================================================
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.nix-profile/bin"
-export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/bin/app"
 export PATH="$PATH:$HOME/bin/c"

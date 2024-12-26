@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+htop --highlight-changes=120 -d 20 --sort ELAPSED --tree
+

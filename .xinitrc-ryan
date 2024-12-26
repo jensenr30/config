@@ -15,3 +15,6 @@ i3
 #export DESKTOP_SESSION=plasma
 #exec startplasma-x11
 
+# mate
+#exec mate-session
+

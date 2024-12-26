@@ -1,58 +1,29 @@
 #!/bin/bash
+
+set -e 
+
 # settings and cli programs for every linux system
 sudo apt update
 
-alias i='sudo apt install -y'
+i='sudo apt install -y'
 
 # coreutils replacements / enhancements
-# i bat
-# i fd-find
-i 7zip
-# i exa
-# i neovim
-# i bash-completion
+$i bat ripgrep fd-find 7zip eza neovim bash-completion atool git git-delta gdu
 
 # programming languages
-i python3 python3-pip
-i python3-pip
-i python-is-python3
-#i rustc cargo
-
-# development tools
-# pip install pre-commit
-# i can-utils
+$i python3 python3-pip python3-pip python-is-python3
 
 #terminal managers
-# i screen
-# i tmux
+$i screen tmux
 
 # downloaders
-# i wget
-# i curl
-#pip install -U yt-dlp
+$i wget curl
 
 #system monitor
-# i htop
-# i atop
-# i iftop
-# i nethogs
-# i sysstat
-# i usbtop
-# i bashtop
+$i htop atop iftop nethogs sysstat usbtop bashtop iotop
 
 # networking
-# i net-tools
-# i sshfs
-# i traceroute
-# i arp-scan
+$i net-tools sshfs traceroute arp-scan bridge-utils nmap
 
 # misc
-# i rsync
-# i minicom
-# i fd-find
-# i fzf
-# i numlockx
-# i xsel
-
-# programming
-# i dfu-util
+$i rsync minicom fd-find fzf numlockx xsel

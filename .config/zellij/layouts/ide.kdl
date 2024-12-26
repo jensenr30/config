@@ -1,0 +1,18 @@
+layout {
+    // we use default_tab_template so when the user creates new tabs, they inherit these settings
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+    }
+    tab name="term" {
+    }
+    tab name="editor" focus=true {
+        pane {
+            command "$SHELL"
+            args "-c" "e && $SHELL"
+        }
+    }
+}
+

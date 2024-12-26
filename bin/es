@@ -2,7 +2,7 @@
 
 # create a file, make it executable, and open it with the default editor
 if test ! -f "$1"; then
-    printf '#!/usr/bin/bash\n\n\n' > "$1"
+    printf '#!/usr/bin/bash\n' > "$1"
 fi
 chmod a+x "$1"
 e "$1"

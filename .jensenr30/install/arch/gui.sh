@@ -5,17 +5,26 @@ source install-helper.sh
 $i xorg
 $i polybar
 $i dmenu
+$i unclutter
 # $y albert
-$i terminator
 $i alacritty
-$i --asdeps tk # for gitk to work
+$i terminator
+$i tk # for gitk to work
 $i nm-connection-editor
+
+$i firefox
+
+# fonts
+$i ttf-inconsolata-nerd
+$i noto-fonts-cjk #chinese, japan, korean
+$i ttf-joypixels # emoji
 
 $i dolphin
 # all dolphin deps
-$i --asdeps ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
+$i ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
 $i thunar
-$i --asdeps thunar-archive-plugin tumbler ffmpegthumbnailer
+$i thunar-archive-plugin tumbler xfce4-settings 
+$y ffmpegthumbnailer tumbler-folder-thumbnailer
 # fix dolphin's broken 'open with' menu - see .profile too
 $i archlinux-xdg-menu
 kbuildsycoca6
@@ -34,13 +43,7 @@ $y qimgv
 $i kolourpaint
 
 $i pavucontrol
-$i pulseaudio-equalizer-ladspa
-
-# fonts
-$i ttf-inconsolata-nerd
-# fix font issues on firefox where special japanese / chinese character don't render
-$i noto-fonts-cjk
-
+# $i pulseaudio-equalizer-ladspa this conflicts with pipewire
 
 # emoji selector
 $y emote
@@ -50,6 +53,7 @@ $i libnotify dunst
 
 # authorization agent & GUI
 $i polkit
+$i lxqt-policykit
 
 # information about hardware
 $y hardinfo2

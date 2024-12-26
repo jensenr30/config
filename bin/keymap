@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+set -e
+
+keymap="$HOME/.jensenr30/keyd-keymap"
+
+if [ "$1" != "--reload" ]; then
+    sudo vim "$keymap"
+fi
+
+systemkeymap='/etc/keyd/default.conf'
+echo "copying user keymap    $keymap"
+echo "to system:             $systemkeymap"
+sudo cp "$keymap" "$systemkeymap"
+
+sudo systemctl enable --now keyd.service
+sudo keyd reload

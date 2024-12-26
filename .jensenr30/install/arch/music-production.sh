@@ -1,6 +1,16 @@
-#!/usr/bin/sh
+#!/bin/bash
 
-sudo pacman -S --noconfirm alsa-scarlett-gui
+source install-helper.sh
+
+# audio server
+sudo pacman -R pulseaudio || echo 'good :)'
+$i pipewire
+$i --asdeps pipewire-audio pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+
+$i alsa-scarlett-gui
+$i calf cardinal
+$y vital-synth
+
 FILE='/etc/modprobe.d/scarlett.conf'
 
 printf "\nconfig file: $FILE\n"

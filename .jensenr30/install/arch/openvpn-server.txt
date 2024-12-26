@@ -1,0 +1,20 @@
+# OpenVPN Server configuration
+
+follow this guide:
+https://ubuntu.com/server/docs/how-to-install-and-use-openvpn
+The steps are basically the same for arch except it organizes the files in
+/etc/openvpn/server
+instead of 
+/etc/openvpn/
+
+## generate keys/certificates for a client:
+sudo su
+cd /etc/openvpn/easy-rsa
+./easyrsa gen-req myclient1 nopass
+./easyrsa sign-req client myclient1
+
+Then copy the following three files to /etc/openvpn/client/ on the client machine:
+    myclient1.key
+    myclient1.crt
+    ca.crt
+

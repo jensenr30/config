@@ -9,9 +9,18 @@ if [ "$USER" != "root" ]; then
     exit
 fi
 
-echo "192.168.0.200 server" >> /etc/hosts
+realdir='/home/ryan/nas'
+
 $i nfs-utils
 showmount -e server
-echo 'server:/media  /nas  nfs defaults,timeo=900,retrans=5,_netdev  0 0' >> /etc/fstab
-mkdir -p /nas
-mount -m server:/media /nas
+ln -s "$realdir" /nas
+safe_fstab="server:$realdir/safe  $realdir/safe  nfs defaults,timeo=900,retrans=5,_netdev  0 0"
+junk_fstab="server:$realdir/junk  $realdir/junk  nfs defaults,timeo=900,retrans=5,_netdev  0 0"
+echo "$safe_fstab" >> /etc/fstab
+echo "$junk_fstab" >> /etc/fstab
+bat /etc/fstab
+systemctl daemon-reload
+systemctl restart remote-fs.target
+# prevent shutdown from hanging - network manager must wait until NFS unmounts before quitting
+systemctl enable --now NetworkManager-wait-online.service
+tree -L 2 /nas
