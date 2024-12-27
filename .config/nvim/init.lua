@@ -198,6 +198,8 @@ vim.filetype.add({
 	extension = {
 		frag = "glsl",
 		vert = "glsl",
+		compute_shader = "glsl",
+		compute = "glsl",
 	},
 })
 -- make Ctrl+Delete and Ctrl+Backspace work in insert mode
