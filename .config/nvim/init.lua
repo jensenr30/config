@@ -305,16 +305,16 @@ require("lazy").setup({
 			local set = vim.keymap.set
 
 			-- Add or skip cursor above/below the main cursor.
-			set({ "n", "v" }, "<C-S-k>", function()
+			set({ "n", "v" }, "<A-k>", function()
 				mc.lineAddCursor(-1)
 			end)
-			set({ "n", "v" }, "<C-S-j>", function()
+			set({ "n", "v" }, "<A-j>", function()
 				mc.lineAddCursor(1)
 			end)
-			set({ "n", "v" }, "<C-S-A-k>", function()
+			set({ "n", "v" }, "<S-A-k>", function()
 				mc.lineSkipCursor(-1)
 			end)
-			set({ "n", "v" }, "<C-S-A-j>", function()
+			set({ "n", "v" }, "<S-A-j>", function()
 				mc.lineSkipCursor(1)
 			end)
 
