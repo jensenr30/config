@@ -36,8 +36,7 @@ $i gparted
 # media
 $i vlc
 $i mplayer
-$y nomacs
-$y qimgv
+$y nomacs qimgv sumatrapdf
 
 # media creation
 $i kolourpaint
