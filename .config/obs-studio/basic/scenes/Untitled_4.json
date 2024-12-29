@@ -61,14 +61,17 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "webcam upside down for keyboard",
-    "current_program_scene": "webcam upside down for keyboard",
+    "current_scene": "webcam upside right with filters",
+    "current_program_scene": "webcam upside right with filters",
     "scene_order": [
         {
             "name": "screen+webcam"
         },
         {
             "name": "webcam upside down for keyboard"
+        },
+        {
+            "name": "webcam upside right with filters"
         }
     ],
     "name": "Untitled 4",
@@ -80,15 +83,16 @@
             "id": "v4l2_input",
             "versioned_id": "v4l2_input",
             "settings": {
-                "device_id": "/dev/video1",
-                "input": 0,
-                "pixelformat": 875967048,
+                "device_id": "/dev/video0",
                 "Auto Exposure": 1,
                 "Exposure Time, Absolute": 166,
                 "Tilt, Absolute": 0,
                 "Focus, Absolute": 0,
                 "Focus, Automatic Continuous": false,
-                "Zoom, Absolute": 100
+                "Zoom, Absolute": 100,
+                "input": 0,
+                "pixelformat": 875967048,
+                "resolution": 5497558139600
             },
             "mixers": 0,
             "sync": 0,
@@ -506,6 +510,94 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093696,
+            "name": "webcam upside right with filters",
+            "uuid": "7372b2d1-2ba0-4a3b-980f-3cee1cc10d03",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 1,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "webcam",
+                        "source_uuid": "68ea2e50-749b-4303-8f6a-0c2823de3bc6",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2560.0,
+                            "y": 1440.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 2.0,
+                            "y": 2.0
+                        },
+                        "scale_rel": {
+                            "x": 2.0,
+                            "y": 2.0
+                        },
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0013888889225199819,
+                            "y": 0.0013888889225199819
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,

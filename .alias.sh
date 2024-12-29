@@ -145,6 +145,7 @@ alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -
 alias mf='m && flash'
 alias t='m test'
 alias mnt='makenew test'
+alias mb='make benchmark'
 
 
 ################################################################################
