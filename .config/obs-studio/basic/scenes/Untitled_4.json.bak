@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "webcam upside right with filters",
-    "current_program_scene": "webcam upside right with filters",
+    "current_scene": "webcam upside down for keyboard",
+    "current_program_scene": "webcam upside down for keyboard",
     "scene_order": [
         {
             "name": "screen+webcam"
@@ -459,20 +459,20 @@
                         "id": 2,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 2586.0,
-                            "y": 1933.0
+                            "x": 2588.0,
+                            "y": 1440.0
                         },
                         "pos_rel": {
-                            "x": 1.8138889074325562,
-                            "y": 1.6847221851348877
+                            "x": 1.8166667222976685,
+                            "y": 1.0
                         },
                         "scale": {
-                            "x": 4.0265626907348633,
-                            "y": 4.0270833969116211
+                            "x": 2.0218749046325684,
+                            "y": 2.0222222805023193
                         },
                         "scale_rel": {
-                            "x": 4.0265626907348633,
-                            "y": 4.0270833969116211
+                            "x": 2.0218749046325684,
+                            "y": 2.0222222805023193
                         },
                         "bounds": {
                             "x": 1.0,
