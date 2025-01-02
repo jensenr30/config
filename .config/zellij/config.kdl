@@ -47,7 +47,7 @@ keybinds clear-defaults=true {
         bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "normal"; }
         bind "Ctrl t" { SwitchToMode "normal"; }
-        bind "x" { CloseTab; SwitchToMode "normal"; }
+        bind "q" { CloseTab; SwitchToMode "normal"; }
         bind "tab" { ToggleTab; }
     }
     resize {
@@ -138,8 +138,6 @@ keybinds clear-defaults=true {
 
         bind "Alt Shift l" { GoToNextTab; }
         bind "Alt Shift h" { GoToPreviousTab; }
-        bind "Ctrl Shift t" { NewTab; }
-        bind "Ctrl Shift w" { CloseTab; }
         // todo bind "Alt i" { MoveTab "left"; }
         // todo bind "Alt o" { MoveTab "right"; }
         bind "Ctrl Shift Down"  { NewPane "Down"; SwitchToMode "normal"; }
