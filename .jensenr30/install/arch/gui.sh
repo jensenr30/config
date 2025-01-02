@@ -24,7 +24,7 @@ $i dolphin
 $i ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
 $i thunar
 $i thunar-archive-plugin tumbler xfce4-settings 
-$y ffmpegthumbnailer tumbler-folder-thumbnailer
+$y ffmpegthumbnailer tumbler-folder-thumbnailer audio-files-thumbnailer-git
 # fix dolphin's broken 'open with' menu - see .profile too
 $i archlinux-xdg-menu
 kbuildsycoca6
