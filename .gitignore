@@ -56,6 +56,7 @@
 .config/i3/*
 !.config/i3/config
 !.config/kdeglobals
+!.config/mimeapps.list
 !.config/nixpkgs/
 !.config/nixpkgs/*
 !.config/nvim/
