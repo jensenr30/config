@@ -20,6 +20,7 @@ video/webm=vlc.desktop;
 video/mp4=vlc.desktop;
 text/plain=nvim.desktop;
 application/x-zerosize=nvim.desktop;
+audio/mpeg=vlc.desktop;
 
 [Default Applications]
 application/pdf=firefox.desktop
@@ -42,3 +43,4 @@ audio/mp4=vlc.desktop
 video/webm=vlc.desktop
 video/mp4=vlc.desktop
 application/x-zerosize=nvim.desktop
+audio/mpeg=vlc.desktop
