@@ -24,7 +24,7 @@ $i dolphin
 $i ffmpegthumbs kde-cli-tools kdegraphics-thumbnailers kio-admin konsole purpose
 $i thunar
 $i thunar-archive-plugin tumbler xfce4-settings 
-$y --asdeps ffmpegthumbnailer ffmpeg-audio-thumbnailer tumbler-folder-thumbnailer
+$y --asdeps ffmpegthumbnailer ffmpeg-audio-thumbnailer tumbler-folder-thumbnailer libopenraw libgsf libgepub
 # fix dolphin's broken 'open with' menu - see .profile too
 $i archlinux-xdg-menu
 kbuildsycoca6
@@ -34,15 +34,13 @@ $i ark p7zip unrar
 $i gparted
 
 # media
-$i vlc
-$i mplayer
+$i vlc mplayer
 $y nomacs qimgv sumatrapdf
 
 # media creation
 $i kolourpaint
 
 $i pavucontrol
-# $i pulseaudio-equalizer-ladspa this conflicts with pipewire
 
 # emoji selector
 $y emote
@@ -51,8 +49,7 @@ $y emote
 $i libnotify dunst
 
 # authorization agent & GUI
-$i polkit
-$i lxqt-policykit
+$i polkit lxqt-policykit
 
 # information about hardware
 $y hardinfo2
