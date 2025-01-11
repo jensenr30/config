@@ -150,7 +150,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 23
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -187,6 +187,11 @@ vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>",
 -- todo figure out how to make p not yank without remapping it to P because P places text on previous line instead of next line
 -- vim.keymap.set({ "n", "v" }, "p", "P", { noremap = true, silent = true })
 -- Open files at last position
+
+-- home key in insert mode goes to first non whitespace character
+vim.api.nvim_set_keymap("i", "<Home>", "<C-o>^", { noremap = true, silent = true })
+
+-- is this causing issues with changing the view (where the cursor is in the screen) when going forward/backward between buffers?
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	--group = "userconfig",
 	desc = "return cursor to where it was last time closing the file",
@@ -449,7 +454,7 @@ require("lazy").setup({
 			-- your configuration comes here
 			-- for example
 			enabled = true, -- if you want to enable the plugin
-			message_template = " <summary> • <date> • <author> • <<sha>>", -- template for the blame message, check the Message template section for more options
+			message_template = " <author> • <summary> • <date> • <<sha>>", -- template for the blame message, check the Message template section for more options
 			date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
 			virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
 		},
