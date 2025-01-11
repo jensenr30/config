@@ -144,11 +144,11 @@
                     "id": "color_filter",
                     "versioned_id": "color_filter_v2",
                     "settings": {
-                        "gamma": 0.22,
-                        "contrast": 0.34999999999999998,
-                        "brightness": -0.41239999999999999,
+                        "gamma": 0.75,
+                        "contrast": 0.12,
+                        "brightness": -0.52559999999999996,
                         "saturation": -1.0,
-                        "hue_shift": 0.0,
+                        "hue_shift": -119.84,
                         "opacity": 1
                     },
                     "mixers": 0,
