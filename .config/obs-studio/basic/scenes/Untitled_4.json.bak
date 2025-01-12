@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "webcam upside down for keyboard - no filter",
-    "current_program_scene": "webcam upside down for keyboard - no filter",
+    "current_scene": "webcam upside right no filters",
+    "current_program_scene": "webcam upside right no filters",
     "scene_order": [
         {
             "name": "screen+webcam"
@@ -71,10 +71,10 @@
             "name": "webcam upside down for keyboard"
         },
         {
-            "name": "webcam upside down for keyboard - no filter"
+            "name": "webcam upside right with filters"
         },
         {
-            "name": "webcam upside right with filters"
+            "name": "webcam upside right no filters"
         }
     ],
     "name": "Untitled 4",
@@ -128,7 +128,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": false,
+                    "enabled": true,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -159,7 +159,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": false,
+                    "enabled": true,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -214,7 +214,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": false,
+                    "enabled": true,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -609,8 +609,8 @@
         },
         {
             "prev_ver": 520093696,
-            "name": "webcam upside down for keyboard - no filter",
-            "uuid": "711d4829-8cd3-4ef1-8dcd-2754b173ce9f",
+            "name": "webcam upside right no filters",
+            "uuid": "76e64bfc-c0ff-48b1-b7e6-2263e7233dac",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
@@ -622,7 +622,7 @@
                         "source_uuid": "68ea2e50-749b-4303-8f6a-0c2823de3bc6",
                         "visible": true,
                         "locked": false,
-                        "rot": 180.0,
+                        "rot": 0.0,
                         "scale_ref": {
                             "x": 2560.0,
                             "y": 1440.0
@@ -638,20 +638,20 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 2588.0,
-                            "y": 1440.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "pos_rel": {
-                            "x": 1.8166667222976685,
-                            "y": 1.0
+                            "x": -1.7777777910232544,
+                            "y": -1.0
                         },
                         "scale": {
-                            "x": 2.0218749046325684,
-                            "y": 2.0222222805023193
+                            "x": 2.0,
+                            "y": 2.0
                         },
                         "scale_rel": {
-                            "x": 2.0218749046325684,
-                            "y": 2.0222222805023193
+                            "x": 2.0,
+                            "y": 2.0
                         },
                         "bounds": {
                             "x": 1.0,

@@ -21,7 +21,7 @@ video/mp4=vlc.desktop;
 text/plain=nvim.desktop;
 application/x-zerosize=nvim.desktop;vlc.desktop;
 audio/mpeg=vlc.desktop;
-image/gif=org.nomacs.ImageLounge.desktop;qimgv.desktop;feh.desktop;
+image/gif=firefox.desktop;org.nomacs.ImageLounge.desktop;qimgv.desktop;feh.desktop;
 
 [Default Applications]
 application/pdf=firefox.desktop
