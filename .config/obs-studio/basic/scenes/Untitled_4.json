@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "webcam upside down for keyboard",
-    "current_program_scene": "webcam upside down for keyboard",
+    "current_scene": "webcam upside right with filters",
+    "current_program_scene": "webcam upside right with filters",
     "scene_order": [
         {
             "name": "screen+webcam"
@@ -84,15 +84,15 @@
             "versioned_id": "v4l2_input",
             "settings": {
                 "device_id": "/dev/video0",
+                "input": 0,
+                "pixelformat": 875967048,
+                "resolution": 5497558139600,
                 "Auto Exposure": 1,
                 "Exposure Time, Absolute": 166,
                 "Tilt, Absolute": 0,
                 "Focus, Absolute": 0,
                 "Focus, Automatic Continuous": false,
-                "Zoom, Absolute": 100,
-                "input": 0,
-                "pixelformat": 875967048,
-                "resolution": 5497558139600
+                "Zoom, Absolute": 100
             },
             "mixers": 0,
             "sync": 0,
