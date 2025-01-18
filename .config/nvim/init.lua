@@ -1085,6 +1085,9 @@ require("lazy").setup({
 				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 			},
+			colors = {
+				warning = { "#f1880f" },
+			},
 			search = {
 				pattern = [[\b(KEYWORDS)\b]], -- overriding default: don't require a ':' character at the end
 			},

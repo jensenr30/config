@@ -14,5 +14,7 @@ layout {
             args "-c" "e && $SHELL"
         }
     }
+    tab name="man" {
+    }
 }
 
