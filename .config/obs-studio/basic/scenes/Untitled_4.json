@@ -259,6 +259,32 @@
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
                     "private_settings": {}
+                },
+                {
+                    "prev_ver": 520093696,
+                    "name": "Scroll",
+                    "uuid": "178c2a38-aa06-49f9-9650-6f49831b0a50",
+                    "id": "scroll_filter",
+                    "versioned_id": "scroll_filter",
+                    "settings": {
+                        "speed_x": 11.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
                 }
             ]
         },
