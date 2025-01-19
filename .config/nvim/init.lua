@@ -150,7 +150,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 23
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -187,6 +187,11 @@ vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>",
 -- todo figure out how to make p not yank without remapping it to P because P places text on previous line instead of next line
 -- vim.keymap.set({ "n", "v" }, "p", "P", { noremap = true, silent = true })
 -- Open files at last position
+
+-- home key in insert mode goes to first non whitespace character
+vim.api.nvim_set_keymap("i", "<Home>", "<C-o>^", { noremap = true, silent = true })
+
+-- is this causing issues with changing the view (where the cursor is in the screen) when going forward/backward between buffers?
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	--group = "userconfig",
 	desc = "return cursor to where it was last time closing the file",
@@ -255,6 +260,14 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+-- configure spectre - i should probably put this somewhere else, but i'm not sure where it goes
+vim.keymap.set("n", "<leader>ssw", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+	desc = "Search current word",
+})
+vim.keymap.set("v", "<leader>ssw", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+	desc = "Search current word",
+})
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -292,7 +305,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
-
+	{ "akinsho/git-conflict.nvim", version = "*", config = true },
 	-- "mg979/vim-visual-multi", -- multi cursor
 	{
 		"jake-stewart/multicursor.nvim",
@@ -319,21 +332,21 @@ require("lazy").setup({
 			end)
 
 			-- Add or skip adding a new cursor by matching word/selection
-			set({ "n", "v" }, "<leader>n", function()
+			set({ "n", "v" }, "<leader>cn", function()
 				mc.matchAddCursor(1)
 			end)
-			set({ "n", "v" }, "<leader>s", function()
-				mc.matchSkipCursor(1)
-			end)
-			set({ "n", "v" }, "<leader>N", function()
+			set({ "n", "v" }, "<leader>cN", function()
 				mc.matchAddCursor(-1)
 			end)
-			set({ "n", "v" }, "<leader>S", function()
+			set({ "n", "v" }, "<leader>cs", function()
+				mc.matchSkipCursor(1)
+			end)
+			set({ "n", "v" }, "<leader>cS", function()
 				mc.matchSkipCursor(-1)
 			end)
 
 			-- Add all matches in the document
-			set({ "n", "v" }, "<leader>A", mc.matchAllAddCursors)
+			set({ "n", "v" }, "<leader>ca", mc.matchAllAddCursors)
 
 			-- You can also add cursors with any motion you prefer:
 			-- set("n", "<right>", function()
@@ -344,21 +357,21 @@ require("lazy").setup({
 			-- end)
 
 			-- Rotate the main cursor.
-			set({ "n", "v" }, "<left>", mc.nextCursor)
-			set({ "n", "v" }, "<right>", mc.prevCursor)
+			-- set({ "n", "v" }, "<left>", mc.nextCursor)
+			-- set({ "n", "v" }, "<right>", mc.prevCursor)
 
 			-- Delete the main cursor.
-			set({ "n", "v" }, "<leader>x", mc.deleteCursor)
+			set({ "n", "v" }, "<leader>cx", mc.deleteCursor)
 
 			-- Add and remove cursors with alt + left click.
 			-- TODO why does this not work?
-			set("n", "<A-LeftMouse>", mc.handleMouse)
+			-- set("n", "<A-LeftMouse>", mc.handleMouse)
 
 			-- Easy way to add and remove cursors using the main cursor.
-			set({ "n", "v" }, "<c-q>", mc.toggleCursor)
+			-- set({ "n", "v" }, "<c-q>", mc.toggleCursor)
 
 			-- Clone every cursor and disable the originals.
-			set({ "n", "v" }, "<leader><c-q>", mc.duplicateCursors)
+			-- set({ "n", "v" }, "<leader><c-q>", mc.duplicateCursors)
 
 			set("n", "<esc>", function()
 				if not mc.cursorsEnabled() then
@@ -371,28 +384,28 @@ require("lazy").setup({
 			end)
 
 			-- bring back cursors if you accidentally clear them
-			set("n", "<leader>gv", mc.restoreCursors)
+			set("n", "<leader>cgv", mc.restoreCursors)
 
 			-- Align cursor columns.
-			set("n", "<leader>a", mc.alignCursors)
+			set("n", "<leader>ca", mc.alignCursors)
 
 			-- Split visual selections by regex.
-			set("v", "S", mc.splitCursors)
+			-- set("v", "S", mc.splitCursors)
 
 			-- Append/insert for each line of visual selections.
 			set("v", "I", mc.insertVisual)
 			set("v", "A", mc.appendVisual)
 
 			-- match new cursors within visual selections by regex.
-			set("v", "M", mc.matchCursors)
+			-- set("v", "M", mc.matchCursors)
 
 			-- Rotate visual selection contents.
-			set("v", "<leader>t", function()
-				mc.transposeCursors(1)
-			end)
-			set("v", "<leader>T", function()
-				mc.transposeCursors(-1)
-			end)
+			-- set("v", "<leader>t", function()
+			-- 	mc.transposeCursors(1)
+			-- end)
+			-- set("v", "<leader>T", function()
+			-- 	mc.transposeCursors(-1)
+			-- end)
 
 			-- Jumplist support
 			set({ "v", "n" }, "<c-i>", mc.jumpForward)
@@ -449,9 +462,11 @@ require("lazy").setup({
 			-- your configuration comes here
 			-- for example
 			enabled = true, -- if you want to enable the plugin
-			message_template = " <summary> • <date> • <author> • <<sha>>", -- template for the blame message, check the Message template section for more options
+			message_template = " <author> • <summary> • <date> • <<sha>>", -- template for the blame message, check the Message template section for more options
 			date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
 			virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
+			delay = 1200, -- wait before displaying git blame info
+			highlight_group = "BufferInactive", -- NOTE not sure if this will work with color schemes other than vscode...
 		},
 	},
 
@@ -605,7 +620,8 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
 			vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "[S]earch [F]iles" })
-			vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
+			-- disabled to make room for spectre
+			-- vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 			vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
@@ -1025,17 +1041,25 @@ require("lazy").setup({
 		-- change the command in the config to whatever the name of that colorscheme is.
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-		"folke/tokyonight.nvim",
+		-- "folke/tokyonight.nvim",
+		"Mofiqul/vscode.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
 		init = function()
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("tokyonight-night")
+			-- vim.cmd.colorscheme("tokyonight-night")
+			vim.cmd.colorscheme("vscode")
 
 			-- You can configure highlights by doing something like:
 			vim.cmd.hi("Comment gui=none")
 		end,
+	},
+
+	-- interactive search and replace w regex
+	{
+		"nvim-pack/nvim-spectre",
+		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
 	-- Highlight todo, notes, etc in comments
@@ -1060,6 +1084,9 @@ require("lazy").setup({
 				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
 				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+			},
+			colors = {
+				warning = { "#f1880f" },
 			},
 			search = {
 				pattern = [[\b(KEYWORDS)\b]], -- overriding default: don't require a ':' character at the end

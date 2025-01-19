@@ -18,7 +18,7 @@ exec_always dunst &
 # GUI authentication
 exec_always lxqt-policykit-agent &
 # desktop background
-exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/layout-art.png"
+exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/desktop/layout-art-activate-linux.png"
 # compositor
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
 # auto hide the mouse

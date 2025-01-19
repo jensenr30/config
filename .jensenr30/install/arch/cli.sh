@@ -5,6 +5,8 @@ source install-helper.sh
 
 # install yay
 $i base-devel neovim
+$i rebuild-detector # provides checkrebuild
+# then run:  yay -S --answerclean All --rebuildall <your-package>
 
 if test ! -d "$HOME/repos/utils/yay"; then
     echo "installing yay..."
