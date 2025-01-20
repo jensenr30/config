@@ -19,6 +19,7 @@ audio/mp4=vlc.desktop;
 video/webm=vlc.desktop;
 video/mp4=vlc.desktop;
 text/plain=nvim.desktop;
+audio/vnd.wave=vlc.desktop;
 application/x-zerosize=nvim.desktop;vlc.desktop;
 audio/mpeg=vlc.desktop;
 image/gif=firefox.desktop;org.nomacs.ImageLounge.desktop;qimgv.desktop;feh.desktop;

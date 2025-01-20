@@ -61,5 +61,7 @@ $i dosfstools mtools ntfs-3g
 $i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel fastfetch lsb-release cmatrix
 $sys enable --now cronie.service
 
+$y ccze
+
 # crontab -e
 # see README.md for crontab entry
