@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-
-$HOME/programs/stm32cubemx/STM32CubeMX > /dev/null 2> /dev/null &
-
