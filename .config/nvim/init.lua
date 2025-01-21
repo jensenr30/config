@@ -305,7 +305,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
-
+	{ "akinsho/git-conflict.nvim", version = "*", config = true },
 	-- "mg979/vim-visual-multi", -- multi cursor
 	{
 		"jake-stewart/multicursor.nvim",

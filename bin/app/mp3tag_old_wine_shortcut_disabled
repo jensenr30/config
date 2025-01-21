@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-
-wine '.wine/drive_c/Program Files/Mp3tag/Mp3tag.exe'
-
