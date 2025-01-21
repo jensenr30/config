@@ -14,7 +14,7 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;qimgv.desktop;
+image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;qimgv.desktop;
 audio/mp4=vlc.desktop;
 video/webm=vlc.desktop;
 video/mp4=vlc.desktop;
@@ -22,6 +22,7 @@ text/plain=nvim.desktop;
 application/x-zerosize=nvim.desktop;vlc.desktop;
 audio/mpeg=vlc.desktop;
 image/gif=firefox.desktop;org.nomacs.ImageLounge.desktop;qimgv.desktop;feh.desktop;
+text/x-csrc=nvim.desktop;
 
 [Default Applications]
 application/pdf=firefox.desktop

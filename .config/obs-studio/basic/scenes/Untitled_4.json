@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "webcam upside down for keyboard w filters",
-    "current_program_scene": "webcam upside down for keyboard w filters",
+    "current_scene": "webcam upside right no filters",
+    "current_program_scene": "webcam upside right no filters",
     "scene_order": [
         {
             "name": "screen+webcam"
@@ -217,7 +217,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": true,
+                    "enabled": false,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -248,7 +248,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": false,
+                    "enabled": true,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -274,7 +274,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": true,
+                    "enabled": false,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
