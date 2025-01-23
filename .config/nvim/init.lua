@@ -203,8 +203,7 @@ vim.filetype.add({
 	extension = {
 		frag = "glsl",
 		vert = "glsl",
-		compute_shader = "glsl",
-		compute = "glsl",
+		comp = "glsl",
 	},
 })
 -- make Ctrl+Delete and Ctrl+Backspace work in insert mode
@@ -1083,7 +1082,7 @@ require("lazy").setup({
 				HACK = { icon = " ", color = "warning" },
 				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
 				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+				NOTE = { icon = " ", color = "hint", alt = { "note", "INFO", "info", "Note" } },
 			},
 			colors = {
 				warning = { "#f1880f" },
