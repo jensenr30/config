@@ -381,7 +381,6 @@
         }
     ],
     "terminal.integrated.hideOnStartup": "always",
-    "terminal.integrated.fontSize": -84,
     "terminal.integrated.mouseWheelZoom": true,
     "git-graph.dialog.rebase.launchInteractiveRebase": true,
     "markdown.extension.toc.unorderedList.marker": "*",
@@ -404,7 +403,6 @@
     "makefile.configureAfterCommand": false,
     "makefile.configureOnEdit": false,
     "makefile.configureOnOpen": false,
-    "terminal.integrated.fontSize": 16,
     "githubPullRequests.pullBranch": "never",
     "git-graph.commitDetailsView.fileView.fileTree.compactFolders": false,
     "git-graph.graph.colours": [
