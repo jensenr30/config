@@ -65,7 +65,6 @@
 .config/nvim/lazy-lock.json
 .config/nvim/plugin/**
 !.config/obs-studio/
-!.config/obs-studio/basic/
 !.config/polybar
 !.config/polybar/config.ini
 !.config/qt6ct/
