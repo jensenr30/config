@@ -149,9 +149,9 @@ keybinds clear-defaults=true {
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }
     }
-    shared_except "locked" "session" {
-        bind "Ctrl o" { SwitchToMode "session"; }
-    }
+    // shared_except "locked" "session" {
+    //     bind "Ctrl o" { SwitchToMode "session"; }
+    // }
     shared_except "locked" "scroll" "search" "tmux" {
         bind "Ctrl b" { SwitchToMode "tmux"; }
     }
@@ -208,9 +208,9 @@ keybinds clear-defaults=true {
     renamepane {
         bind "esc" { UndoRenamePane; SwitchToMode "pane"; }
     }
-    shared_among "session" "tmux" {
-        bind "d" { Detach; }
-    }
+    // shared_among "session" "tmux" {
+    //     bind "d" { Detach; }
+    // }
     tmux {
         bind "left" { MoveFocus "left"; SwitchToMode "normal"; }
         bind "down" { MoveFocus "down"; SwitchToMode "normal"; }
