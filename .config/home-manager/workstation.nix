@@ -109,7 +109,7 @@ virtualbox
 # qt5ct qt6ct
 # gnome-themes-extra
 # # TODO: is this necessary?  -git?  can't i just get these from the arch repos?
-# adwaita-qt4 adwaita-qt5-git adwaita-qt6-git
+# adwaita-qt5-git adwaita-qt6-git
 # papirus-icon-theme
 
   ];
