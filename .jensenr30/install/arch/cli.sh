@@ -44,7 +44,7 @@ $i wget curl
 $p yt-dlp
 
 #system monitor
-$i htop atop iftop nethogs sysstat usbutils bashtop
+$i htop atop iftop iotop nethogs sysstat usbutils bashtop
 
 # networking
 $i net-tools traceroute arp-scan nmap sshfs speedtest-cli openvpn

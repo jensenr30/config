@@ -5,9 +5,6 @@ xrdb -merge ~/.Xresources
 # this is necessary because polybar doesn't respond to .Xresources dpi settings
 export DPI=$(dpi-get)
 
-# start polkit agent - non-blocking
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
 i3
 #awesome
 

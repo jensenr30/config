@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+git log --graph --all --format="%Cred%(decorate:prefix=,suffix=%n)%Cblue%h%Creset %Cgreen%an%Creset %w(72,0,28)%s" $@
