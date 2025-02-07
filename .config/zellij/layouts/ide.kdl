@@ -7,6 +7,12 @@ layout {
         children
     }
     tab name="term" {
+        pane split_direction="vertical" {
+            pane size="63%"
+            pane command="watch" {
+                args "-n" "1" "-c" "gl" "--color=always"
+            }
+        }
     }
     tab name="editor" focus=true {
         pane {
