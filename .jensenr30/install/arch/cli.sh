@@ -34,7 +34,7 @@ $i syslinux
 $y systemd-numlockontty
 $sys enable --now numLockOnTty
 
-$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux zellij
+$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux zellij grc
 
 # programming & dev tools
 $i python3 python-pip python-pipx
@@ -44,7 +44,7 @@ $i wget curl
 $p yt-dlp
 
 #system monitor
-$i htop atop iftop iotop nethogs sysstat usbutils bashtop
+$i htop atop iftop iotop nethogs sysstat usbutils btop
 
 # networking
 $i net-tools traceroute arp-scan nmap sshfs speedtest-cli openvpn
@@ -61,7 +61,6 @@ $i dosfstools mtools ntfs-3g
 $i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel fastfetch lsb-release cmatrix
 $sys enable --now cronie.service
 
-$y ccze
 
 # crontab -e
 # see README.md for crontab entry
