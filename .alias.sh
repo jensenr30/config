@@ -153,6 +153,8 @@ alias mb='make benchmark'
 ################################################################################
 alias k='gitk --all --full-history --select-commit=$(mit) & disown'
 alias gh='gittyup .'
+alias gd='git diff -U6'
+alias gdc='gd --cached'
 alias gdcs='DELTA_FEATURES=+side-by-side gdc'
 alias s="git status"
 alias ga='git add'
