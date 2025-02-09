@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+$HOME/repos/tracy/profiler/build/tracy-profiler

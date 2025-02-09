@@ -84,6 +84,8 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+vim.opt.relativenumber = true
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -1085,7 +1087,7 @@ require("lazy").setup({
 				NOTE = { icon = " ", color = "hint", alt = { "note", "INFO", "info", "Note" } },
 			},
 			colors = {
-				warning = { "#f1880f" },
+				warning = { "#c1980f" },
 			},
 			search = {
 				pattern = [[\b(KEYWORDS)\b]], -- overriding default: don't require a ':' character at the end

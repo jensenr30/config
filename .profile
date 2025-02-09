@@ -98,6 +98,8 @@ export PATH="$PATH:/usr/lib/emscripten"
 #===============================================================================
 # Theme
 #===============================================================================
+# this breaks dolphin's theme on KDE plasma, but at one point it made dolphine
+# use the correct theme on i3
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 
@@ -121,8 +123,6 @@ export SESSION_TYPE
 #===============================================================================
 # firefox smooth scrolling
 export MOZ_USE_XINPUT2=1
-# fix dolphin's broken 'open with' menu - also you need to install archlinux-xdg-menu
-export XDG_MENU_PREFIX=arch-
 
 export STM32CubeMX_PATH=/home/ryan/programs/stm32cubemx_6.12.0
 
