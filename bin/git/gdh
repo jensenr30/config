@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-
-git diff HEAD -U8 --color=always $@ | bat
-
