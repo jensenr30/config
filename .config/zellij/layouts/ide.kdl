@@ -8,7 +8,7 @@ layout {
     }
     tab name="term" {
         pane split_direction="vertical" {
-            pane size="63%"
+            pane size="70%"
             pane command="watch" {
                 args "-n" "1" "-c" "gl" "--color=always"
             }
