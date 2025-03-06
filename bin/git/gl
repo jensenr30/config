@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-git log --graph --all --format="%Cred%(decorate:prefix=,suffix=%n)%Cblue%h%Creset %Cgreen%<(5,trunc)%an%Creset%w(50,0,17)%s" $@
+git log --graph --all --format="%Cgreen%(decorate:prefix=,suffix=%n)%Cblue%h%Creset %Cred%<(5,trunc)%an%Creset%w(50,0,17)%s" $@
