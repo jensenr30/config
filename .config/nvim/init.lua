@@ -190,6 +190,14 @@ vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>",
 -- vim.keymap.set({ "n", "v" }, "p", "P", { noremap = true, silent = true })
 -- Open files at last position
 
+-- close current buffer without closing the window
+vim.keymap.set(
+	"n",
+	"q",
+	":bprevious<CR>:bdelete #<CR>",
+	{ noremap = true, silent = true, desc = "Delete buffer without closing window" }
+)
+
 -- home key in insert mode goes to first non whitespace character
 vim.api.nvim_set_keymap("i", "<Home>", "<C-o>^", { noremap = true, silent = true })
 
