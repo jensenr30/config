@@ -194,7 +194,7 @@ vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>",
 vim.keymap.set(
 	"n",
 	"q",
-	"<C-o>:bdelete #<CR>",
+	":bprevious<CR>:bdelete #<CR>",
 	{ noremap = true, silent = true, desc = "Delete buffer without closing window" }
 )
 
