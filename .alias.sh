@@ -136,14 +136,14 @@ function pdfd() {
 ################################################################################
 #                                    C                                         #
 ################################################################################
-alias m='make'
 #alias m="make -j $(nproc)"
-alias makenew='make clean && m'
+alias makenew='make clean && make'
 alias makenewapp='rm -rf build/app; make app'
 alias bm="bear -- make" # generates compile_commands.json for clangd
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
-alias mf='m && flash'
-alias t='m test'
+alias mf='make && flash'
+alias t='make test'
+alias cleat='clear && make test'
 alias mnt='makenew test'
 alias mb='make benchmark'
 

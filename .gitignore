@@ -110,6 +110,7 @@
 # lots of good scripts in here :)
 !bin/
 !bin/**
+bin/app/reaper
 
 #===============================================================================
 # 3. Ignore specific junk

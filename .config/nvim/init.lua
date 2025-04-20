@@ -190,6 +190,10 @@ vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>",
 -- vim.keymap.set({ "n", "v" }, "p", "P", { noremap = true, silent = true })
 -- Open files at last position
 
+-- keep the visual lines selected after doing operations
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+vim.keymap.set("v", "=", "=gv", { noremap = true, silent = true })
 -- close current buffer without closing the window
 vim.keymap.set(
 	"n",
@@ -327,35 +331,35 @@ require("lazy").setup({
 			local set = vim.keymap.set
 
 			-- Add or skip cursor above/below the main cursor.
-			set({ "n", "v" }, "<A-k>", function()
+			set({ "n" }, "<A-k>", function()
 				mc.lineAddCursor(-1)
 			end)
-			set({ "n", "v" }, "<A-j>", function()
+			set({ "n" }, "<A-j>", function()
 				mc.lineAddCursor(1)
 			end)
-			set({ "n", "v" }, "<S-A-k>", function()
+			set({ "n" }, "<S-A-k>", function()
 				mc.lineSkipCursor(-1)
 			end)
-			set({ "n", "v" }, "<S-A-j>", function()
+			set({ "n" }, "<S-A-j>", function()
 				mc.lineSkipCursor(1)
 			end)
 
 			-- Add or skip adding a new cursor by matching word/selection
-			set({ "n", "v" }, "<leader>cn", function()
+			set({ "n" }, "<leader>cn", function()
 				mc.matchAddCursor(1)
 			end)
-			set({ "n", "v" }, "<leader>cN", function()
+			set({ "n" }, "<leader>cN", function()
 				mc.matchAddCursor(-1)
 			end)
-			set({ "n", "v" }, "<leader>cs", function()
+			set({ "n" }, "<leader>cs", function()
 				mc.matchSkipCursor(1)
 			end)
-			set({ "n", "v" }, "<leader>cS", function()
+			set({ "n" }, "<leader>cS", function()
 				mc.matchSkipCursor(-1)
 			end)
 
 			-- Add all matches in the document
-			set({ "n", "v" }, "<leader>ca", mc.matchAllAddCursors)
+			set({ "n" }, "<leader>ca", mc.matchAllAddCursors)
 
 			-- You can also add cursors with any motion you prefer:
 			-- set("n", "<right>", function()
@@ -370,7 +374,7 @@ require("lazy").setup({
 			-- set({ "n", "v" }, "<right>", mc.prevCursor)
 
 			-- Delete the main cursor.
-			set({ "n", "v" }, "<leader>cx", mc.deleteCursor)
+			set({ "n" }, "<leader>cx", mc.deleteCursor)
 
 			-- Add and remove cursors with alt + left click.
 			-- TODO why does this not work?

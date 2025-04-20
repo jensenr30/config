@@ -55,7 +55,7 @@ sudo timedatectl set-ntp true
 timedatectl # print info
 
 # file systems
-$i dosfstools mtools ntfs-3g
+$i dosfstools mtools ntfs-3g exfat-utils
 
 # misc
 $i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel fastfetch lsb-release cmatrix
