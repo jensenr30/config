@@ -76,6 +76,7 @@ function cl(){
 alias cdi="cd $CFGDIR/install"
 alias cdid="cd $CFGDIR/install/$distro"
 alias tri='cd ~/repos/triangulite && ide'
+alias tile='cd ~/repos/tile-venture && ide'
 alias exp='cd ~/repos/exp && ide'
 
 
