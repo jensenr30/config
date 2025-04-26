@@ -148,8 +148,8 @@ keybinds clear-defaults=true {
 
         bind "Alt Shift l" { GoToNextTab; }
         bind "Alt Shift h" { GoToPreviousTab; }
-        // todo bind "Alt i" { MoveTab "left"; }
-        // todo bind "Alt o" { MoveTab "right"; }
+        bind "Ctrl Alt Shift h" { MoveTab "left"; }
+        bind "Ctrl Alt Shift l" { MoveTab "right"; }
         bind "Ctrl Shift Down"  { NewPane "Down"; SwitchToMode "normal"; }
         bind "Ctrl Shift Right" { NewPane "Right"; SwitchToMode "normal"; }
         // up and left currently not supported by zellij according to docs and testing
