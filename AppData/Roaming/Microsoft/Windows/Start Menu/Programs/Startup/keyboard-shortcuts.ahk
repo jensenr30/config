@@ -73,10 +73,10 @@ Capslock & u::{
 
 
 ; Meta + c :: open calculator
-#c::
-{
-     Run "C:\Windows\System32\calc.exe"
-}
+; #c::
+; {
+;      Run "C:\Windows\System32\calc.exe"
+; }
 
 
 ; Meta + m :: open task Manager
