@@ -474,7 +474,7 @@ require("lazy").setup({
 		opts = {
 			-- your configuration comes here
 			-- for example
-			enabled = true, -- if you want to enable the plugin
+			enabled = false, -- if you want to enable the plugin
 			message_template = " <author> • <summary> • <date> • <<sha>>", -- template for the blame message, check the Message template section for more options
 			date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
 			virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
@@ -826,7 +826,7 @@ require("lazy").setup({
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				clangd = {},
+				-- clangd = {}, -- NOTE: this was causing duplicate clangd servers to run - i config clangd manually instead now.
 				glsl_analyzer = {},
 				-- gopls = {},
 				-- pyright = {},
@@ -870,25 +870,31 @@ require("lazy").setup({
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
 			})
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+			-- require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						-- This handles overriding only values explicitly passed
-						-- by the server configuration above. Useful when disabling
-						-- certain features of an LSP (for example, turning off formatting for tsserver)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
-					end,
-				},
-			})
+			-- NOTE: I disabled this mason shit because I couldn't figure out how to make mason stop adding clangd.
+			-- I had 2 clangd servers running which would cause the go-to-definition command to always show 2 duplicate results
+			-- so mason is diabled for now
+			--
+			-- require("mason-lspconfig").setup({
+			-- 	handlers = {
+			-- 		function(server_name)
+			-- 			local server = servers[server_name] or {}
+			-- 			-- This handles overriding only values explicitly passed
+			-- 			-- by the server configuration above. Useful when disabling
+			-- 			-- certain features of an LSP (for example, turning off formatting for tsserver)
+			-- 			server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+			-- 			require("lspconfig")[server_name].setup(server)
+			-- 		end,
+			-- 	},
+			-- })
 			--
 			--
 			--local hostname = os.getenv("HOSTNAME")
 			--if hostname == "PDL-RyanJensen" then
+			-- TODO fix for work laptop
 			require("lspconfig").clangd.setup({
+				filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
 				cmd = {
 					"clangd",
 					--"--background-index",
@@ -897,10 +903,7 @@ require("lazy").setup({
 					-- TODO configure clangd query driver only for PDL-RyanJensen
 					"--query-driver=/home/ryan/sdk/arm-none-eabi/bin/arm-none-eabi-gcc",
 				},
-				--filetypes = { "c", "cpp", "objc", "objcpp" },
 			})
-			--end
-			--
 		end,
 	},
 
