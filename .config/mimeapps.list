@@ -1,6 +1,6 @@
 [Added Associations]
 application/pdf=sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
-image/jpeg=firefox.desktop;qimgv.desktop;org.nomacs.ImageLounge.desktop;
+image/jpeg=gimp.desktop;firefox.desktop;qimgv.desktop;org.nomacs.ImageLounge.desktop;
 image/png=qimgv.desktop;feh.desktop;gimp.desktop;firefox.desktop;org.nomacs.ImageLounge.desktop;
 inode/directory=vlc.desktop;thunar.desktop;
 video/x-matroska=mpv.desktop;mplayer.desktop;vlc.desktop;

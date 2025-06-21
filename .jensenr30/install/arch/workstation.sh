@@ -73,6 +73,7 @@ $i check cppcheck lcov
 
 # graphics
 $i opengl-man-pages
+$y vulkan-man-pages
 $i radeontop # gpu usage monitor
 
 #===============================================================================
