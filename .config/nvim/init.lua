@@ -95,6 +95,9 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -152,7 +155,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 23
+vim.opt.scrolloff = 17
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -166,6 +169,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+
 --
 --
 --
@@ -194,6 +198,15 @@ vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>",
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", "=", "=gv", { noremap = true, silent = true })
+
+-- allow natural navigation using j,k keys when on a wrapped line
+-- vim.keymap.set("n", "j", "gj", { noremap = true })
+-- vim.keymap.set("n", "k", "gk", { noremap = true })
+-- vim.keymap.set("n", "<Down>", "gj", { noremap = true })
+-- vim.keymap.set("n", "<Up>", "gk", { noremap = true })
+-- vim.keymap.set("i", "<Down>", "<C-o>gj", { noremap = true })
+-- vim.keymap.set("i", "<Up>", "<C-o>gk", { noremap = true })
+
 -- close current buffer without closing the window
 vim.keymap.set(
 	"n",
