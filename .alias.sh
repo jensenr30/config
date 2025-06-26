@@ -147,6 +147,7 @@ alias t='make test'
 alias cleat='clear && make test'
 alias mnt='makenew test'
 alias mb='make benchmark'
+alias cm='clear; make'
 
 
 ################################################################################
