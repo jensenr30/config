@@ -95,6 +95,9 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -152,7 +155,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 23
+vim.opt.scrolloff = 17
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -166,6 +169,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+
 --
 --
 --
@@ -194,6 +198,15 @@ vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:ClangdSwitchSourceHeader<CR>",
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", "=", "=gv", { noremap = true, silent = true })
+
+-- allow natural navigation using j,k keys when on a wrapped line
+-- vim.keymap.set("n", "j", "gj", { noremap = true })
+-- vim.keymap.set("n", "k", "gk", { noremap = true })
+-- vim.keymap.set("n", "<Down>", "gj", { noremap = true })
+-- vim.keymap.set("n", "<Up>", "gk", { noremap = true })
+-- vim.keymap.set("i", "<Down>", "<C-o>gj", { noremap = true })
+-- vim.keymap.set("i", "<Up>", "<C-o>gk", { noremap = true })
+
 -- close current buffer without closing the window
 vim.keymap.set(
 	"n",
@@ -474,7 +487,7 @@ require("lazy").setup({
 		opts = {
 			-- your configuration comes here
 			-- for example
-			enabled = true, -- if you want to enable the plugin
+			enabled = false, -- if you want to enable the plugin
 			message_template = " <author> • <summary> • <date> • <<sha>>", -- template for the blame message, check the Message template section for more options
 			date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
 			virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
@@ -560,6 +573,13 @@ require("lazy").setup({
 	--
 	-- Use the `dependencies` key to specify the dependencies of a particular plugin
 
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+		-- use opts = {} for passing setup options
+		-- this is equivalent to setup({}) function
+	},
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
@@ -819,7 +839,7 @@ require("lazy").setup({
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				clangd = {},
+				-- clangd = {}, -- NOTE: this was causing duplicate clangd servers to run - i config clangd manually instead now.
 				glsl_analyzer = {},
 				-- gopls = {},
 				-- pyright = {},
@@ -863,25 +883,31 @@ require("lazy").setup({
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
 			})
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+			-- require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						-- This handles overriding only values explicitly passed
-						-- by the server configuration above. Useful when disabling
-						-- certain features of an LSP (for example, turning off formatting for tsserver)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
-					end,
-				},
-			})
+			-- NOTE: I disabled this mason shit because I couldn't figure out how to make mason stop adding clangd.
+			-- I had 2 clangd servers running which would cause the go-to-definition command to always show 2 duplicate results
+			-- so mason is diabled for now
+			--
+			-- require("mason-lspconfig").setup({
+			-- 	handlers = {
+			-- 		function(server_name)
+			-- 			local server = servers[server_name] or {}
+			-- 			-- This handles overriding only values explicitly passed
+			-- 			-- by the server configuration above. Useful when disabling
+			-- 			-- certain features of an LSP (for example, turning off formatting for tsserver)
+			-- 			server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+			-- 			require("lspconfig")[server_name].setup(server)
+			-- 		end,
+			-- 	},
+			-- })
 			--
 			--
 			--local hostname = os.getenv("HOSTNAME")
 			--if hostname == "PDL-RyanJensen" then
+			-- TODO fix for work laptop
 			require("lspconfig").clangd.setup({
+				filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
 				cmd = {
 					"clangd",
 					--"--background-index",
@@ -890,10 +916,7 @@ require("lazy").setup({
 					-- TODO configure clangd query driver only for PDL-RyanJensen
 					"--query-driver=/home/ryan/sdk/arm-none-eabi/bin/arm-none-eabi-gcc",
 				},
-				--filetypes = { "c", "cpp", "objc", "objcpp" },
 			})
-			--end
-			--
 		end,
 	},
 

@@ -16,6 +16,7 @@
 !.bash_profile
 !.bashrc
 !.dictionary.txt
+!.gdbinit
 !.gitconfig
 !.gitignore
 !.gitignore-global

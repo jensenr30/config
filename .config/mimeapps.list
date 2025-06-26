@@ -1,6 +1,6 @@
 [Added Associations]
 application/pdf=sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
-image/jpeg=firefox.desktop;qimgv.desktop;org.nomacs.ImageLounge.desktop;
+image/jpeg=gimp.desktop;firefox.desktop;qimgv.desktop;org.nomacs.ImageLounge.desktop;
 image/png=qimgv.desktop;feh.desktop;gimp.desktop;firefox.desktop;org.nomacs.ImageLounge.desktop;
 inode/directory=vlc.desktop;thunar.desktop;
 video/x-matroska=mpv.desktop;mplayer.desktop;vlc.desktop;
@@ -14,7 +14,7 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;gimp.desktop;qimgv.desktop;
+image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;qimgv.desktop;
 audio/mp4=vlc.desktop;
 video/webm=mpv.desktop;vlc.desktop;
 video/mp4=mpv.desktop;vlc.desktop;
@@ -26,6 +26,7 @@ image/gif=org.nomacs.ImageLounge.desktop;firefox.desktop;qimgv.desktop;feh.deskt
 text/x-csrc=nvim.desktop;
 image/webp=org.nomacs.ImageLounge.desktop;
 audio/flac=vlc.desktop;
+inode/symlink=qimgv.desktop;org.nomacs.ImageLounge.desktop;
 
 [Default Applications]
 application/pdf=sumatrapdf.desktop
@@ -53,3 +54,4 @@ image/webp=org.nomacs.ImageLounge.desktop
 image/gif=org.nomacs.ImageLounge.desktop
 x-scheme-handler/discord=vesktop.desktop
 audio/flac=vlc.desktop
+inode/symlink=org.nomacs.ImageLounge.desktop
