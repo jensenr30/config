@@ -18,7 +18,7 @@
 [delta]
     navigate = true    # use n and N to move between diff sections
     syntax-theme = none
-    line-numbers = true
+    line-numbers = false
     wrap-max-lines = 40
     # delta detects terminal colors automatically; set one of these to disable auto-detection
     dark = true
