@@ -18,15 +18,17 @@ image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;qimgv.desktop;
 audio/mp4=vlc.desktop;
 video/webm=mpv.desktop;vlc.desktop;
 video/mp4=mpv.desktop;vlc.desktop;
-text/plain=nvim.desktop;
+text/plain=jensen-editor_in_new_terminal.desktop;
 audio/vnd.wave=vlc.desktop;
 application/x-zerosize=nvim.desktop;vlc.desktop;
 audio/mpeg=vlc.desktop;
 image/gif=org.nomacs.ImageLounge.desktop;firefox.desktop;qimgv.desktop;feh.desktop;
-text/x-csrc=nvim.desktop;
+text/x-csrc=jensen-editor_in_new_terminal.desktop;
 image/webp=org.nomacs.ImageLounge.desktop;
 audio/flac=vlc.desktop;
 inode/symlink=qimgv.desktop;org.nomacs.ImageLounge.desktop;
+text/x-c++src=jensen-editor_in_new_terminal.desktop;
+text/x-chdr=jensen-editor_in_new_terminal.desktop;
 
 [Default Applications]
 application/pdf=sumatrapdf.desktop
@@ -55,3 +57,5 @@ image/gif=org.nomacs.ImageLounge.desktop
 x-scheme-handler/discord=vesktop.desktop
 audio/flac=vlc.desktop
 inode/symlink=org.nomacs.ImageLounge.desktop
+text/x-c++src=jensen-editor_in_new_terminal.desktop;
+text/x-chdr=jensen-editor_in_new_terminal.desktop

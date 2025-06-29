@@ -86,6 +86,11 @@
 !.config/zellij/layouts
 !.config/zellij/layouts/**
 
+!.local/
+!.local/share/
+!.local/share/applications/
+!.local/share/applications/jensen-editor_in_new_terminal.desktop
+
 !.ssr/
 !.ssr/output-profiles/
 !.ssr/output-profiles/*
