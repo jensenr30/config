@@ -387,8 +387,6 @@ themes {
     }
 }
 
-theme "jenbox2"
-
 // Plugins to load in the background when a new session starts
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
@@ -406,7 +404,8 @@ load_plugins {
 // Default: default
 // 
 // theme "tokyo-night"
- 
+theme "jenbox2"
+
 // Choose the base input mode of zellij.
 // Default: normal
 // 
