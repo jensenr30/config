@@ -183,7 +183,7 @@ alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP
 alias giturl="git remote get-url origin | tee >(clipin)"
 alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
-alias rebasec='git rebase --continue'
+alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
 
 
