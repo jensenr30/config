@@ -16,6 +16,7 @@
 !.bash_profile
 !.bashrc
 !.dictionary.txt
+!.gdbinit
 !.gitconfig
 !.gitignore
 !.gitignore-global
@@ -85,6 +86,11 @@
 !.config/zellij/layouts
 !.config/zellij/layouts/**
 
+!.local/
+!.local/share/
+!.local/share/applications/
+!.local/share/applications/jensen-editor_in_new_terminal.desktop
+
 !.ssr/
 !.ssr/output-profiles/
 !.ssr/output-profiles/*
@@ -110,6 +116,7 @@
 # lots of good scripts in here :)
 !bin/
 !bin/**
+bin/app/reaper
 
 #===============================================================================
 # 3. Ignore specific junk

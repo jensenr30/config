@@ -76,6 +76,7 @@ function cl(){
 alias cdi="cd $CFGDIR/install"
 alias cdid="cd $CFGDIR/install/$distro"
 alias tri='cd ~/repos/triangulite && ide'
+alias tile='cd ~/repos/tile-venture && ide'
 alias exp='cd ~/repos/exp && ide'
 
 
@@ -136,16 +137,17 @@ function pdfd() {
 ################################################################################
 #                                    C                                         #
 ################################################################################
-alias m='make'
 #alias m="make -j $(nproc)"
-alias makenew='make clean && m'
+alias makenew='make clean && make'
 alias makenewapp='rm -rf build/app; make app'
 alias bm="bear -- make" # generates compile_commands.json for clangd
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
-alias mf='m && flash'
-alias t='m test'
+alias mf='make && flash'
+alias t='make test'
+alias cleat='clear && make test'
 alias mnt='makenew test'
 alias mb='make benchmark'
+alias cm='clear; make'
 
 
 ################################################################################
@@ -154,6 +156,7 @@ alias mb='make benchmark'
 alias k='gitk --all --full-history --select-commit=$(mit) & disown'
 alias gh='gittyup .'
 alias gd='git diff -U6'
+alias gds='DELTA_FEATURES=+side-by-side gd'
 alias gdc='gd --cached'
 alias gdcs='DELTA_FEATURES=+side-by-side gdc'
 alias s="git status"
@@ -180,7 +183,7 @@ alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP
 alias giturl="git remote get-url origin | tee >(clipin)"
 alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
-alias rebasec='git rebase --continue'
+alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
 
 
