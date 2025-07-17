@@ -103,7 +103,7 @@ alias lsb='lsblk -o NAME,SIZE,FSUSE%,LABEL,MOUNTPOINT'
 alias lss='ls /dev/serial/by-id/'
 
 #finders
-alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
+alias f='fd --hidden --ignore-case --one-file-system --full-path'
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
 
 # greps
@@ -183,7 +183,7 @@ alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP
 alias giturl="git remote get-url origin | tee >(clipin)"
 alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
-alias rebasec='git rebase --continue'
+alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
 
 
@@ -239,7 +239,8 @@ fi
 #                                 Windows                                      #
 ################################################################################
 if [ $sysname == "windows" ]; then
-    alias lsu='usbipd wsl list | tee >(wc)'
+    alias lsu='usbipd list'
+    alias usba='usbipd attach --wsl -b'
     unalias ls
     alias ls='ls --color=auto --group-directories-first'
 fi
