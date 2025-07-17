@@ -230,10 +230,9 @@ fi
 ################################################################################
 #                               Arch Linux                                     #
 ################################################################################
-# this shouldn't be necessary... oh well
-#if [ "$distro" == "arch" ]; then
-#    alias neofetch='neofetch --ascii_distro Arch'
-#fi
+if [ "$distro" == "arch" ]; then
+    alias renderdoc='qrenderdoc'
+fi
 
 
 ################################################################################
