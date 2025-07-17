@@ -103,7 +103,7 @@ alias lsb='lsblk -o NAME,SIZE,FSUSE%,LABEL,MOUNTPOINT'
 alias lss='ls /dev/serial/by-id/'
 
 #finders
-alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
+alias f='fd --hidden --ignore-case --one-file-system --full-path'
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
 
 # greps
