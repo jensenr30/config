@@ -8,7 +8,7 @@ layout {
     }
     tab name="term" {
         pane split_direction="vertical" {
-            pane size="63%"
+            pane size="74%"
             pane command="watch" {
                 args "-n" "1" "-c" "gl" "--color=always"
             }
@@ -21,6 +21,8 @@ layout {
         }
     }
     tab name="man" {
+    }
+    tab name="debug" {
     }
 }
 

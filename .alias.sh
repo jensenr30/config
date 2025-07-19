@@ -76,6 +76,7 @@ function cl(){
 alias cdi="cd $CFGDIR/install"
 alias cdid="cd $CFGDIR/install/$distro"
 alias tri='cd ~/repos/triangulite && ide'
+alias tile='cd ~/repos/tile-venture && ide'
 alias exp='cd ~/repos/exp && ide'
 
 
@@ -102,7 +103,7 @@ alias lsb='lsblk -o NAME,SIZE,FSUSE%,LABEL,MOUNTPOINT'
 alias lss='ls /dev/serial/by-id/'
 
 #finders
-alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
+alias f='fd --hidden --ignore-case --one-file-system --full-path'
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
 
 # greps
@@ -136,16 +137,17 @@ function pdfd() {
 ################################################################################
 #                                    C                                         #
 ################################################################################
-alias m='make'
 #alias m="make -j $(nproc)"
-alias makenew='make clean && m'
+alias makenew='make clean && make'
 alias makenewapp='rm -rf build/app; make app'
 alias bm="bear -- make" # generates compile_commands.json for clangd
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt'
-alias mf='m && flash'
-alias t='m test'
+alias mf='make && flash'
+alias t='make test'
+alias cleat='clear && make test'
 alias mnt='makenew test'
 alias mb='make benchmark'
+alias cm='clear; make'
 
 
 ################################################################################
@@ -153,6 +155,9 @@ alias mb='make benchmark'
 ################################################################################
 alias k='gitk --all --full-history --select-commit=$(mit) & disown'
 alias gh='gittyup .'
+alias gd='git diff -U6'
+alias gds='DELTA_FEATURES=+side-by-side gd'
+alias gdc='gd --cached'
 alias gdcs='DELTA_FEATURES=+side-by-side gdc'
 alias s="git status"
 alias ga='git add'
@@ -178,7 +183,7 @@ alias wip='c -m "WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP   WIP
 alias giturl="git remote get-url origin | tee >(clipin)"
 alias gsui='git submodule update --init --recursive'
 alias rebase='git rebase'
-alias rebasec='git rebase --continue'
+alias grc='git rebase --continue'
 alias gcpc='git cherry-pick --continue'
 
 
@@ -225,17 +230,17 @@ fi
 ################################################################################
 #                               Arch Linux                                     #
 ################################################################################
-# this shouldn't be necessary... oh well
-#if [ "$distro" == "arch" ]; then
-#    alias neofetch='neofetch --ascii_distro Arch'
-#fi
+if [ "$distro" == "arch" ]; then
+    alias renderdoc='qrenderdoc'
+fi
 
 
 ################################################################################
 #                                 Windows                                      #
 ################################################################################
 if [ $sysname == "windows" ]; then
-    alias lsu='usbipd wsl list | tee >(wc)'
+    alias lsu='usbipd list'
+    alias usba='usbipd attach --wsl -b'
     unalias ls
     alias ls='ls --color=auto --group-directories-first'
 fi

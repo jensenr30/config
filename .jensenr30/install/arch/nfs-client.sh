@@ -19,8 +19,6 @@ junk_fstab="server:$realdir/junk  $realdir/junk  nfs defaults,timeo=900,retrans=
 echo "$safe_fstab" >> /etc/fstab
 echo "$junk_fstab" >> /etc/fstab
 bat /etc/fstab
-systemctl daemon-reload
-systemctl restart remote-fs.target
 # prevent shutdown from hanging - network manager must wait until NFS unmounts before quitting
 systemctl enable --now NetworkManager-wait-online.service
-tree -L 2 /nas
+./nfs-client-refresh.sh
