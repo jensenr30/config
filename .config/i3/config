@@ -78,6 +78,7 @@ bindsym Ctrl+Print exec shutter -s
 for_window [class="Shutter"] floating enable
 for_window [class="SimpleScreen"] floating enable
 for_window [class="pavucontrol"] floating enable
+# for_window [title="memes - Thunar"] floating enable
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -99,6 +100,7 @@ bindsym $mod+Return exec myterminal
 bindsym $mod+Ctrl+f exec fsearch
 bindsym $mod+f exec thunar
 bindsym $mod+g exec gimp
+bindsym $mod+m exec memes
 bindsym $mod+$alt+e exec emote
 bindsym $mod+e exec term -e e
 bindsym $mod+a exec pavucontrol
