@@ -3,7 +3,7 @@
 set -e
 
 path="$HOME/nas/safe/pictures/screenshots"
-filename="screenshot-$(date +%Y%m%d_%H%M%S).png"
+filename="$(date +%Y-%m-%d_%H%:M%:S_).png"
 import -window root "$filename"
 mv "$filename" "$path/$filename" || path=""
 echo  "$path/$filename" | tee >(clipin) 
