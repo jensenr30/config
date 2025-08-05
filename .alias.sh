@@ -119,7 +119,6 @@ alias o='xdg-open'
 alias path='echo $PATH | tr ":" "\n"'
 alias pwdc='pwd | tee >(clipin)'
 alias rm='rm -d'
-alias sl='screen -list'
 alias w='watch -n 0.1 --color'
 
 # PDF diff viewer

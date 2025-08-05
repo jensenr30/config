@@ -1,0 +1,42 @@
+#!/usr/bin/bash
+
+# open a rectangular grid of i3 windows
+# usage: (use single quotes around command and args!)
+# rectangular-grid COLUMNS ROWS 'COMMAND ARG1 ARG2 ...'
+
+if [ $# -ne 3 ]; then
+    printf "args must be EXACTLY 3 - the last arg should be a single-quoted command like 'ls -a'\n"
+    exit 1
+fi
+
+COLS=$1
+ROWS=$2
+
+s='sleep .1'
+
+i3-msg "layout splitv"
+$s
+
+for row in $(seq 1 $ROWS); do
+    printf "row $row\n"
+    printf "col 1\n"
+
+    $cmd
+    i3-msg "exec term --hold --working-directory $(pwd) -e ${@:3}"
+    $s
+
+    i3-msg "split h"
+    $s
+
+    for col in $(seq 2 $COLS); do
+        printf "col $col\n"
+
+        $cmd
+        i3-msg "exec term --hold --working-directory $(pwd) -e ${@:3}"
+        $s
+    done
+
+    i3-msg "focus parent"
+    $s
+done
+
