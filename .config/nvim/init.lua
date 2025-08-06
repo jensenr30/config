@@ -164,6 +164,20 @@ vim.opt.scrolloff = 17
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- show in-line errors and configure floating errors
+vim.diagnostic.config({
+	virtual_text = true,
+	float = {
+		focusable = false,
+		style = "minimal",
+		border = "rounded",
+		source = "always",
+		header = "",
+		prefix = "",
+		max_width = 80,
+	},
+})
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
