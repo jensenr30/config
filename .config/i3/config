@@ -23,6 +23,8 @@ exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/desktop/layout-art-activat
 exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
 # auto hide the mouse
 exec_always unclutter --timeout 3 --ignore-scrolling &
+# start up sound
+exec_always paplay --volume=40000 .jensenr30/private/audio-clips/windows-95-startup.wav
 
 # program launcher
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
@@ -78,6 +80,7 @@ bindsym Ctrl+Print exec shutter -s
 for_window [class="Shutter"] floating enable
 for_window [class="SimpleScreen"] floating enable
 for_window [class="pavucontrol"] floating enable
+# for_window [title="memes - Thunar"] floating enable
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -99,6 +102,7 @@ bindsym $mod+Return exec myterminal
 bindsym $mod+Ctrl+f exec fsearch
 bindsym $mod+f exec thunar
 bindsym $mod+g exec gimp
+bindsym $mod+m exec memes
 bindsym $mod+$alt+e exec emote
 bindsym $mod+e exec term -e e
 bindsym $mod+a exec pavucontrol

@@ -11,23 +11,16 @@ $i firefox chromium qbittorrent discord
 #===============================================================================
 # office
 #===============================================================================
-$i fbreader
-$i xournalpp # annotating PDFs and adding signatures.
-$i libreoffice
+$i fbreader xournalpp libreoffice skanlite
 $i --asdeps hunspell hunspell-en_us # libre office (spell check)
-$i skanlite
 
 #===============================================================================
 # media editing
 #===============================================================================
-$i gimp
+$i gimp inkscape shotcut audacity obs-studio
 # fix gimp so it shows up in launcher search
 sudo sed -i "s/Name=GNU Image Manipulation Program/Name=GIMP - GNU Image Manipulation Program/g" \
     /usr/share/applications/gimp.desktop
-$i inkscape
-$i audacity
-$i kdenlive
-$i obs-studio
 $y simplescreenrecorder
 $y gcolor2
 $i xf86-input-wacom
@@ -54,13 +47,7 @@ $y gnome-keyring # for vs code
 $p pre-commit
 $i python-pdm
 $i doxygen
-# graphics / game / networking
-$i sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
-$y sdl2-manpage-git
-$i emscripten
-$y nng
 $i valgrind
-$i lib32-mesa # amd 32-bit libraries
 $i cloc # count lines of code
 
 # # installing shit for mcuxpresso IDE
@@ -76,9 +63,15 @@ $i opengl-man-pages
 $y vulkan-man-pages
 $i vulkan-devel
 $i radeontop # gpu usage monitor
+# graphics / game / networking
+$i sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
+$y sdl2-manpage-git
+$i emscripten
+$y nng
+$i lib32-mesa # amd 32-bit libraries
 
 #===============================================================================
-# Embedded systems
+# embedded systems
 #===============================================================================
 # this is for dronecan_gui_tool:
 $i python-pip python-setuptools python-wheel python-numpy python-pyqt5

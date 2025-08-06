@@ -34,7 +34,27 @@ $i syslinux
 $y systemd-numlockontty
 $sys enable --now numLockOnTty
 
-$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux zellij grc
+# core utils
+$i                      \
+    atool               \
+    bat                 \
+    eza                 \
+    fd                  \
+    gdu                 \
+    git                 \
+    git-delta           \
+    grc                 \
+    ripgrep             \
+    screen              \
+    strace              \
+    tmux                \
+    tree                \
+    unrar               \
+    unzip               \
+    which               \
+    yazi                \
+    zellij              \
+    zip                 \
 
 # programming & dev tools
 $i python3 python-pip python-pipx
