@@ -944,9 +944,8 @@ require("lazy").setup({
 			-- })
 			--
 			--
-			--local hostname = os.getenv("HOSTNAME")
+			--local hostname = os.getenv("HOSTNAME") todo
 			--if hostname == "PDL-RyanJensen" then
-			-- TODO fix for work laptop
 			require("lspconfig").clangd.setup({
 				filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
 				cmd = {
@@ -955,7 +954,7 @@ require("lazy").setup({
 					--"--suggest-missing-includes",
 					"--header-insertion=never",
 					-- TODO configure clangd query driver only for PDL-RyanJensen
-					"--query-driver=/home/ryan/sdk/arm-none-eabi/bin/arm-none-eabi-gcc",
+					"--query-driver=/usr/bin/arm-none-eabi-gcc",
 				},
 			})
 		end,
