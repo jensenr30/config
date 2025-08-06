@@ -183,13 +183,28 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
 --
 --
 --
+-- build
+vim.keymap.set("n", "<leader>bb", ":TermOpen build<CR>", { desc = "build default target" })
+-- build run
+vim.keymap.set("n", "<leader>br", ":TermOpen build && run<CR>", { desc = "build run target" })
+-- built tests
+vim.keymap.set("n", "<leader>bt", ":TermOpen build test<CR>", { desc = "build tests" })
+-- open terminal in insert mode (in the terminal)
+vim.keymap.set("n", "<leader><CR>", ":TermOpen<CR>")
+vim.api.nvim_create_user_command("TermOpen", function(opts)
+	local target = opts.args
+	vim.cmd("terminal " .. target)
+	vim.cmd("normal! G")
+	-- vim.cmd("startinsert")
+end, {
+	nargs = "*",
+	desc = "Open terminal and run command (optional)",
+})
 --
------------------------------------------------------------------------------------------------------------------------
--- Some of Ryan Jensen's customizations
+--
 --
 -- Close every floating window
 local function close_floating_windows()
