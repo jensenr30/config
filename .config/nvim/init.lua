@@ -166,7 +166,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- show in-line errors and configure floating errors
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = false,
 	float = {
 		focusable = false,
 		style = "minimal",
