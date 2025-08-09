@@ -237,12 +237,11 @@ vim.keymap.set("v", "=", "=gv", { noremap = true, silent = true })
 -- vim.keymap.set("i", "<Up>", "<C-o>gk", { noremap = true })
 
 -- close current buffer without closing the window
-vim.keymap.set(
-	"n",
-	"q",
-	":bprevious<CR>:bdelete #<CR>",
-	{ noremap = true, silent = true, desc = "Delete buffer without closing window" }
-)
+vim.keymap.set("n", "q", function()
+	local buf_id = vim.api.nvim_get_current_buf()
+	vim.cmd("bprevious")
+	vim.api.nvim_buf_delete(buf_id, { force = false }) -- don't close the file if there are changes
+end, { noremap = true, silent = true })
 
 -- home key in insert mode goes to first non whitespace character
 vim.api.nvim_set_keymap("i", "<Home>", "<C-o>^", { noremap = true, silent = true })
