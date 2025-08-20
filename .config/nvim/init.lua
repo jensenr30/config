@@ -166,7 +166,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- show in-line errors and configure floating errors
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = false,
 	float = {
 		focusable = false,
 		style = "minimal",
@@ -972,9 +972,8 @@ require("lazy").setup({
 			-- })
 			--
 			--
-			--local hostname = os.getenv("HOSTNAME")
+			--local hostname = os.getenv("HOSTNAME") todo
 			--if hostname == "PDL-RyanJensen" then
-			-- TODO fix for work laptop
 			require("lspconfig").clangd.setup({
 				filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
 				cmd = {
@@ -983,7 +982,7 @@ require("lazy").setup({
 					--"--suggest-missing-includes",
 					"--header-insertion=never",
 					-- TODO configure clangd query driver only for PDL-RyanJensen
-					"--query-driver=/home/ryan/sdk/arm-none-eabi/bin/arm-none-eabi-gcc",
+					"--query-driver=/usr/bin/arm-none-eabi-gcc",
 				},
 			})
 		end,

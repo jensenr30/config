@@ -30,10 +30,6 @@ $y downgrade
 # for configuring installation media
 $i syslinux
 
-# numlock always ON
-$y systemd-numlockontty
-$sys enable --now numLockOnTty
-
 # core utils
 $i                      \
     atool               \
@@ -77,9 +73,20 @@ timedatectl # print info
 # file systems
 $i dosfstools mtools ntfs-3g exfat-utils
 
+
+################################################################################
 # misc
+################################################################################
 $i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel fastfetch lsb-release cmatrix
 $sys enable --now cronie.service
+
+# numlock always ON
+$y systemd-numlockontty
+$sys enable --now numLockOnTty
+
+# screen backlight control
+$i brightnessctl
+
 
 
 # crontab -e
