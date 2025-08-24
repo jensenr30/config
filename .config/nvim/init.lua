@@ -187,11 +187,11 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 --
 --
 -- build
-vim.keymap.set("n", "<leader>bb", ":TermOpen build<CR>", { desc = "build default target" })
+vim.keymap.set("n", "<leader>bb", ":TermOpen build<CR>", { desc = "build" })
 -- build run
-vim.keymap.set("n", "<leader>br", ":TermOpen build && run<CR>", { desc = "build run target" })
+vim.keymap.set("n", "<leader>br", ":TermOpen build && run<CR>", { desc = "run" })
 -- built tests
-vim.keymap.set("n", "<leader>bt", ":TermOpen build test<CR>", { desc = "build tests" })
+vim.keymap.set("n", "<leader>bt", ":TermOpen build test<CR>", { desc = "build and run tests" })
 -- open terminal in insert mode (in the terminal)
 vim.keymap.set("n", "<leader><CR>", ":TermOpen<CR>")
 vim.api.nvim_create_user_command("TermOpen", function(opts)
