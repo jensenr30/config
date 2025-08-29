@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-set -e
+set -e                                       # halt on errors
 
-path="$HOME/nas/safe/pictures/screenshots"
-filename="$(date +%Y-%m-%d_%H.%M.%S).png"
-import -window root "$filename"
-mv "$filename" "$path/$filename" || path=""
-echo  "$path/$filename" | tee >(clipin) 
+path="$HOME/nas/safe/pictures/screenshots"   # preferred destination
+filename="$(date +%Y-%m-%d_%H.%M.%S).png"    #
+import -window root "$filename"              # take the screenshot - save to ./
+mv "$filename" "$path/$filename" || path=""  # attempt to move to destination folder
+echo  "$path/$filename" | tee >(clipin)      # put the filename in the clipboard

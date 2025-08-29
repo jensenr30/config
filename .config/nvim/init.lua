@@ -300,14 +300,17 @@ vim.keymap.set("n", "gf", function()
 	--      we probably need to build a list of files under the cursor,
 	--      and check if the cursor is within any valid file - if so open it and be done
 	--      if not, we will have to search through the files to determine which is closest to the cursor.
-	local file_pattern = "[%w%./\\-_]+%.[%w]+"
+	local file_pattern = "[-_%w%./\\]+%.[%w]+"
+	vim.api.nvim_echo({ { "file_pattern: " .. file_pattern } }, true, {})
 	for str in line:gmatch("(" .. file_pattern .. "%:?%d*)") do
 		print("match in line: " .. str)
 		local filepath, linenum = str:match("(" .. file_pattern .. "):?(%d*)")
+		vim.api.nvim_echo({ { "filepath: " .. filepath } }, true, {})
 		filepath = filepath or match
 		if vim.fn.filereadable(filepath) == 1 then
 			vim.cmd("edit " .. filepath)
 			if linenum then
+				vim.api.nvim_echo({ { "line num: " .. linenum } })
 				vim.cmd(linenum)
 			end
 			return
