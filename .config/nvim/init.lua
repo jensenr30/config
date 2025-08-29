@@ -310,7 +310,7 @@ vim.keymap.set("n", "gf", function()
 		if vim.fn.filereadable(filepath) == 1 then
 			vim.cmd("edit " .. filepath)
 			if linenum then
-				vim.api.nvim_echo({ { "line num: " .. linenum } })
+				vim.api.nvim_echo({ { "line num: " .. linenum } }, true, {})
 				vim.cmd(linenum)
 			end
 			return
