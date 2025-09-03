@@ -1,5 +1,5 @@
 [Added Associations]
-application/pdf=com.github.xournalpp.xournalpp.desktop;sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
+application/pdf=libreoffice-writer.desktop;com.github.xournalpp.xournalpp.desktop;sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
 image/jpeg=gimp.desktop;firefox.desktop;qimgv.desktop;org.nomacs.ImageLounge.desktop;
 image/png=gimp.desktop;qimgv.desktop;feh.desktop;firefox.desktop;org.nomacs.ImageLounge.desktop;
 inode/directory=vlc.desktop;thunar.desktop;
@@ -33,7 +33,7 @@ application/vnd.tcpdump.pcap=jensen-editor_in_new_terminal.desktop;
 application/octet-stream=jensen-editor_in_new_terminal.desktop;
 
 [Default Applications]
-application/pdf=sumatrapdf.desktop
+application/pdf=firefox.desktop
 image/jpeg=org.nomacs.ImageLounge.desktop;
 image/png=org.nomacs.ImageLounge.desktop;
 inode/directory=thunar.desktop

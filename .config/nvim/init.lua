@@ -238,6 +238,9 @@ vim.keymap.set("v", "=", "=gv", { noremap = true, silent = true })
 
 -- close current buffer without closing the window
 vim.keymap.set("n", "q", function()
+	if vim.bo.buftype == "" then
+		vim.cmd("write")
+	end
 	local buf_id = vim.api.nvim_get_current_buf()
 	vim.cmd("bprevious")
 	vim.api.nvim_buf_delete(buf_id, { force = false }) -- don't close the file if there are changes
