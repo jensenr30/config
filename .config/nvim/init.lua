@@ -164,18 +164,47 @@ vim.opt.scrolloff = 17
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- show in-line errors and configure floating errors
+vim.diagnostic.config({
+	virtual_text = false,
+	float = {
+		focusable = false,
+		style = "minimal",
+		border = "rounded",
+		source = "always",
+		header = "",
+		prefix = "",
+		max_width = 80,
+	},
+})
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
 --
 --
 --
+-- build
+vim.keymap.set("n", "<leader>bb", ":TermOpen build<CR>", { desc = "build" })
+-- build run
+vim.keymap.set("n", "<leader>br", ":TermOpen build && run<CR>", { desc = "run" })
+-- built tests
+vim.keymap.set("n", "<leader>bt", ":TermOpen build test<CR>", { desc = "build and run tests" })
+-- open terminal in insert mode (in the terminal)
+vim.keymap.set("n", "<leader><CR>", ":TermOpen<CR>")
+vim.api.nvim_create_user_command("TermOpen", function(opts)
+	local target = opts.args
+	vim.cmd("terminal " .. target)
+	vim.cmd("normal! G")
+	-- vim.cmd("startinsert")
+end, {
+	nargs = "*",
+	desc = "Open terminal and run command (optional)",
+})
 --
------------------------------------------------------------------------------------------------------------------------
--- Some of Ryan Jensen's customizations
+--
 --
 -- Close every floating window
 local function close_floating_windows()
@@ -208,12 +237,14 @@ vim.keymap.set("v", "=", "=gv", { noremap = true, silent = true })
 -- vim.keymap.set("i", "<Up>", "<C-o>gk", { noremap = true })
 
 -- close current buffer without closing the window
-vim.keymap.set(
-	"n",
-	"q",
-	":bprevious<CR>:bdelete #<CR>",
-	{ noremap = true, silent = true, desc = "Delete buffer without closing window" }
-)
+vim.keymap.set("n", "q", function()
+	if vim.bo.buftype == "" then
+		vim.cmd("write")
+	end
+	local buf_id = vim.api.nvim_get_current_buf()
+	vim.cmd("bprevious")
+	vim.api.nvim_buf_delete(buf_id, { force = false }) -- don't close the file if there are changes
+end, { noremap = true, silent = true })
 
 -- home key in insert mode goes to first non whitespace character
 vim.api.nvim_set_keymap("i", "<Home>", "<C-o>^", { noremap = true, silent = true })
@@ -257,6 +288,45 @@ vim.o.smartindent = true
 --
 --
 --
+--
+-- goto file:line_number  - accepts /path/to/my/File:123 - opens File & puts cursor on line 123
+-- TODO i should make this a one-off plugin once its finished
+vim.keymap.set("n", "gf", function()
+	local line = vim.api.nvim_get_current_line()
+	-- TODO currently we just open the first valid file - but we should fix it so it selects the file underneath the user's cursor
+	-- TODO use this: local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+	--      then use the column information to tell if the
+	--      but keep in mind this should work like this:
+	--      priority:
+	--      1. open the file under the cursor
+	--      2. if there is no file under the cursor, open the nearest one
+	--      we probably need to build a list of files under the cursor,
+	--      and check if the cursor is within any valid file - if so open it and be done
+	--      if not, we will have to search through the files to determine which is closest to the cursor.
+	local file_pattern = "[-_%w%./\\]+%.[%w]+"
+	vim.api.nvim_echo({ { "file_pattern: " .. file_pattern } }, true, {})
+	for str in line:gmatch("(" .. file_pattern .. "%:?%d*)") do
+		print("match in line: " .. str)
+		local filepath, linenum = str:match("(" .. file_pattern .. "):?(%d*)")
+		vim.api.nvim_echo({ { "filepath: " .. filepath } }, true, {})
+		filepath = filepath or match
+		if vim.fn.filereadable(filepath) == 1 then
+			vim.cmd("edit " .. filepath)
+			if linenum then
+				vim.api.nvim_echo({ { "line num: " .. linenum } }, true, {})
+				vim.cmd(linenum)
+			end
+			return
+		else
+			if filepath ~= nil then
+				vim.api.nvim_echo({ { "File not found: " .. filepath, "ErrorMsg" } }, true, {})
+			else
+				vim.api.nvim_echo({ { "Bad str: " .. str, "ErrorMsg" } }, true, {})
+			end
+		end
+	end
+	vim.api.nvim_echo({ { "No valid file under cursor: " .. line, "ErrorMsg" } }, true, {})
+end, { noremap = true, silent = true })
 --
 --
 --
@@ -573,13 +643,14 @@ require("lazy").setup({
 	--
 	-- Use the `dependencies` key to specify the dependencies of a particular plugin
 
-	{
+	{ -- automatically add matching quotes (") ('), parentheses (()) ([]) ({}),
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
 		-- use opts = {} for passing setup options
 		-- this is equivalent to setup({}) function
 	},
+
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
@@ -907,9 +978,8 @@ require("lazy").setup({
 			-- })
 			--
 			--
-			--local hostname = os.getenv("HOSTNAME")
+			--local hostname = os.getenv("HOSTNAME") todo
 			--if hostname == "PDL-RyanJensen" then
-			-- TODO fix for work laptop
 			require("lspconfig").clangd.setup({
 				filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
 				cmd = {
@@ -918,7 +988,7 @@ require("lazy").setup({
 					--"--suggest-missing-includes",
 					"--header-insertion=never",
 					-- TODO configure clangd query driver only for PDL-RyanJensen
-					"--query-driver=/home/ryan/sdk/arm-none-eabi/bin/arm-none-eabi-gcc",
+					"--query-driver=/usr/bin/arm-none-eabi-gcc",
 				},
 			})
 		end,

@@ -1,5 +1,5 @@
 [Added Associations]
-application/pdf=sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
+application/pdf=libreoffice-writer.desktop;com.github.xournalpp.xournalpp.desktop;sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
 image/jpeg=gimp.desktop;firefox.desktop;qimgv.desktop;org.nomacs.ImageLounge.desktop;
 image/png=gimp.desktop;qimgv.desktop;feh.desktop;firefox.desktop;org.nomacs.ImageLounge.desktop;
 inode/directory=vlc.desktop;thunar.desktop;
@@ -14,10 +14,10 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
-image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;qimgv.desktop;
+image/svg+xml=firefox.desktop;gimp.desktop;org.inkscape.Inkscape.desktop;qimgv.desktop;
 audio/mp4=vlc.desktop;
 video/webm=mpv.desktop;vlc.desktop;
-video/mp4=mpv.desktop;vlc.desktop;
+video/mp4=vlc.desktop;mpv.desktop;
 text/plain=jensen-editor_in_new_terminal.desktop;
 audio/vnd.wave=vlc.desktop;
 application/x-zerosize=nvim.desktop;vlc.desktop;
@@ -30,9 +30,10 @@ inode/symlink=qimgv.desktop;org.nomacs.ImageLounge.desktop;
 text/x-c++src=jensen-editor_in_new_terminal.desktop;
 text/x-chdr=jensen-editor_in_new_terminal.desktop;
 application/vnd.tcpdump.pcap=jensen-editor_in_new_terminal.desktop;
+application/octet-stream=jensen-editor_in_new_terminal.desktop;
 
 [Default Applications]
-application/pdf=sumatrapdf.desktop
+application/pdf=firefox.desktop
 image/jpeg=org.nomacs.ImageLounge.desktop;
 image/png=org.nomacs.ImageLounge.desktop;
 inode/directory=thunar.desktop
@@ -49,7 +50,7 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 image/svg+xml=qimgv.desktop
 audio/mp4=vlc.desktop
-video/webm=vlc.desktop
+video/webm=mpv.desktop
 video/mp4=mpv.desktop
 application/x-zerosize=vlc.desktop
 audio/mpeg=vlc.desktop
@@ -61,3 +62,4 @@ inode/symlink=org.nomacs.ImageLounge.desktop
 text/x-c++src=jensen-editor_in_new_terminal.desktop;
 text/x-chdr=jensen-editor_in_new_terminal.desktop
 application/vnd.tcpdump.pcap=jensen-editor_in_new_terminal.desktop
+application/octet-stream=jensen-editor_in_new_terminal.desktop

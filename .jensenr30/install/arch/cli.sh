@@ -30,11 +30,27 @@ $y downgrade
 # for configuring installation media
 $i syslinux
 
-# numlock always ON
-$y systemd-numlockontty
-$sys enable --now numLockOnTty
-
-$i git git-delta bat fd which eza atool unrar zip unzip gdu yazi tree ripgrep screen tmux zellij grc
+# core utils
+$i                      \
+    atool               \
+    bat                 \
+    eza                 \
+    fd                  \
+    gdu                 \
+    git                 \
+    git-delta           \
+    grc                 \
+    ripgrep             \
+    screen              \
+    strace              \
+    tmux                \
+    tree                \
+    unrar               \
+    unzip               \
+    which               \
+    yazi                \
+    zellij              \
+    zip                 \
 
 # programming & dev tools
 $i python3 python-pip python-pipx
@@ -57,9 +73,20 @@ timedatectl # print info
 # file systems
 $i dosfstools mtools ntfs-3g exfat-utils
 
+
+################################################################################
 # misc
+################################################################################
 $i rsync minicom fzf numlockx bash-completion exfatprogs pkgstats cronie xclip xsel fastfetch lsb-release cmatrix
 $sys enable --now cronie.service
+
+# numlock always ON
+$y systemd-numlockontty
+$sys enable --now numLockOnTty
+
+# screen backlight control
+$i brightnessctl
+
 
 
 # crontab -e

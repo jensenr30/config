@@ -103,7 +103,7 @@ alias lsb='lsblk -o NAME,SIZE,FSUSE%,LABEL,MOUNTPOINT'
 alias lss='ls /dev/serial/by-id/'
 
 #finders
-alias f='fd --hidden --no-ignore --ignore-case --one-file-system --full-path'
+alias f='fd --hidden --ignore-case --one-file-system --full-path'
 alias fh='history | sed "s/ *[0-9]* *//" | rpj-fzf --tac +s | tee >(tr -d "\n" | clipin)'
 
 # greps
@@ -119,7 +119,6 @@ alias o='xdg-open'
 alias path='echo $PATH | tr ":" "\n"'
 alias pwdc='pwd | tee >(clipin)'
 alias rm='rm -d'
-alias sl='screen -list'
 alias w='watch -n 0.1 --color'
 
 # PDF diff viewer
@@ -230,10 +229,9 @@ fi
 ################################################################################
 #                               Arch Linux                                     #
 ################################################################################
-# this shouldn't be necessary... oh well
-#if [ "$distro" == "arch" ]; then
-#    alias neofetch='neofetch --ascii_distro Arch'
-#fi
+if [ "$distro" == "arch" ]; then
+    alias renderdoc='qrenderdoc'
+fi
 
 
 ################################################################################

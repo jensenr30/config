@@ -85,14 +85,8 @@ fi
 #===============================================================================
 # programming
 #===============================================================================
-# ubuntu/debian requires manual installation of arm-none-eabi-gcc
-if [ "$distro" == "deb" ]; then
-    PATH="$PATH:$HOME/sdk/arm-none-eabi/bin"
-fi
-
 # used to compile web client for tileventure
 export PATH="$PATH:/usr/lib/emscripten"
-
 
 
 #===============================================================================
