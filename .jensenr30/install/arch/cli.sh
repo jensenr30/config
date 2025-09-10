@@ -53,7 +53,7 @@ $i                      \
     zip                 \
 
 # programming & dev tools
-$i python3 python-pip python-pipx
+$i python3 python-pip python-pipx uv
 
 # downloaders
 $i wget curl
