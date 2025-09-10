@@ -240,6 +240,7 @@ fi
 if [ $sysname == "windows" ]; then
     alias lsu='usbipd list'
     alias usba='usbipd attach --wsl -b'
+    alias usbd='usbipd detach -b'
     unalias ls
     alias ls='ls --color=auto --group-directories-first'
 fi

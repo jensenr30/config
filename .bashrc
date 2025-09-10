@@ -11,7 +11,7 @@ start_directory=$(pwd) # don't cause a net change in directory by running this s
 shopt -s globstar # "**" in a pathname expansion context will match all files and 0 or more dirs and subdirs.
 shopt -s expand_aliases # aliases work in non-interactive shells
 source $HOME/.alias.sh
-chmod --recursive a+x "$HOME/bin" # automatically enable executing any file placed into bin/
+# chmod --recursive a+x "$HOME/bin" # automatically enable executing any file placed into bin/
 
 
 #===============================================================================
