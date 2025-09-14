@@ -206,6 +206,11 @@ end, {
 --
 --
 --
+-- python LSP
+vim.lsp.enable("pyright")
+--
+--
+--
 -- Close every floating window
 local function close_floating_windows()
 	for _, win in pairs(vim.api.nvim_list_wins()) do

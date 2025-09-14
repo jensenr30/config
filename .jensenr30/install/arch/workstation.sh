@@ -58,6 +58,9 @@ $i cloc # count lines of code
 $i gcc gdb clang make cmake ninja bear
 $i check cppcheck lcov
 
+# python LSP
+$i pyright
+
 # graphics
 $i opengl-man-pages
 $y vulkan-man-pages
