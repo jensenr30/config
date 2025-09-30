@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+rsync -avh --progress --delete-before /home/ryan/nas/safe/ <backup-drive>/safe-backup

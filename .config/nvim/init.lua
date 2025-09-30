@@ -243,7 +243,7 @@ vim.keymap.set("v", "=", "=gv", { noremap = true, silent = true })
 
 -- close current buffer without closing the window
 vim.keymap.set("n", "q", function()
-	if vim.bo.buftype == "" then
+	if vim.bo.buftype == "" and not vim.bo.readonly then
 		vim.cmd("write")
 	end
 	local buf_id = vim.api.nvim_get_current_buf()
