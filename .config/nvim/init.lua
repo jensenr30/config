@@ -279,6 +279,17 @@ vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.expandtab = true -- Use spaces instead of tabs
 vim.o.smartindent = true
+
+-- Make sure formatoptions stay consistent across filetypes
+vim.api.nvim_create_autocmd("BufEnter", {
+	callback = function()
+		-- don't add comments when entering INSERT mode from NORMAL mode
+		vim.opt_local.formatoptions:remove("o")
+		-- only insert comments in INSERT mode
+		vim.opt_local.formatoptions:append("r")
+	end,
+})
+
 -- -- vim visual multi-cursor
 -- -- existing shortcuts must be cleared first
 -- vim.g.VM_maps = {
