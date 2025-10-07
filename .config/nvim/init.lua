@@ -207,7 +207,16 @@ end, {
 --
 --
 -- python LSP
-vim.lsp.enable("pyright")
+local ok, err = pcall(function()
+	vim.lsp.enable("pyright")
+end)
+
+if not ok then
+	-- Handle the error. The `err` variable contains the error message.
+	-- actually, don't notify - i will quickly discover the LSP wasn't loaded
+	-- and the message is annoying on one of my computers
+	-- vim.notify("ERROR: failed to load pyright" .. err, vim.log.levels.ERROR)
+end
 --
 --
 --
