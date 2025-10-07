@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+printf "I just gave you the \`voice\` role - you should be able to speak after you leave and re-join the voice call.\n*Sorry for the inconvenience - new server rules (voice channels now require the \`voice\` role to speak).*\n" | clipin
+clipout

@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+set -e
+
+sudo umount /nas/junk || echo "Failed to unmount /nas/junk" && sleep 1
+sudo umount /nas/safe || echo "Failed to unmount /nas/safe" && sleep 1
+sudo reboot

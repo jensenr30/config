@@ -151,8 +151,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # move workspace to different monitor
-bindsym $mod+Ctrl+Left move workspace to output left
-bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right workspace next
 
 bindsym --whole-window $mod+button4 workspace prev_on_output
 bindsym --whole-window $mod+button5 workspace next_on_output
