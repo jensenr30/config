@@ -1217,7 +1217,7 @@ require("lazy").setup({
 				TODO = { icon = " ", color = "warning", alt = { "todo", "Todo", "ToDo", "TODo" } },
 				HACK = { icon = " ", color = "warning" },
 				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE", "POLISH" } },
 				NOTE = { icon = " ", color = "hint", alt = { "note", "INFO", "info", "Note" } },
 			},
 			colors = {
@@ -1246,6 +1246,19 @@ require("lazy").setup({
 			-- - sd'   - [S]urround [D]elete [']quotes
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
+
+			require("lspconfig").lua_ls.setup({
+				settings = {
+					Lua = {
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true), -- Tells Lua LS about Neovim's runtime files
+						},
+						diagnostics = {
+							globals = { "vim" }, -- Tells Lua LS to recognize the 'vim' global
+						},
+					},
+				},
+			})
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
