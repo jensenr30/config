@@ -1217,11 +1217,12 @@ require("lazy").setup({
 				TODO = { icon = " ", color = "warning", alt = { "todo", "Todo", "ToDo", "TODo" } },
 				HACK = { icon = " ", color = "warning" },
 				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-				PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE", "POLISH" } },
+				PERF = { icon = " ", color = "optimize", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE", "POLISH" } },
 				NOTE = { icon = " ", color = "hint", alt = { "note", "INFO", "info", "Note" } },
 			},
 			colors = {
 				warning = { "#c1980f" },
+				optimize = { "#777777" },
 			},
 			search = {
 				pattern = [[\b(KEYWORDS)\b]], -- overriding default: don't require a ':' character at the end
