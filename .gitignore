@@ -77,6 +77,8 @@
 !.config/REAPER/Configurations/*
 !.config/REAPER/KeyMaps
 !.config/REAPER/KeyMaps/*
+!.config/retroarch/
+!.config/retroarch/retroarch.cfg
 !.config/vis/
 !.config/vis/config
 !.config/vis/colors/

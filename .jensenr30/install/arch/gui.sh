@@ -52,5 +52,8 @@ $y batify
 # authorization agent & GUI
 $i polkit lxqt-policykit
 
+# necessary for X pop up calendar
+$i yad xdotool
+
 # information about hardware
 $y hardinfo2

@@ -1,5 +1,6 @@
 #!/bin/bash
 # install programs for my primary workstation
+
 source install-helper.sh
 
 # package managers
@@ -108,11 +109,12 @@ sudo systemctl enable --now docker
 $i virtualbox
 $i virt-manager
 
-
 #===============================================================================
 # misc
 #===============================================================================
-$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench
+$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench 
+
+
 
 # usbtop
 $y usbtop

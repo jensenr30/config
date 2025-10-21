@@ -18,4 +18,3 @@ fi
 
 export DPI="$DPI"
 echo "$DPI"
-
