@@ -18,7 +18,7 @@ layout {
             }
         }
     }
-    tab_with_tabbar name="btop" {
-        pane command="btop"
-    }
+    // tab_with_tabbar name="btop" {
+    //     pane command="btop"
+    // }
 }
