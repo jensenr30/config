@@ -8,7 +8,7 @@ $i pipewire
 $i --asdeps pipewire-audio pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 
 $i alsa-scarlett-gui
-$i calf cardinal
+$i calf cardinal guitarix
 $y vital-synth
 
 FILE='/etc/modprobe.d/scarlett.conf'
