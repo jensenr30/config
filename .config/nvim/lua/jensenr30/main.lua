@@ -62,3 +62,13 @@ vim.opt.scrolloff = 17
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+
+
+-- configure spectre - TODO put this in the spectre plugin file somehow
+vim.keymap.set("n", "<leader>ssw", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+	desc = "Search current word",
+})
+vim.keymap.set("v", "<leader>ssw", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+	desc = "Search current word",
+})
+
