@@ -27,7 +27,7 @@ exec_always unclutter --timeout 3 --ignore-scrolling &
 exec_always paplay --volume=40000 .jensenr30/private/audio-clips/windows-95-startup.wav
 
 # program launcher
-bindsym $mod+d exec --no-startup-id dmenu_run -i -fn FreeSans -l 20
+bindsym $mod+d exec --no-startup-id application-launcher
 
 # set window border size
 for_window [class=.*] border pixel 3
