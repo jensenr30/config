@@ -22,6 +22,9 @@ return
         ---@diagnostic disable-next-line: missing-fields
         require("nvim-treesitter.configs").setup(opts)
 
+        -- prevent tree-sitter from coloring macro because my colorscheme takes care of it
+        vim.api.nvim_set_hl(0, "@constant.macro.cpp", {})
+
         -- There are additional nvim-treesitter modules that you can use to interact
         -- with nvim-treesitter. You should go explore a few and see what interests you:
         --
