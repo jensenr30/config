@@ -53,6 +53,8 @@
 !.config/home-manager/**
 .config/home-manager/hostname.nix
 !.config/htop/
+!.config/hypr/
+!.config/hypr/*
 !.config/i3
 .config/i3/*
 !.config/i3/config
