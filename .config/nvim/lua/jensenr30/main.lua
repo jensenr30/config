@@ -3,6 +3,13 @@ vim.opt.number = true
 -- other lines display relative lin numbers
 vim.opt.relativenumber = true
 
+-- indentation
+vim.o.cindent = true
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true -- Use spaces instead of tabs
+vim.o.smartindent = true
+
 vim.opt.wrap = true
 -- line-wrapping maintains consistent indentation
 vim.opt.breakindent = true
