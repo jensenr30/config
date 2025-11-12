@@ -64,15 +64,17 @@ return {
         -- Clone every cursor and disable the originals.
         -- set({ "n", "v" }, "<leader><c-q>", mc.duplicateCursors)
 
-        set("n", "<esc>", function()
-            if not mc.cursorsEnabled() then
-                mc.enableCursors()
-            elseif mc.hasCursors() then
-                mc.clearCursors()
-            else
-                -- Default <esc> handler.
-            end
-        end)
+
+        -- NOTE: see escape.lua for how the cursors get disabled
+        -- set("n", "<esc>", function()
+        --     if not mc.cursorsEnabled() then
+        --         mc.enableCursors()
+        --     elseif mc.hasCursors() then
+        --         mc.clearCursors()
+        --     else
+        --         -- Default <esc> handler.
+        --     end
+        -- end)
 
         -- bring back cursors if you accidentally clear them
         set("n", "<leader>cgv", mc.restoreCursors)

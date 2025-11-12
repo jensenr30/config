@@ -1,12 +1,3 @@
-local function close_floating_windows()
-	for _, win in pairs(vim.api.nvim_list_wins()) do
-		if vim.api.nvim_win_get_config(win).relative == "win" then
-			vim.api.nvim_win_close(win, false)
-		end
-	end
-end
-vim.keymap.set("n", "<Esc>", close_floating_windows, { desc = "Close all floating Windows" })
-
 vim.keymap.set("n", "<A-h>", "<C-o>", { desc = "Jump to previous location" })
 vim.keymap.set("n", "<A-l>", "<C-i>", { desc = "Jump to next location" })
 

@@ -3,6 +3,7 @@ require("jensenr30/main")
 
 require("jensenr30/build")
 require("jensenr30/diagnostic")
+require("jensenr30/escape")
 require("jensenr30/goto-file-line-number")
 require("jensenr30/lazy");
 require("jensenr30/lsp")

@@ -58,10 +58,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 25
 
--- Set highlight on search, but clear on pressing <Esc> in normal mode
+-- highlight search results
 vim.opt.hlsearch = true
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-
 
 
 -- configure spectre - TODO put this in the spectre plugin file somehow
