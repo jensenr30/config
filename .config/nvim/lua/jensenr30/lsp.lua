@@ -3,7 +3,7 @@ vim.lsp.config["clangd"] = {
         "clangd",
         "--header-insertion=never",
         -- TODO configure clangd query driver only for PDL-RyanJensen
-        "--query-driver=/usr/bin/arm-none-eabi-gcc",
+        -- "--query-driver=/usr/bin/arm-none-eabi-gcc",
     },
     filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
 }

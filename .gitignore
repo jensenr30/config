@@ -74,6 +74,8 @@
 !.config/qt6ct/qt6ct.conf
 !.config/qt6ct/colors/
 !.config/qt6ct/colors/**
+!.config/OpenRCT2/
+!.config/OpenRCT2/shortcuts.json
 !.config/REAPER
 !.config/REAPER/Configurations
 !.config/REAPER/Configurations/*
