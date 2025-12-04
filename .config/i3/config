@@ -293,6 +293,12 @@ bar {
         mode invisible
 }
 
-
+# Color scheme
+# class                 border  bground text    indicator child_border
+client.focused          #4E9953 #30772F #FFFFFF #33F442   #3F774A
+client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 exec_always sleep 0.3 && polybar-launch-on-all-monitors
