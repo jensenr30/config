@@ -23,6 +23,8 @@ vim.g.maplocalleader = " "
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.opt.clipboard = "unnamedplus"
+-- `p` will not yank text
+vim.keymap.set("x", "p", "P", { silent = true })
 
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
