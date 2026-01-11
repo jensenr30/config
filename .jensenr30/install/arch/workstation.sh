@@ -56,7 +56,7 @@ $i cloc # count lines of code
 # $y ncurses5-compat-libs
 
 # C
-$i gcc gdb clang make cmake ninja bear
+$i gcc gdb clang make cmake ninja bear vcpkg
 $i check cppcheck lcov
 
 # python LSP

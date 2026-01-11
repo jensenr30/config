@@ -4,7 +4,7 @@ vim.keymap.set("n", "<A-l>", "<C-i>", { desc = "Jump to next location" })
 vim.keymap.set({ "n", "v", "i" }, "<A-o>", "<Esc>:LspClangdSwitchSourceHeader<CR>", { noremap = true, silent = true })
 
 -- close current buffer without closing the window
-vim.keymap.set("n", "q", function()
+vim.keymap.set("n", "<A-q>", function()
 	if vim.bo.buftype == "" and not vim.bo.readonly then
 		vim.cmd("write")
 	end

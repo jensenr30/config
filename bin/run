@@ -23,6 +23,9 @@ elif [ $(pwd) = "$r/triangulite" ]; then
 elif [ $(pwd) = "$r/git-bent" ]; then
     echo "running git-bent..."
     ./build/git-bent
+elif [ $(pwd) = "$r/andjel/Particle-Fluid-simulation" ]; then
+    echo "running andjel particle_sim"
+    ./run.sh
 elif [ $(pwd) = "$r/gittyup" ]; then
     if [[ -z "${DEBUG}" ]]; then
         echo "running gittyup Release"
