@@ -124,3 +124,5 @@ atuin_source="$HOME/.atuin/bin/env"
 if [ -f "$atuin_source" ]; then
     . "$atuin_source"
 fi
+
+export XDG_CONFIG_HOME="$HOME/.config"

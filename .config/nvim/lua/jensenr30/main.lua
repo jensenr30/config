@@ -58,7 +58,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Scrolls %d lines at a time
-vim.opt.scroll = 5
+--vim.opt.scroll = 5
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 25
 
