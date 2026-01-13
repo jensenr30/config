@@ -47,6 +47,7 @@
 !.config/Code
 !.config/Code/User/
 !.config/Code/User/settings.json
+!.config/gamemode.ini
 !.config/gtk-4.0/
 !.config/gtk-4.0/settings.ini
 !.config/home-manager/
