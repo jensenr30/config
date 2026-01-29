@@ -9,8 +9,10 @@
     autocrlf = input
 [pull]
     rebase = false
+	ff = only
 [init]
     defaultBranch = main
+	templateDir = /home/ryan/.git-template
 [rerere]
     enabled = true
 [interactive]
