@@ -1,7 +1,7 @@
 [Added Associations]
 application/pdf=com.github.xournalpp.xournalpp.desktop;libreoffice-writer.desktop;sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
 image/jpeg=gimp.desktop;firefox.desktop;qimgv.desktop;org.nomacs.ImageLounge.desktop;
-image/png=gimp.desktop;qimgv.desktop;feh.desktop;firefox.desktop;org.nomacs.ImageLounge.desktop;
+image/png=feh.desktop;qimgv.desktop;firefox.desktop;gimp.desktop;org.nomacs.ImageLounge.desktop;
 inode/directory=vlc.desktop;thunar.desktop;
 video/x-matroska=mpv.desktop;mplayer.desktop;vlc.desktop;
 x-scheme-handler/http=firefox.desktop;
@@ -24,18 +24,19 @@ application/x-zerosize=nvim.desktop;vlc.desktop;jensen-editor_in_new_terminal.de
 audio/mpeg=vlc.desktop;
 image/gif=org.nomacs.ImageLounge.desktop;firefox.desktop;qimgv.desktop;feh.desktop;
 text/x-csrc=jensen-editor_in_new_terminal.desktop;
-image/webp=org.nomacs.ImageLounge.desktop;
+image/webp=firefox.desktop;org.nomacs.ImageLounge.desktop;
 audio/flac=vlc.desktop;
 inode/symlink=qimgv.desktop;org.nomacs.ImageLounge.desktop;
 text/x-c++src=jensen-editor_in_new_terminal.desktop;
 text/x-chdr=jensen-editor_in_new_terminal.desktop;
 application/vnd.tcpdump.pcap=jensen-editor_in_new_terminal.desktop;
 application/octet-stream=jensen-editor_in_new_terminal.desktop;
+text/markdown=firefox.desktop;
 
 [Default Applications]
 application/pdf=firefox.desktop
-image/jpeg=org.nomacs.ImageLounge.desktop;
-image/png=org.nomacs.ImageLounge.desktop;
+image/jpeg=firefox.desktop
+image/png=firefox.desktop
 inode/directory=thunar.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/http=firefox.desktop
