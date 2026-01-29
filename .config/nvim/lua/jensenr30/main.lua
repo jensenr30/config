@@ -23,6 +23,8 @@ vim.g.maplocalleader = " "
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.opt.clipboard = "unnamedplus"
+-- `p` will not yank text
+vim.keymap.set("x", "p", "P", { silent = true })
 
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
@@ -55,6 +57,8 @@ vim.opt.inccommand = "split"
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
+-- Scrolls %d lines at a time
+--vim.opt.scroll = 5
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 25
 

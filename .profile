@@ -85,8 +85,8 @@ fi
 #===============================================================================
 # programming
 #===============================================================================
-# used to compile web client for tileventure
 export PATH="$PATH:/usr/lib/emscripten"
+export VCPKG_ROOT="$HOME/.local/share/vcpkg"
 
 
 #===============================================================================
@@ -124,3 +124,5 @@ atuin_source="$HOME/.atuin/bin/env"
 if [ -f "$atuin_source" ]; then
     . "$atuin_source"
 fi
+
+export XDG_CONFIG_HOME="$HOME/.config"

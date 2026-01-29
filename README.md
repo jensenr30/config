@@ -16,3 +16,8 @@ rsync -a config/ $HOME
 rm -rf config/
 bash
 ```
+
+## Maintenance
+
+manually update vcpkg
+`git -C $VCPKG_ROOT pull`

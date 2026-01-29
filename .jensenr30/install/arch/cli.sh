@@ -60,7 +60,7 @@ $i wget curl
 $p yt-dlp
 
 #system monitor
-$i htop atop iftop iotop nethogs sysstat usbutils btop
+$i htop atop iftop iotop nethogs sysstat usbutils btop inotify-tools
 
 # networking
 $i net-tools traceroute arp-scan nmap sshfs speedtest-cli openvpn

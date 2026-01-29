@@ -5,6 +5,8 @@ xrdb -merge ~/.Xresources
 # this is necessary because polybar doesn't respond to .Xresources dpi settings
 export DPI=$(dpi-get)
 
+xset r rate 220 60
+
 i3
 #awesome
 

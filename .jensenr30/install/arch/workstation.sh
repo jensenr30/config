@@ -18,7 +18,7 @@ $i --asdeps hunspell hunspell-en_us # libre office (spell check)
 #===============================================================================
 # media editing
 #===============================================================================
-$i gimp inkscape shotcut audacity obs-studio
+$i gimp inkscape shotcut audacity
 # fix gimp so it shows up in launcher search
 sudo sed -i "s/Name=GNU Image Manipulation Program/Name=GIMP - GNU Image Manipulation Program/g" \
     /usr/share/applications/gimp.desktop
@@ -29,7 +29,7 @@ $i xf86-input-wacom
 $y wacom-utility
 
 # allow obs to make virtual webcam
-$i v4l2loopback-dkms linux-headers
+$i obs-studio v4l2loopback-dkms linux-headers
 sudo modprobe v4l2loopback
 
 # cd ripping
@@ -56,7 +56,7 @@ $i cloc # count lines of code
 # $y ncurses5-compat-libs
 
 # C
-$i gcc gdb clang make cmake ninja bear
+$i gcc gdb clang make cmake ninja bear vcpkg
 $i check cppcheck lcov
 
 # python LSP
@@ -112,7 +112,7 @@ $i virt-manager
 #===============================================================================
 # misc
 #===============================================================================
-$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench 
+$y fsearch piper qdirstat shutter deepin-screenshot wine geekbench
 
 
 
