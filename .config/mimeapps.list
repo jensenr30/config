@@ -36,7 +36,7 @@ text/markdown=firefox.desktop;
 [Default Applications]
 application/pdf=firefox.desktop
 image/jpeg=firefox.desktop
-image/png=firefox.desktop
+image/png=org.nomacs.ImageLounge.desktop
 inode/directory=thunar.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/http=firefox.desktop
