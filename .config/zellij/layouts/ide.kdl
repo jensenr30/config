@@ -1,17 +1,16 @@
 layout {
-    // we use default_tab_template so when the user creates new tabs, they inherit these settings
-    default_tab_template {
-        pane size=1 borderless=true {
-            plugin location="zellij:tab-bar"
-        }
-        children
-    }
+    // // we use default_tab_template so when the user creates new tabs, they inherit these settings
+    // default_tab_template {
+    //     pane size=1 borderless=true {
+    //         plugin location="zellij:tab-bar"
+    //     }
+    //     children
+    // }
+
     tab name="term" {
         pane split_direction="vertical" {
             pane size="74%"
-            pane command="watch" {
-                args "-n" "1" "-c" "gl" "--color=always"
-            }
+            pane command="wgl"
         }
     }
     tab name="editor" focus=true {
@@ -25,4 +24,3 @@ layout {
     tab name="debug" {
     }
 }
-

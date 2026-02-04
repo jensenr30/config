@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+# if we don't delay here, the git log often gets cut off by zellij
+echo -n "warming up"
+sleep 0.3
+echo -n "."
+sleep 0.3
+echo -n "."
+sleep 0.3
+echo "."
+sleep 0.3
+
+watch -c -n 1 gl --color=always
