@@ -74,3 +74,14 @@ vim.keymap.set("v", "<leader>ssw", '<esc><cmd>lua require("spectre").open_visual
 	desc = "Search current word",
 })
 
+
+-- git commit message color codes
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "gitcommit",
+  callback = function()
+    -- Set 50 char limit for title, 72 for body
+    vim.opt_local.textwidth = 72
+    -- Highlight column 51 to warn about long titles
+    vim.opt_local.colorcolumn = "51"
+  end,
+})
