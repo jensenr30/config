@@ -70,9 +70,13 @@ $i radeontop # gpu usage monitor
 # graphics / game / networking
 $i sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
 $y sdl2-manpage-git
-$i emscripten
 $y nng
 $i lib32-mesa # amd 32-bit libraries
+
+# cross compiling
+$i mingw-w64-gcc emscripten
+
+
 
 #===============================================================================
 # embedded systems
