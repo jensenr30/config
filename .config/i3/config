@@ -16,7 +16,7 @@ exec_always ~/.jensenr30/screen-layout/$HOSTNAME.sh
 # notification
 exec_always dunst &
 # GUI authentication
-exec_always lxqt-policykit-agent &
+exec_always sleep 5 && lxqt-policykit-agent &
 # desktop background
 exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/desktop/layout-art-activate-linux.png"
 # compositor

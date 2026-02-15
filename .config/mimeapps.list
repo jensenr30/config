@@ -32,6 +32,7 @@ text/x-chdr=jensen-editor_in_new_terminal.desktop;
 application/vnd.tcpdump.pcap=jensen-editor_in_new_terminal.desktop;
 application/octet-stream=jensen-editor_in_new_terminal.desktop;
 text/markdown=firefox.desktop;code.desktop;
+image/x-xcf=gimp.desktop;krita_xcf.desktop;
 
 [Default Applications]
 application/pdf=firefox.desktop
