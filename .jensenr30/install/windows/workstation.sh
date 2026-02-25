@@ -13,6 +13,7 @@ i zip
 
 # programming
 i git
+i delta
 i vscode
 w usbipd # WSL USB passthrough
 i python
