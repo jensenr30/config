@@ -22,22 +22,22 @@ return {
             mc.lineSkipCursor(1)
         end)
 
-        -- Add or skip adding a new cursor by matching word/selection
-        set({ "n" }, "<leader>cn", function()
-            mc.matchAddCursor(1)
-        end)
-        set({ "n" }, "<leader>cN", function()
-            mc.matchAddCursor(-1)
-        end)
-        set({ "n" }, "<leader>cs", function()
-            mc.matchSkipCursor(1)
-        end)
-        set({ "n" }, "<leader>cS", function()
-            mc.matchSkipCursor(-1)
-        end)
+        -- -- Add or skip adding a new cursor by matching word/selection
+        -- set({ "n" }, "<leader>cn", function()
+        --     mc.matchAddCursor(1)
+        -- end)
+        -- set({ "n" }, "<leader>cN", function()
+        --     mc.matchAddCursor(-1)
+        -- end)
+        -- set({ "n" }, "<leader>cs", function()
+        --     mc.matchSkipCursor(1)
+        -- end)
+        -- set({ "n" }, "<leader>cS", function()
+        --     mc.matchSkipCursor(-1)
+        -- end)
 
-        -- Add all matches in the document
-        set({ "n" }, "<leader>ca", mc.matchAllAddCursors)
+        -- -- Add all matches in the document
+        -- set({ "n" }, "<leader>ca", mc.matchAllAddCursors)
 
         -- You can also add cursors with any motion you prefer:
         -- set("n", "<right>", function()
@@ -51,8 +51,8 @@ return {
         -- set({ "n", "v" }, "<left>", mc.nextCursor)
         -- set({ "n", "v" }, "<right>", mc.prevCursor)
 
-        -- Delete the main cursor.
-        set({ "n" }, "<leader>cx", mc.deleteCursor)
+        -- -- Delete the main cursor.
+        -- set({ "n" }, "<leader>cx", mc.deleteCursor)
 
         -- Add and remove cursors with alt + left click.
         -- TODO why does this not work?
@@ -76,11 +76,11 @@ return {
         --     end
         -- end)
 
-        -- bring back cursors if you accidentally clear them
-        set("n", "<leader>cgv", mc.restoreCursors)
+        -- -- bring back cursors if you accidentally clear them
+        -- set("n", "<leader>cgv", mc.restoreCursors)
 
         -- Align cursor columns.
-        set("n", "<leader>ca", mc.alignCursors)
+        set("n", "<leader>ma", mc.alignCursors)
 
         -- Split visual selections by regex.
         -- set("v", "S", mc.splitCursors)
