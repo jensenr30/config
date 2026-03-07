@@ -2,31 +2,7 @@
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec_always killall -9 polybar
-exec_always killall -9 picom
-exec_always killall -9 albert
-exec_always killall -9 lxqt-policykit-agent
-exec_always killall -9 unclutter
-exec_always killall -9 dunst
-exec_always killall -9 lxqt-notificationd
-exec_always killall -9 xfce4-notifyd
-exec_always sleep 8
-
-exec_always ~/.jensenr30/screen-layout/$HOSTNAME.sh
-# notification
-exec_always dunst &
-# GUI authentication
-exec_always sleep 5 && lxqt-policykit-agent &
-# desktop background
-exec_always feh --bg-fill "$HOME/.jensenr30/$HOSTNAME/desktop/layout-art-activate-linux.png"
-# compositor
-exec_always picom -b --config $HOME/.jensenr30/cfg/picom.conf &
-# auto hide the mouse
-exec_always unclutter --timeout 3 --ignore-scrolling &
-# start up sound
-exec_always paplay --volume=40000 .jensenr30/private/audio-clips/windows-95-startup.wav
-# configure keyboard delay (ms), repeat rate (Hz)
-exec_always xset r rate 190 80
+exec_always x_startup.sh &> ~/x_startup_log
 
 # program launcher
 bindsym $mod+d exec --no-startup-id application-launcher
@@ -42,11 +18,6 @@ set $alt Mod1
 
 # default stacking stacked tabbed
 workspace_layout tabbed
-
-# set monitors to turn off ater 30 minutes of inactivity
-#exec xset dpms 0 0 1800
-# disable screen saver
-#exec xset s off
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -302,5 +273,3 @@ client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused        #333333 #222222 #888888 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-
-exec_always sleep 0.3 && polybar-launch-on-all-monitors

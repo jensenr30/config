@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+touch "$1.hpp"
+wrap-c-header "$1.hpp"
