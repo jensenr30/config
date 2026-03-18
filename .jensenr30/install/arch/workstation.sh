@@ -9,6 +9,8 @@ $i flatpak
 # internet
 $i firefox chromium qbittorrent discord
 
+# obs
+
 #===============================================================================
 # office
 #===============================================================================
@@ -29,7 +31,7 @@ $i xf86-input-wacom
 $y wacom-utility
 
 # allow obs to make virtual webcam
-$i obs-studio v4l2loopback-dkms linux-headers
+$i obs-studio linux-headers v4l2loopback-dkms v4l2loopback-utils
 sudo modprobe v4l2loopback
 
 # cd ripping
