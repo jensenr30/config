@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+arg="$1"
+
+disconnect_network_drives
+
+case "$arg" in
+    off)
+        printf "Powering off"
+        sleep 0.3 && printf "." && sleep 0.3 && printf "." && sleep 0.3 && printf ".\n" && sleep 0.3
+        shutdown now
+        ;;
+    restart)
+        printf "Restarting"
+        sleep 0.3 && printf "." && sleep 0.3 && printf "." && sleep 0.3 && printf ".\n" && sleep 0.3
+        reboot
+        ;;
+    *)
+        echo "Error: invalid argument" >&2
+        exit 1
+        ;;
+esac
