@@ -47,7 +47,6 @@ $y emote
 
 # notification server
 $i libnotify dunst
-$y batify
 
 # authorization agent & GUI
 $i polkit lxqt-policykit
