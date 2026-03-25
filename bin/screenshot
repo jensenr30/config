@@ -1,9 +1,14 @@
 #!/usr/bin/bash
 
-set -e                                       # halt on errors
+set -e
 
-path="$HOME/nas/safe/pictures/screenshots"   # preferred destination
-filename="$(date +%Y-%m-%d_%H.%M.%S).png"    #
-import -window root "$filename"              # take the screenshot - save to ./
-mv "$filename" "$path/$filename" || path=""  # attempt to move to destination folder
-echo  "$path/$filename" | tee >(clipin)      # put the filename in the clipboard
+filename="$(date +%Y-%m-%d_%H.%M.%S).png"
+preferred_path="$HOME/nas/safe/pictures/screenshots/$filename"
+fallback_path="$HOME/$filename"
+
+# take the screenshot
+import -window root "$fallback_path"
+
+actual_path="$fallback_path"
+mv "$fallback_path" "$preferred_path" && actual_path="$preferred_path"
+echo  "$actual_path" | tee >(clipin)      # put the filename in the clipboard

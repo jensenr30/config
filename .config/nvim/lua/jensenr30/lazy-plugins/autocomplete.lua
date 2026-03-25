@@ -101,7 +101,7 @@ return
             }),
             sources = {
                 { name = "nvim_lsp" },
-                -- { name = "nvim_lsp_signature_help" }, -- not sure if this is necessary
+                { name = "nvim_lsp_signature_help" },
                 { name = "luasnip" },
                 { name = "path" },
             },
