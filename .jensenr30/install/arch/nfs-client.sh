@@ -12,6 +12,7 @@ fi
 realdir='/home/ryan/nas'
 
 $i nfs-utils
+$i gvfs-nfs
 showmount -e server
 ln -s "$realdir" /nas
 safe_fstab="server:$realdir/safe  $realdir/safe  nfs defaults,timeo=900,retrans=5,_netdev  0 0"
