@@ -1,5 +1,5 @@
 [Added Associations]
-application/pdf=com.github.xournalpp.xournalpp.desktop;libreoffice-writer.desktop;sumatrapdf.desktop;org.kde.okular.desktop;firefox.desktop;
+application/pdf=sumatrapdf.desktop;com.github.xournalpp.xournalpp.desktop;libreoffice-writer.desktop;org.kde.okular.desktop;firefox.desktop;
 image/jpeg=gimp.desktop;org.nomacs.ImageLounge.desktop;firefox.desktop;qimgv.desktop;
 image/png=gimp.desktop;feh.desktop;qimgv.desktop;firefox.desktop;org.nomacs.ImageLounge.desktop;
 inode/directory=vlc.desktop;thunar.desktop;
