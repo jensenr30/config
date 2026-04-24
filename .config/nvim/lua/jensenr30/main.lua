@@ -1,7 +1,7 @@
 -- show absolute line number on current line
 vim.opt.number = true
 -- other lines display relative lin numbers
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- indentation
 vim.o.cindent = true

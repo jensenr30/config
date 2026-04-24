@@ -5,7 +5,7 @@ vim.lsp.config["clangd"] = {
         -- TODO configure clangd query driver only for PDL-RyanJensen
         -- "--query-driver=/usr/bin/arm-none-eabi-gcc",
     },
-    filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
+    filetypes = { "c", "cpp", "objc", "objcpp"},
 }
 vim.lsp.enable("clangd")
 
