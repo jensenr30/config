@@ -246,8 +246,8 @@
     ],
     "todohighlight.keywordsPattern": "Todo|TODO|todo|FIXME|fixme|FixMe",
     "todohighlight.defaultStyle": {
-        "color": "#000000",
-        "backgroundColor": "#00db00",
+        "color": "#cf0000",
+        "backgroundColor": "#1f1f1f",
         "overviewRulerColor": "#00db00",
         "isWholeLine": false
     },
@@ -425,7 +425,6 @@
     "git-graph.showStatusBarItem": false,
     "githubPullRequests.terminalLinksHandler": "github",
     "git-graph.repository.commits.order": "topo",
-    "rewrap.autoWrap.enabled": true,
     "terminal.integrated.scrollback": 10000,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wrappingIndent": "indent",
@@ -445,39 +444,39 @@
     },
     "editor.fontSize": 16,
     "debug.onTaskErrors": "debugAnyway",
-    "terminal.integrated.tabs.enabled": false,
-    "highlight.regexes": {
-        // this terrifying regex will highlight the entire line
-        // "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|FIXME)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-        //     "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-        //     "decorations": [
-        //         {
-        //             "overviewRulerColor": "#00cc33",
-        //             "backgroundColor": "#00cc33",
-        //             "color": "#1f1f1f",
-        //             "fontWeight": "bold"
-        //         },
-        //         {
-        //             "backgroundColor": "#00cc33",
-        //             "color": "#1f1f1f"
-        //         }
-        //     ]
-        // },
-        "(TODO|FIXME)": {
-            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-            "decorations": [
-                {
-                    "overviewRulerColor": "#00cc33",
-                    "backgroundColor": "#00cc33",
-                    "color": "#1f1f1f",
-                    "fontWeight": "bold"
-                },
-                {
-                    "backgroundColor": "#00cc33",
-                    "color": "#1f1f1f"
-                }
-            ]
-        },
-    },
+    "terminal.integrated.tabs.enabled": false
+    // "highlight.regexes": {
+    //     // this terrifying regex will highlight the entire line
+    //     // "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|FIXME)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+    //     //     "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+    //     //     "decorations": [
+    //     //         {
+    //     //             "overviewRulerColor": "#00cc33",
+    //     //             "backgroundColor": "#00cc33",
+    //     //             "color": "#1f1f1f",
+    //     //             "fontWeight": "bold"
+    //     //         },
+    //     //         {
+    //     //             "backgroundColor": "#00cc33",
+    //     //             "color": "#1f1f1f"
+    //     //         }
+    //     //     ]
+    //     // },
+    //     "(TODO|FIXME)": {
+    //         "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+    //         "decorations": [
+    //             {
+    //                 "overviewRulerColor": "#00cc33",
+    //                 "backgroundColor": "#00cc33",
+    //                 "color": "#1f1f1f",
+    //                 "fontWeight": "bold"
+    //             },
+    //             {
+    //                 "backgroundColor": "#00cc33",
+    //                 "color": "#1f1f1f"
+    //             }
+    //         ]
+    //     },
+    // },
     "terminal.integrated.fontSize": 16
 }
