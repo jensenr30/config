@@ -5,7 +5,7 @@ return
     lazy = false,
     build = ":TSUpdate",
     opts = {
-        ensure_installed = { "bash", "c", "cpp", "doxygen", "glsl", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+        ensure_installed = { "bash", "c", "cpp", "doxygen", "glsl", "html", "lua", "luadoc", "markdown", "python", "vim", "vimdoc" },
     --     -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = {
