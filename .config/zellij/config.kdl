@@ -261,7 +261,6 @@ plugins {
     }
 }
 
-// todo uncomment after you get zellij v 0.42 on ubuntu (for work)
 // themes {
 //     jenbox2 {
 //         text_unselected {
