@@ -77,6 +77,7 @@ vim.keymap.set("v", "<leader>ssw", '<esc><cmd>lua require("spectre").open_visual
 	desc = "Search current word",
 })
 
+vim.keymap.set('n', '<A-w>', ':set wrap!<CR>', { desc = 'Toggle line wrap' })
 
 -- git commit message color codes
 vim.api.nvim_create_autocmd("FileType", {
