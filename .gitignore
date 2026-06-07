@@ -98,6 +98,10 @@
 !.local/share/applications/
 !.local/share/applications/jensen-editor_in_new_terminal.desktop
 
+!.local/share/EquilateralGames
+!.local/share/EquilateralGames/Triangulite
+!.local/share/EquilateralGames/Triangulite/settings.json
+
 !.ssr/
 !.ssr/output-profiles/
 !.ssr/output-profiles/*
