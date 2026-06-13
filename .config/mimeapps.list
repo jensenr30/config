@@ -1,6 +1,6 @@
 [Added Associations]
 application/pdf=sumatrapdf.desktop;com.github.xournalpp.xournalpp.desktop;libreoffice-writer.desktop;org.kde.okular.desktop;firefox.desktop;
-image/jpeg=gimp.desktop;org.nomacs.ImageLounge.desktop;firefox.desktop;qimgv.desktop;
+image/jpeg=gimp.desktop;org.nomacs.ImageLounge.desktop;firefox.desktop;qimgv.desktop;feh.desktop;
 image/png=feh.desktop;firefox.desktop;qimgv.desktop;gimp.desktop;org.nomacs.ImageLounge.desktop;
 inode/directory=vlc.desktop;
 video/x-matroska=mpv.desktop;mplayer.desktop;vlc.desktop;
@@ -37,8 +37,8 @@ image/avif=org.nomacs.ImageLounge.desktop;firefox.desktop;
 
 [Default Applications]
 application/pdf=firefox.desktop
-image/jpeg=org.nomacs.ImageLounge.desktop
-image/png=org.nomacs.ImageLounge.desktop
+image/jpeg=feh.desktop
+image/png=feh.desktop
 inode/directory=thunar.desktop
 video/x-matroska=vlc.desktop
 x-scheme-handler/http=firefox.desktop

@@ -42,8 +42,10 @@
         "datasheet",
         "DBGMCU",
         "dcdc",
+        "DERATED",
         "devkit",
         "devpkg",
+        "DFSDM",
         "dischgr",
         "dllname",
         "doxygen",
@@ -116,6 +118,7 @@
         "mppts",
         "multilib",
         "NEEDNT",
+        "NESSIE",
         "newfs",
         "newlib",
         "NODESTATUS",
@@ -426,7 +429,7 @@
     "githubPullRequests.terminalLinksHandler": "github",
     "git-graph.repository.commits.order": "topo",
     "terminal.integrated.scrollback": 10000,
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "on",
     "editor.wrappingIndent": "indent",
     "search.exclude": {
         "extern/imgui/examples": true,
@@ -442,8 +445,10 @@
         "configurations": [],
         "compounds": []
     },
-    "editor.fontSize": 16,
     "debug.onTaskErrors": "debugAnyway",
     "terminal.integrated.tabs.enabled": false,
-    "terminal.integrated.fontSize": 16
+    "terminal.integrated.fontSize": 16,
+    "workbench.startupEditor": "none",
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "Visual Studio Dark"
 }
