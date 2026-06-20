@@ -3,7 +3,7 @@
 	email = jensenr30@gmail.com
     #email = jensenr30@gmail.com
 [core]
-    editor = e
+    editor = vim
     excludesFile = ~/.gitignore-global
     pager = delta
     autocrlf = input
