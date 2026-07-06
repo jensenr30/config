@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+"$HOME/repos/aseprite/build/bin/aseprite"

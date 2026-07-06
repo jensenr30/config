@@ -818,7 +818,7 @@
     },
     "language": 0,
     "ui": {
-        "camera_zoom_factor": 1.426558494567871,
+        "camera_zoom_factor": 1.0,
         "console_color": {
             "a": 0.10000000149011612,
             "b": 0.0,
