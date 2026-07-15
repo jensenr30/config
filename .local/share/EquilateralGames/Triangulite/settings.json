@@ -1,5 +1,4 @@
 {
-    "accepted_end_user_license_agreement": true,
     "bindings": {
         "client_game_controller": [
             {
@@ -40,18 +39,6 @@
                     "pressed": true
                 },
                 "type": 4
-            },
-            {
-                "type": 0
-            },
-            {
-                "type": 0
-            },
-            {
-                "type": 0
-            },
-            {
-                "type": 0
             },
             {
                 "type": 0
@@ -336,46 +323,6 @@
                     "alt": 0,
                     "ctrl": 0,
                     "key": 113,
-                    "pressed": true,
-                    "shift": 0
-                },
-                "type": 3
-            },
-            {
-                "key": {
-                    "alt": 0,
-                    "ctrl": 0,
-                    "key": 1073741906,
-                    "pressed": true,
-                    "shift": 0
-                },
-                "type": 3
-            },
-            {
-                "key": {
-                    "alt": 0,
-                    "ctrl": 0,
-                    "key": 1073741905,
-                    "pressed": true,
-                    "shift": 0
-                },
-                "type": 3
-            },
-            {
-                "key": {
-                    "alt": 0,
-                    "ctrl": 0,
-                    "key": 1073741904,
-                    "pressed": true,
-                    "shift": 0
-                },
-                "type": 3
-            },
-            {
-                "key": {
-                    "alt": 0,
-                    "ctrl": 0,
-                    "key": 1073741903,
                     "pressed": true,
                     "shift": 0
                 },
