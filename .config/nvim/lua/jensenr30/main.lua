@@ -3,14 +3,18 @@ vim.opt.number = true
 -- other lines display relative lin numbers
 vim.opt.relativenumber = false
 
+
 -- indentation
 vim.o.cindent = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.expandtab = true -- Use spaces instead of tabs
-vim.o.smartindent = true
+vim.o.smartindent = false
+
 
 vim.opt.wrap = true
+-- dont break words
+vim.opt.linebreak = true
 -- line-wrapping maintains consistent indentation
 vim.opt.breakindent = true
 
@@ -76,6 +80,7 @@ vim.keymap.set("n", "<leader>ssw", '<cmd>lua require("spectre").open_visual({sel
 vim.keymap.set("v", "<leader>ssw", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
 	desc = "Search current word",
 })
+
 
 vim.keymap.set('n', '<A-w>', ':set wrap!<CR>', { desc = 'Toggle line wrap' })
 

@@ -53,7 +53,7 @@ bindsym Ctrl+Print exec shutter -s
 for_window [class="Shutter"] floating enable
 for_window [class="SimpleScreen"] floating enable
 for_window [class="pavucontrol"] floating enable
-# for_window [title="memes - Thunar"] floating enable
+for_window [class="Thunar"] move right
 
 
 # Use pactl to adjust volume in PulseAudio.
